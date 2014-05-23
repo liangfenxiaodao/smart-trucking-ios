@@ -1,989 +1,503 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>2C6F0955564844B0B1129F69</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DDA5729114564585936844CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3D9C14FE9D934430AD4598E8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44584D39CF2A4EB199F07993</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>A5F166D2FAFF484C9091EF28</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>BD84502EB04ED31CD5184BAD</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>BD84505016193D534B7F2ED5</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>SmartTruckingTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>BD8450E4C1DD2A9639C473DA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD845BC5D39AD1AA1CB5AB1C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD8450FA5435B2FEBA5A7CC0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BD845CB51DE349ECE884EF5C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>BD845104A7C81F30ABCF131A</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>BD8457981DDC94BA6E2E8E74</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>BD8455170B87DCB156741248</string>
-			<key>remoteInfo</key>
-			<string>SmartTrucking</string>
-		</dict>
-		<key>BD84519A563002F19E7A1950</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD845CF952F93904B19B0A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD8451A108E9B566D5A473C6</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3D9C14FE9D934430AD4598E8</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>SmartTrucking/SmartTrucking-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>SmartTrucking/SmartTrucking-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>BD8451F0B55C1BE48F806888</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BD845CAB32682000F9621392</string>
-				<string>BD8450E4C1DD2A9639C473DA</string>
-				<string>BD845CE13493261CD4269D6C</string>
-				<string>2C6F0955564844B0B1129F69</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>BD84520E336995ED89FC850B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD84546F903691CC22FCF176</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD8452CA3A0B31B7E9816166</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BD845E9F92284D684E637AD1</string>
-				<string>BD845668D3FBE98A6FE27CDF</string>
-				<string>BD845A1FE76180FCEA06A6CA</string>
-				<string>BD845A96034420E17740D735</string>
-				<string>3D9C14FE9D934430AD4598E8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD8452E3C21C6EBB9CEFDAC7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BD84558A796C79341FFE7EE4</string>
-				<string>BD845D26C5E2F5E7D5EC6366</string>
-				<string>BD845C25CA082A5EE13C5A1D</string>
-				<string>BD845CB402DCCDD6A47F08CD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD8453823793DF2AF66DC2E8</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>SmartTrucking/SmartTrucking-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>SmartTruckingTests/SmartTruckingTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>BD84546F903691CC22FCF176</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>BD8455170B87DCB156741248</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>BD845D63F54ADFEA523B746F</string>
-			<key>buildPhases</key>
-			<array>
-				<string>44584D39CF2A4EB199F07993</string>
-				<string>BD8455F1F1D9C6ABA3FECB73</string>
-				<string>BD8451F0B55C1BE48F806888</string>
-				<string>BD845B6F5DD690A770220FC1</string>
-				<string>A5F166D2FAFF484C9091EF28</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SmartTrucking</string>
-			<key>productName</key>
-			<string>SmartTrucking</string>
-			<key>productReference</key>
-			<string>BD845E9B142ECBD90280BBEE</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>BD84558A796C79341FFE7EE4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.info</string>
-			<key>path</key>
-			<string>SmartTrucking-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD8455F1F1D9C6ABA3FECB73</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BD845B756B6772CBBA1F6E3B</string>
-				<string>BD8458CCEDCDF861786A5B79</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>BD845601B533FBB0E9C2B1C0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD845F4CAB0B85AA5673407B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD845628EA73733E6DA66780</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD845668D3FBE98A6FE27CDF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BD845F75EBF0CC7D2BE902F9</string>
-				<string>BD845BC5D39AD1AA1CB5AB1C</string>
-				<string>BD84546F903691CC22FCF176</string>
-				<string>BD845F4CAB0B85AA5673407B</string>
-				<string>DDA5729114564585936844CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD845683AD64184F2808C243</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3D9C14FE9D934430AD4598E8</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>SmartTrucking/SmartTrucking-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>SmartTrucking/SmartTrucking-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>BD84573E6D7784B2D5854A39</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD84578A97CD4974B3D17CB6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD8457981DDC94BA6E2E8E74</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>ORGANIZATIONNAME</key>
-				<string>none</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>BD8458C6FD82FEEF3C92A121</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>BD8452CA3A0B31B7E9816166</string>
-			<key>productRefGroup</key>
-			<string>BD845E9F92284D684E637AD1</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>BD8455170B87DCB156741248</string>
-				<string>BD845ECFB6EA9371410EFB6D</string>
-			</array>
-		</dict>
-		<key>BD84581DA6FC02968726C642</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BD845D05F779A92988829A55</string>
-				<string>BD845B4E7AFC7AABCAD079F6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD84582B4223A08F090B50C0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD8458C6FD82FEEF3C92A121</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>BD8459785F922A535E5DB6E5</string>
-				<string>BD84502EB04ED31CD5184BAD</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>BD8458CCEDCDF861786A5B79</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD84578A97CD4974B3D17CB6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD8459785F922A535E5DB6E5</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>BD845A1FE76180FCEA06A6CA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BD8452E3C21C6EBB9CEFDAC7</string>
-				<string>BD84582B4223A08F090B50C0</string>
-				<string>BD84578A97CD4974B3D17CB6</string>
-				<string>BD845628EA73733E6DA66780</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>SmartTrucking</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD845A96034420E17740D735</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BD84581DA6FC02968726C642</string>
-				<string>BD845CF952F93904B19B0A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>SmartTruckingTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD845B4E7AFC7AABCAD079F6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BD845F194ABFF2BF3513EFFB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD845B53C608141E0E6D36E4</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>BD8453823793DF2AF66DC2E8</string>
-				<string>BD845D385110466048FE019A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>BD845B6F5DD690A770220FC1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BD845F6B5B1F45C9F8AB6530</string>
-				<string>BD845EE75C5D1B914AAD0D30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>BD845B756B6772CBBA1F6E3B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD845C25CA082A5EE13C5A1D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD845B8CFA7A5FE42769F4B5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD845F75EBF0CC7D2BE902F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD845BC5D39AD1AA1CB5AB1C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>BD845C25CA082A5EE13C5A1D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD845CA091D3E26332E2FABD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BD84519A563002F19E7A1950</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>BD845CAB32682000F9621392</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD845F75EBF0CC7D2BE902F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD845CB402DCCDD6A47F08CD</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SmartTrucking-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD845CB51DE349ECE884EF5C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD845B4E7AFC7AABCAD079F6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD845CE13493261CD4269D6C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD84546F903691CC22FCF176</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD845CF952F93904B19B0A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SmartTruckingTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD845D0598C15EDC4953F272</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BD845601B533FBB0E9C2B1C0</string>
-				<string>BD845B8CFA7A5FE42769F4B5</string>
-				<string>BD84520E336995ED89FC850B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>BD845D05F779A92988829A55</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.info</string>
-			<key>path</key>
-			<string>SmartTruckingTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD845D26C5E2F5E7D5EC6366</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BD84573E6D7784B2D5854A39</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD845D385110466048FE019A</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>SmartTrucking/SmartTrucking-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>SmartTruckingTests/SmartTruckingTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>BD845D63F54ADFEA523B746F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>BD845683AD64184F2808C243</string>
-				<string>BD8451A108E9B566D5A473C6</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>BD845E9B142ECBD90280BBEE</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>SmartTrucking.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>BD845E9F92284D684E637AD1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BD845E9B142ECBD90280BBEE</string>
-				<string>BD84505016193D534B7F2ED5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD845ECFB6EA9371410EFB6D</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>BD845B53C608141E0E6D36E4</string>
-			<key>buildPhases</key>
-			<array>
-				<string>BD845CA091D3E26332E2FABD</string>
-				<string>BD845D0598C15EDC4953F272</string>
-				<string>BD8450FA5435B2FEBA5A7CC0</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>BD845FF377867F107A831FA3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SmartTruckingTests</string>
-			<key>productName</key>
-			<string>SmartTruckingTests</string>
-			<key>productReference</key>
-			<string>BD84505016193D534B7F2ED5</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>BD845EE75C5D1B914AAD0D30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD845628EA73733E6DA66780</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD845F194ABFF2BF3513EFFB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD845F4CAB0B85AA5673407B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>BD845F6B5B1F45C9F8AB6530</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD845D26C5E2F5E7D5EC6366</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD845F75EBF0CC7D2BE902F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>BD845FF377867F107A831FA3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>BD8455170B87DCB156741248</string>
-			<key>targetProxy</key>
-			<string>BD845104A7C81F30ABCF131A</string>
-		</dict>
-		<key>DDA5729114564585936844CA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>BD8457981DDC94BA6E2E8E74</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C6F0955564844B0B1129F69 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5729114564585936844CA /* libPods.a */; };
+		3686785F59A0BB34B4E59699 /* Good.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F9D0FFD2A1AC5442AE6 /* Good.m */; };
+		3686788B9AC8D17F64DC2384 /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867D2BA966DCAEB240BDDF /* ApiClient.m */; };
+		BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */; };
+		BD84519A563002F19E7A1950 /* SmartTruckingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845CF952F93904B19B0A4A /* SmartTruckingTests.m */; };
+		BD84520E336995ED89FC850B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84546F903691CC22FCF176 /* UIKit.framework */; };
+		BD845601B533FBB0E9C2B1C0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845F4CAB0B85AA5673407B /* XCTest.framework */; };
+		BD8458CCEDCDF861786A5B79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD84578A97CD4974B3D17CB6 /* AppDelegate.m */; };
+		BD845B756B6772CBBA1F6E3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845C25CA082A5EE13C5A1D /* main.m */; };
+		BD845B8CFA7A5FE42769F4B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845F75EBF0CC7D2BE902F9 /* Foundation.framework */; };
+		BD845CAB32682000F9621392 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845F75EBF0CC7D2BE902F9 /* Foundation.framework */; };
+		BD845CB51DE349ECE884EF5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD845B4E7AFC7AABCAD079F6 /* InfoPlist.strings */; };
+		BD845CE13493261CD4269D6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84546F903691CC22FCF176 /* UIKit.framework */; };
+		BD845EE75C5D1B914AAD0D30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD845628EA73733E6DA66780 /* Images.xcassets */; };
+		BD845F6B5B1F45C9F8AB6530 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD845D26C5E2F5E7D5EC6366 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD845104A7C81F30ABCF131A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD8457981DDC94BA6E2E8E74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD8455170B87DCB156741248;
+			remoteInfo = SmartTrucking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		36867427058ACE886D62E244 /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
+		368678A4B143E7E69BB8F748 /* Good.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Good.h; sourceTree = "<group>"; };
+		36867D2BA966DCAEB240BDDF /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
+		36867F9D0FFD2A1AC5442AE6 /* Good.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Good.m; sourceTree = "<group>"; };
+		3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		BD84505016193D534B7F2ED5 /* SmartTruckingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTruckingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD84546F903691CC22FCF176 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BD84558A796C79341FFE7EE4 /* SmartTrucking-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "SmartTrucking-Info.plist"; sourceTree = "<group>"; };
+		BD845628EA73733E6DA66780 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BD84573E6D7784B2D5854A39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BD84578A97CD4974B3D17CB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BD84582B4223A08F090B50C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BD845C25CA082A5EE13C5A1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD845CB402DCCDD6A47F08CD /* SmartTrucking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartTrucking-Prefix.pch"; sourceTree = "<group>"; };
+		BD845CF952F93904B19B0A4A /* SmartTruckingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartTruckingTests.m; sourceTree = "<group>"; };
+		BD845D05F779A92988829A55 /* SmartTruckingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "SmartTruckingTests-Info.plist"; sourceTree = "<group>"; };
+		BD845E9B142ECBD90280BBEE /* SmartTrucking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTrucking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD845F194ABFF2BF3513EFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BD845F4CAB0B85AA5673407B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BD845F75EBF0CC7D2BE902F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DDA5729114564585936844CA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD8451F0B55C1BE48F806888 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD845CAB32682000F9621392 /* Foundation.framework in Frameworks */,
+				BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */,
+				BD845CE13493261CD4269D6C /* UIKit.framework in Frameworks */,
+				2C6F0955564844B0B1129F69 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD845D0598C15EDC4953F272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD845601B533FBB0E9C2B1C0 /* XCTest.framework in Frameworks */,
+				BD845B8CFA7A5FE42769F4B5 /* Foundation.framework in Frameworks */,
+				BD84520E336995ED89FC850B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36867864C87D2A5E93F0EF27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36867F9D0FFD2A1AC5442AE6 /* Good.m */,
+				368678A4B143E7E69BB8F748 /* Good.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD8452CA3A0B31B7E9816166 = {
+			isa = PBXGroup;
+			children = (
+				BD845E9F92284D684E637AD1 /* Products */,
+				BD845668D3FBE98A6FE27CDF /* Frameworks */,
+				BD845A1FE76180FCEA06A6CA /* SmartTrucking */,
+				BD845A96034420E17740D735 /* SmartTruckingTests */,
+				3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		BD8452E3C21C6EBB9CEFDAC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD84558A796C79341FFE7EE4 /* SmartTrucking-Info.plist */,
+				BD845D26C5E2F5E7D5EC6366 /* InfoPlist.strings */,
+				BD845C25CA082A5EE13C5A1D /* main.m */,
+				BD845CB402DCCDD6A47F08CD /* SmartTrucking-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD845668D3FBE98A6FE27CDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD845F75EBF0CC7D2BE902F9 /* Foundation.framework */,
+				BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */,
+				BD84546F903691CC22FCF176 /* UIKit.framework */,
+				BD845F4CAB0B85AA5673407B /* XCTest.framework */,
+				DDA5729114564585936844CA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD84581DA6FC02968726C642 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD845D05F779A92988829A55 /* SmartTruckingTests-Info.plist */,
+				BD845B4E7AFC7AABCAD079F6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD845A1FE76180FCEA06A6CA /* SmartTrucking */ = {
+			isa = PBXGroup;
+			children = (
+				BD8452E3C21C6EBB9CEFDAC7 /* Supporting Files */,
+				BD84582B4223A08F090B50C0 /* AppDelegate.h */,
+				BD84578A97CD4974B3D17CB6 /* AppDelegate.m */,
+				BD845628EA73733E6DA66780 /* Images.xcassets */,
+				36867D2BA966DCAEB240BDDF /* ApiClient.m */,
+				36867427058ACE886D62E244 /* ApiClient.h */,
+				36867864C87D2A5E93F0EF27 /* Model */,
+			);
+			path = SmartTrucking;
+			sourceTree = "<group>";
+		};
+		BD845A96034420E17740D735 /* SmartTruckingTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD84581DA6FC02968726C642 /* Supporting Files */,
+				BD845CF952F93904B19B0A4A /* SmartTruckingTests.m */,
+			);
+			path = SmartTruckingTests;
+			sourceTree = "<group>";
+		};
+		BD845E9F92284D684E637AD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD845E9B142ECBD90280BBEE /* SmartTrucking.app */,
+				BD84505016193D534B7F2ED5 /* SmartTruckingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD8455170B87DCB156741248 /* SmartTrucking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD845D63F54ADFEA523B746F /* Build configuration list for PBXNativeTarget "SmartTrucking" */;
+			buildPhases = (
+				44584D39CF2A4EB199F07993 /* Check Pods Manifest.lock */,
+				BD8455F1F1D9C6ABA3FECB73 /* Sources */,
+				BD8451F0B55C1BE48F806888 /* Frameworks */,
+				BD845B6F5DD690A770220FC1 /* Resources */,
+				A5F166D2FAFF484C9091EF28 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartTrucking;
+			productName = SmartTrucking;
+			productReference = BD845E9B142ECBD90280BBEE /* SmartTrucking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD845ECFB6EA9371410EFB6D /* SmartTruckingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD845B53C608141E0E6D36E4 /* Build configuration list for PBXNativeTarget "SmartTruckingTests" */;
+			buildPhases = (
+				BD845CA091D3E26332E2FABD /* Sources */,
+				BD845D0598C15EDC4953F272 /* Frameworks */,
+				BD8450FA5435B2FEBA5A7CC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD845FF377867F107A831FA3 /* PBXTargetDependency */,
+			);
+			name = SmartTruckingTests;
+			productName = SmartTruckingTests;
+			productReference = BD84505016193D534B7F2ED5 /* SmartTruckingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD8457981DDC94BA6E2E8E74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = none;
+			};
+			buildConfigurationList = BD8458C6FD82FEEF3C92A121 /* Build configuration list for PBXProject "SmartTrucking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BD8452CA3A0B31B7E9816166;
+			productRefGroup = BD845E9F92284D684E637AD1 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+			);
+			projectRoot = "";
+			targets = (
+				BD8455170B87DCB156741248 /* SmartTrucking */,
+				BD845ECFB6EA9371410EFB6D /* SmartTruckingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD8450FA5435B2FEBA5A7CC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD845CB51DE349ECE884EF5C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD845B6F5DD690A770220FC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD845F6B5B1F45C9F8AB6530 /* InfoPlist.strings in Resources */,
+				BD845EE75C5D1B914AAD0D30 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44584D39CF2A4EB199F07993 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A5F166D2FAFF484C9091EF28 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD8455F1F1D9C6ABA3FECB73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD845B756B6772CBBA1F6E3B /* main.m in Sources */,
+				BD8458CCEDCDF861786A5B79 /* AppDelegate.m in Sources */,
+				3686788B9AC8D17F64DC2384 /* ApiClient.m in Sources */,
+				3686785F59A0BB34B4E59699 /* Good.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD845CA091D3E26332E2FABD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD84519A563002F19E7A1950 /* SmartTruckingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD845FF377867F107A831FA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD8455170B87DCB156741248 /* SmartTrucking */;
+			targetProxy = BD845104A7C81F30ABCF131A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD845B4E7AFC7AABCAD079F6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD845F194ABFF2BF3513EFFB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BD845D26C5E2F5E7D5EC6366 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD84573E6D7784B2D5854A39 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD84502EB04ED31CD5184BAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD8451A108E9B566D5A473C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartTrucking/SmartTrucking-Prefix.pch";
+				INFOPLIST_FILE = "SmartTrucking/SmartTrucking-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BD8453823793DF2AF66DC2E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartTrucking/SmartTrucking-Prefix.pch";
+				INFOPLIST_FILE = "SmartTruckingTests/SmartTruckingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BD845683AD64184F2808C243 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartTrucking/SmartTrucking-Prefix.pch";
+				INFOPLIST_FILE = "SmartTrucking/SmartTrucking-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BD8459785F922A535E5DB6E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD845D385110466048FE019A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartTrucking/SmartTrucking-Prefix.pch";
+				INFOPLIST_FILE = "SmartTruckingTests/SmartTruckingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD8458C6FD82FEEF3C92A121 /* Build configuration list for PBXProject "SmartTrucking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD8459785F922A535E5DB6E5 /* Debug */,
+				BD84502EB04ED31CD5184BAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD845B53C608141E0E6D36E4 /* Build configuration list for PBXNativeTarget "SmartTruckingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD8453823793DF2AF66DC2E8 /* Debug */,
+				BD845D385110466048FE019A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD845D63F54ADFEA523B746F /* Build configuration list for PBXNativeTarget "SmartTrucking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD845683AD64184F2808C243 /* Debug */,
+				BD8451A108E9B566D5A473C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD8457981DDC94BA6E2E8E74 /* Project object */;
+}
