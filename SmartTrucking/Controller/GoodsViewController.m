@@ -23,6 +23,11 @@
   return self;
 }
 
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  [self.tableView setTableFooterView:[[UIView alloc]init]];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   return _goodsArray.count;
 }
@@ -40,7 +45,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   return 85;
 }
-
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
