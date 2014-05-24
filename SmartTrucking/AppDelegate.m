@@ -17,8 +17,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   UITabBarController *tabBarController = [[UITabBarController alloc] init];
+  UINavigationController *goodsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[GoodsViewController alloc] init]];
   [tabBarController setViewControllers:@[
-          [[GoodsViewController alloc] init],
+          goodsNavigationController,
           [[SearchViewController alloc] init],
           [[PublishViewController alloc] init],
           [[MyAccountViewController alloc] init]]];

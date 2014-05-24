@@ -31,7 +31,6 @@ static ApiClient *sharedInstance;
        for(NSDictionary *goodDictionary in response){
           Goods *good = [[Goods alloc] initWithDictionary:goodDictionary];
          [result addObject:good];
-         NSLog(@"%@", good);
        }
        successBlock(result);
      }failure:^(AFHTTPRequestOperation *operation, NSError *error) {

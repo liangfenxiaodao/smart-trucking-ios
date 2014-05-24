@@ -16,6 +16,7 @@
 - (id)init {
   self = [super init];
   if (!self) return nil;
+  [self.navigationItem setTitle:@"当前货源"];
   [self.tabBarItem setTitle:@"货源"];
   [self.tabBarItem setImage:[UIImage imageNamed:@"interstate_truck"]];
   
