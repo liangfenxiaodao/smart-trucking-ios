@@ -20,14 +20,15 @@
 - (id)init {
   self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"GoodsCell"];
   if (!self) return nil;
-  self.nameLabel = [self createLabel];
-  self.fromLabel = [self createLabel];
-  self.toLabel = [self createLabel];
+//  self.nameLabel = [self createLabelWith:[UIFont goodsLocationFont]];
+  self.fromLabel = [self createLabelWith:[UIFont goodsLocationFont]];
+  self.toLabel = [self createLabelWith:[UIFont goodsLocationFont]];
   self.truckImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"truck"]];
   [self.contentView addSubview:self.truckImage];
   self.pickUpTimeLabel = [self createLabel];
   self.arriveTimeLabel = [self createLabel];
   self.priceLabel = [self createLabel];
+  [self.priceLabel setTextColor:[UIColor textColorPrice]];
   self.weightLabel = [self createLabel];
   [self layout];
   return self;
@@ -70,14 +71,22 @@
   [self.toLabel setText:goods.toSuburb];
   [self.pickUpTimeLabel setText:goods.pickUpTime];
   [self.arriveTimeLabel setText:goods.arriveTime];
-  [self.weightLabel setText:[NSString stringWithFormat:@"Weight: %.1fT", goods.weight]];
-  [self.priceLabel setText:[NSString stringWithFormat:@"Price: $%i", goods.price]];
+  [self.weightLabel setText:[NSString stringWithFormat:@"重量: %.1f吨", goods.weight]];
+  [self.priceLabel setText:[NSString stringWithFormat:@"$%i", goods.price]];
 };
 
 - (UILabel *)createLabel {
   UILabel *label = UILabel.new;
   [label setTextColor:[UIColor textColorDark]];
   [label setFont:[UIFont goodsListFont]];
+  [self.contentView addSubview:label];
+  return label;
+}
+
+- (UILabel *)createLabelWith:(UIFont *)font {
+  UILabel *label = UILabel.new;
+  [label setTextColor:[UIColor textColorDark]];
+  [label setFont:font];
   [self.contentView addSubview:label];
   return label;
 }

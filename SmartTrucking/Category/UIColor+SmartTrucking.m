@@ -6,6 +6,11 @@
   return [UIColor buildSimpleColor:88];
 }
 
++ (UIColor*) textColorPrice {
+  return [UIColor buildColorWithRed:107 green:170 blue:62];
+}
+
+
 + (UIColor *)buildSimpleColor:(int)value {
   return [UIColor buildColorWithRed:value green:value blue:value];
 }

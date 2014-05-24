@@ -2,4 +2,6 @@
 
 @interface UIFont (SmartTrucking)
 + (UIFont *)goodsListFont;
+
++ (UIFont *)goodsLocationFont;
 @end
