@@ -11,13 +11,21 @@
 
 }
 
+- (id)init {
+  self = [super init];
+  if (!self) return nil;
+  [self.tabBarItem setTitle:@"货源"];
+  [self.tabBarItem setImage:[UIImage imageNamed:@"truck"]];
+  return self;
+}
+
+
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
   MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   hud.labelText = @"Loading...";
   [[ApiClient client] getAllGoodsWithSuccess:^(NSArray *result) {
     self.goods = result;
-    NSLog(@"loading finished, need to hide HUD");
     [MBProgressHUD hideHUDForView:self.view animated:YES];
   } error:^(NSError *error) {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
