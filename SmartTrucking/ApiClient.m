@@ -1,6 +1,6 @@
 #import "ApiClient.h"
 #import "AFHTTPRequestOperationManager.h"
-#import "Good.h"
+#import "Goods.h"
 #import <AFNetworking/AFNetworking.h>
 
 @interface ApiClient ()
@@ -29,7 +29,7 @@ static ApiClient *sharedInstance;
      success:^(AFHTTPRequestOperation *operation, id response) {
        NSMutableArray *result = [[NSMutableArray alloc]init];
        for(NSDictionary *goodDictionary in response){
-          Good *good = [[Good alloc] initWithDictionary:goodDictionary];
+          Goods *good = [[Goods alloc] initWithDictionary:goodDictionary];
          [result addObject:good];
          NSLog(@"%@", good);
        }

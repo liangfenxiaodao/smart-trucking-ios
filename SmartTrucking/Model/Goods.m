@@ -1,6 +1,6 @@
-#import "Good.h"
+#import "Goods.h"
 
-@implementation Good {
+@implementation Goods {
 
 }
 

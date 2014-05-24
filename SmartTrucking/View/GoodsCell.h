@@ -1,4 +1,7 @@
 #import <Foundation/Foundation.h>
 
-@interface GoodsCell : UIView
+@class Goods;
+
+@interface GoodsCell : UITableViewCell
+- (void)setGoods:(Goods *)goods;
 @end

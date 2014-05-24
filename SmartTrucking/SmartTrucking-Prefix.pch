@@ -12,7 +12,8 @@
 
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
-
     #import <Foundation/Foundation.h>
+    #import "UIColor+SmartTrucking.h"
+    #import "UIFont+SmartTrucking.h"
 
 #endif

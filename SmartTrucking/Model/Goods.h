@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface Good : NSObject
+@interface Goods : NSObject
 @property(nonatomic, strong) NSString *name;
 @property(nonatomic, strong) NSString *fromSuburb;
 @property(nonatomic, strong) NSString *toSuburb;
