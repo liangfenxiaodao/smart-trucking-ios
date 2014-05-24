@@ -70,7 +70,7 @@
   [self.toLabel setText:goods.toSuburb];
   [self.pickUpTimeLabel setText:goods.pickUpTime];
   [self.arriveTimeLabel setText:goods.arriveTime];
-  [self.weightLabel setText:@"Weight: 2T"];
+  [self.weightLabel setText:[NSString stringWithFormat:@"Weight: %.1fT", goods.weight]];
   [self.priceLabel setText:[NSString stringWithFormat:@"Price: $%i", goods.price]];
 };
 
