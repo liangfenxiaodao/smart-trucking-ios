@@ -23,20 +23,21 @@ static ApiClient *sharedInstance;
   return sharedInstance;
 }
 
-- (NSArray *)getAllGoods {
-  __block NSMutableArray *result = [[NSMutableArray alloc]init];
+- (void)getAllGoodsWithSuccess:(void(^)(NSArray *result))successBlock error:(void(^)(NSError *error))errorBlock {
   [_requestOperationManager GET:@"/goods"
      parameters:nil
      success:^(AFHTTPRequestOperation *operation, id response) {
-        for(NSDictionary *goodDictionary in response){
+       NSMutableArray *result = [[NSMutableArray alloc]init];
+       for(NSDictionary *goodDictionary in response){
           Good *good = [[Good alloc] initWithDictionary:goodDictionary];
-          NSLog(@"%@", good);
-        }
+         [result addObject:good];
+         NSLog(@"%@", good);
+       }
+       successBlock(result);
      }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-
+       errorBlock(error);
      }
   ];
-  return result;
 };
 
 - (instancetype)initWithServer:(NSString *)server {

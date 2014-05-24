@@ -5,5 +5,5 @@
 @interface ApiClient : NSObject
 + (ApiClient *)client;
 
-- (NSArray *)getAllGoods;
+- (void)getAllGoodsWithSuccess:(void (^)(NSArray *result))successBlock error:(void (^)(NSError *error))errorBlock;
 @end

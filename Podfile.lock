@@ -19,16 +19,19 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Masonry (0.5.0)
+  - MBProgressHUD (0.8)
   - ObjectiveSugar (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking
   - Masonry
+  - MBProgressHUD (~> 0.8)
   - ObjectiveSugar
 
 SPEC CHECKSUMS:
   AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
   Masonry: eb26a0073a2c4b0df533c39fd623fb11d79a1bd9
+  MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
   ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
 
 COCOAPODS: 0.33.1

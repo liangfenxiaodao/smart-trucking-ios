@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C6F0955564844B0B1129F69 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5729114564585936844CA /* libPods.a */; };
+		368677ED565AAB5E51ED3080 /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F3858EF67485981AB91 /* GoodsViewController.m */; };
 		3686785F59A0BB34B4E59699 /* Good.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F9D0FFD2A1AC5442AE6 /* Good.m */; };
 		3686788B9AC8D17F64DC2384 /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867D2BA966DCAEB240BDDF /* ApiClient.m */; };
 		BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */; };
@@ -35,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		368670B7581994460386517F /* GoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsViewController.h; sourceTree = "<group>"; };
 		36867427058ACE886D62E244 /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
 		368678A4B143E7E69BB8F748 /* Good.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Good.h; sourceTree = "<group>"; };
 		36867D2BA966DCAEB240BDDF /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
+		36867F3858EF67485981AB91 /* GoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsViewController.m; sourceTree = "<group>"; };
 		36867F9D0FFD2A1AC5442AE6 /* Good.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Good.m; sourceTree = "<group>"; };
 		3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		BD84505016193D534B7F2ED5 /* SmartTruckingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTruckingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +96,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		36867FDF0EFB07A1C9A78B4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				36867F3858EF67485981AB91 /* GoodsViewController.m */,
+				368670B7581994460386517F /* GoodsViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		BD8452CA3A0B31B7E9816166 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +158,7 @@
 				36867D2BA966DCAEB240BDDF /* ApiClient.m */,
 				36867427058ACE886D62E244 /* ApiClient.h */,
 				36867864C87D2A5E93F0EF27 /* Model */,
+				36867FDF0EFB07A1C9A78B4E /* Controller */,
 			);
 			path = SmartTrucking;
 			sourceTree = "<group>";
@@ -298,6 +311,7 @@
 				BD8458CCEDCDF861786A5B79 /* AppDelegate.m in Sources */,
 				3686788B9AC8D17F64DC2384 /* ApiClient.m in Sources */,
 				3686785F59A0BB34B4E59699 /* Good.m in Sources */,
+				368677ED565AAB5E51ED3080 /* GoodsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
