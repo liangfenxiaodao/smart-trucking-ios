@@ -69,8 +69,8 @@
   [self.nameLabel setText:goods.name];
   [self.fromLabel setText:goods.fromSuburb];
   [self.toLabel setText:goods.toSuburb];
-  [self.pickUpTimeLabel setText:goods.pickUpTime];
-  [self.arriveTimeLabel setText:goods.arriveTime];
+  [self.pickUpTimeLabel setText:goods.formattedPickupTime];
+  [self.arriveTimeLabel setText:goods.formattedArriveTime];
   [self.weightLabel setText:[NSString stringWithFormat:@"重量: %.1f吨", goods.weight]];
   [self.priceLabel setText:[NSString stringWithFormat:@"$%i", goods.price]];
 };
