@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C6F0955564844B0B1129F69 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5729114564585936844CA /* libPods.a */; };
+		3686702F7DA5ABCC55CAD1F3 /* debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3686798695D53EC257390DFA /* debug.xcconfig */; };
+		368672230E915FE6FE534FB0 /* common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368675CCE862A6965184AE10 /* common.xcconfig */; };
 		36867482797A84B510A91371 /* GoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867763F50586822930A8EF /* GoodsCell.m */; };
 		3686751DFEFCADE2834E1736 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A4A0403146DB99DFB66 /* SearchViewController.m */; };
 		368676950B79930720B55DA9 /* UIColor+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867EEF60408FB5FF28577F /* UIColor+SmartTrucking.m */; };
@@ -17,6 +19,7 @@
 		3686788B9AC8D17F64DC2384 /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867D2BA966DCAEB240BDDF /* ApiClient.m */; };
 		36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */; };
 		36867E4F8700F2737A29F750 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368678D88DBF2E4F6D58DC53 /* PublishViewController.m */; };
+		36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368674E1227DD200EFEF046E /* release.xcconfig */; };
 		BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */; };
 		BD84519A563002F19E7A1950 /* SmartTruckingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845CF952F93904B19B0A4A /* SmartTruckingTests.m */; };
 		BD84520E336995ED89FC850B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84546F903691CC22FCF176 /* UIKit.framework */; };
@@ -47,11 +50,14 @@
 		36867225497198AFDAC080F2 /* UIColor+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SmartTrucking.h"; sourceTree = "<group>"; };
 		368672A137C57FDBE40430F2 /* PublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishViewController.h; sourceTree = "<group>"; };
 		36867427058ACE886D62E244 /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
+		368674E1227DD200EFEF046E /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		368675CCE862A6965184AE10 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = common.xcconfig; sourceTree = "<group>"; };
 		36867763F50586822930A8EF /* GoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsCell.m; sourceTree = "<group>"; };
 		368678A4B143E7E69BB8F748 /* Goods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goods.h; sourceTree = "<group>"; };
 		368678D88DBF2E4F6D58DC53 /* PublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishViewController.m; sourceTree = "<group>"; };
 		3686796956F47C37488E5D84 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		368679863396CB326E8879F7 /* UIFont+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SmartTrucking.m"; sourceTree = "<group>"; };
+		3686798695D53EC257390DFA /* debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		36867A4A0403146DB99DFB66 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		36867A8568D822761D2786CE /* GoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsCell.h; sourceTree = "<group>"; };
 		36867A94257486DDADAB3CC3 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
@@ -134,6 +140,16 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		36867DAC816BAE071428110F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3686798695D53EC257390DFA /* debug.xcconfig */,
+				368674E1227DD200EFEF046E /* release.xcconfig */,
+				368675CCE862A6965184AE10 /* common.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		36867FDF0EFB07A1C9A78B4E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +173,7 @@
 				BD845A1FE76180FCEA06A6CA /* SmartTrucking */,
 				BD845A96034420E17740D735 /* SmartTruckingTests */,
 				3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */,
+				36867DAC816BAE071428110F /* Config */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,8 +302,6 @@
 			mainGroup = BD8452CA3A0B31B7E9816166;
 			productRefGroup = BD845E9F92284D684E637AD1 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				BD8455170B87DCB156741248 /* SmartTrucking */,
@@ -310,6 +325,9 @@
 			files = (
 				BD845F6B5B1F45C9F8AB6530 /* InfoPlist.strings in Resources */,
 				BD845EE75C5D1B914AAD0D30 /* Images.xcassets in Resources */,
+				3686702F7DA5ABCC55CAD1F3 /* debug.xcconfig in Resources */,
+				36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */,
+				368672230E915FE6FE534FB0 /* common.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,13 +458,14 @@
 		};
 		BD8451A108E9B566D5A473C6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */;
+			baseConfigurationReference = 368674E1227DD200EFEF046E /* release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SmartTrucking/SmartTrucking-Prefix.pch";
 				INFOPLIST_FILE = "SmartTrucking/SmartTrucking-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -469,13 +488,14 @@
 		};
 		BD845683AD64184F2808C243 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */;
+			baseConfigurationReference = 3686798695D53EC257390DFA /* debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SmartTrucking/SmartTrucking-Prefix.pch";
 				INFOPLIST_FILE = "SmartTrucking/SmartTrucking-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -554,6 +574,7 @@
 				BD845D385110466048FE019A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD845D63F54ADFEA523B746F /* Build configuration list for PBXNativeTarget "SmartTrucking" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +583,7 @@
 				BD8451A108E9B566D5A473C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

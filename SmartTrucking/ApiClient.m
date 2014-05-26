@@ -17,7 +17,9 @@ static ApiClient *sharedInstance;
   static dispatch_once_t oneToken;
 
   dispatch_once(&oneToken, ^{
-    sharedInstance = [[ApiClient alloc] initWithServer:@"smart-trucking.herokuapp.com"];
+      NSString *serverProtocol = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Server Protocol"];
+      NSString *serverAddress = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Server Address"];
+      sharedInstance = [[ApiClient alloc] initWithServer:serverAddress andProtocol: serverProtocol];
   });
 
   return sharedInstance;
@@ -39,10 +41,10 @@ static ApiClient *sharedInstance;
   ];
 };
 
-- (instancetype)initWithServer:(NSString *)server {
+- (instancetype)initWithServer:(NSString *)server andProtocol: (NSString *)protocol{
   self = [super init];
   if (self) {
-    NSString *url = [NSString stringWithFormat:@"http://%@", server];
+    NSString *url = [NSString stringWithFormat:@"%@://%@", protocol, server];
     _requestOperationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:url]];
   }
   return self;

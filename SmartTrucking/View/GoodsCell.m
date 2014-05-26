@@ -11,6 +11,7 @@
 @property(nonatomic, strong) UILabel *priceLabel;
 @property(nonatomic, strong) UIImageView *truckImage;
 @property(nonatomic, strong) UILabel *weightLabel;
+@property (nonatomic, strong) UILabel *volumeLabel;
 @end
 
 @implementation GoodsCell {
@@ -20,7 +21,6 @@
 - (id)init {
   self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"GoodsCell"];
   if (!self) return nil;
-//  self.nameLabel = [self createLabelWith:[UIFont goodsLocationFont]];
   self.fromLabel = [self createLabelWith:[UIFont goodsLocationFont]];
   self.toLabel = [self createLabelWith:[UIFont goodsLocationFont]];
   self.truckImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"truck"]];
@@ -29,6 +29,7 @@
   self.arriveTimeLabel = [self createLabel];
   self.priceLabel = [self createLabel];
   [self.priceLabel setTextColor:[UIColor textColorPrice]];
+  self.volumeLabel = [self createLabel];
   self.weightLabel = [self createLabel];
   [self layout];
   return self;
@@ -43,13 +44,17 @@
     maker.top.equalTo(self.fromLabel.mas_bottom).with.offset(5);
     maker.left.equalTo(self.mas_left).with.offset(10);
   }];
-  [self.weightLabel mas_makeConstraints:^(MASConstraintMaker *maker){
+  [self.volumeLabel mas_makeConstraints:^(MASConstraintMaker *maker){
     maker.top.equalTo(self.pickUpTimeLabel.mas_bottom).with.offset(15);
     maker.left.equalTo(self.mas_left).with.offset(10);
   }];
+  [self.weightLabel mas_makeConstraints:^(MASConstraintMaker *maker){
+    maker.top.equalTo(self.volumeLabel.mas_top);
+    maker.right.equalTo(self.priceLabel.mas_left).with.offset(-90);
+  }];
   [self.priceLabel mas_makeConstraints:^(MASConstraintMaker *maker){
-    maker.top.equalTo(self.weightLabel.mas_top);
-    maker.left.equalTo(self.weightLabel.mas_right).with.offset(10);
+    maker.top.equalTo(self.volumeLabel.mas_top);
+    maker.right.equalTo(self.mas_right).with.offset(-30);
   }];
   [self.truckImage mas_makeConstraints:^(MASConstraintMaker *maker){
     maker.top.equalTo(self.mas_top).with.offset(15);
@@ -71,8 +76,9 @@
   [self.toLabel setText:goods.toSuburb];
   [self.pickUpTimeLabel setText:goods.formattedPickupTime];
   [self.arriveTimeLabel setText:goods.formattedArriveTime];
-  [self.weightLabel setText:[NSString stringWithFormat:@"重量: %.1f吨", goods.weight]];
-  [self.priceLabel setText:[NSString stringWithFormat:@"$%i", goods.price]];
+  [self.volumeLabel setText:[NSString stringWithFormat:@"%@", goods.volume]];
+  [self.weightLabel setText:[NSString stringWithFormat:@"%.1fT", goods.weight]];
+  [self.priceLabel setText:[NSString stringWithFormat:@"Rate: $%i", goods.price]];
 };
 
 - (UILabel *)createLabel {

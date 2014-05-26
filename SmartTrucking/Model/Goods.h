@@ -9,6 +9,7 @@
 @property(nonatomic, assign) int price;
 @property(nonatomic, strong) NSString *bidEndingTime;
 @property(nonatomic, assign) float weight;
+@property(nonatomic, strong) NSString *volume;
 @property (nonatomic, strong) NSString *formattedPickupTime;
 @property (nonatomic, strong) NSString *formattedArriveTime;
 - (id)initWithDictionary:(NSDictionary *)dictionary;

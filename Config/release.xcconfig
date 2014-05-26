@@ -1,0 +1,10 @@
+#include "common.xcconfig"
+
+VALIDATE_PRODUCT = YES
+CODE_SIGN_IDENTITY = iPhone Distribution
+COPY_PHASE_STRIP = YES
+
+ENABLE_NS_ASSERTIONS = NO
+
+SERVER_PROTOCAL = http
+SERVER_ADDRESS = smart-trucking.herokuapp.com
