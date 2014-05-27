@@ -3,6 +3,7 @@
 #import "ApiClient.h"
 #import "Goods.h"
 #import "GoodsCell.h"
+#import "GoodsSummaryViewController.h"
 
 @interface GoodsViewController ()
 
@@ -16,8 +17,8 @@
 - (id)init {
   self = [super init];
   if (!self) return nil;
-  [self.navigationItem setTitle:@"当前货源"];
-  [self.tabBarItem setTitle:@"货源"];
+  [self.navigationItem setTitle:@"Listings"];
+  [self.tabBarItem setTitle:@"Listings"];
   [self.tabBarItem setImage:[UIImage imageNamed:@"interstate_truck"]];
   
   _goodsArray = [[NSMutableArray alloc] init];
@@ -58,6 +59,12 @@
   } error:^(NSError *error) {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
   }];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  Goods *goods = [self.goodsArray objectAtIndex:(NSUInteger) indexPath.row];
+  GoodsSummaryViewController *summaryViewController = [[GoodsSummaryViewController alloc] initWithGoods:goods];
+  [self.navigationController pushViewController:summaryViewController animated:YES];
 }
 
 @end

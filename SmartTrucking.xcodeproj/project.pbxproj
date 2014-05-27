@@ -17,6 +17,7 @@
 		3686785F59A0BB34B4E59699 /* Goods.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F9D0FFD2A1AC5442AE6 /* Goods.m */; };
 		3686786252891C134CFF3673 /* UIFont+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = 368679863396CB326E8879F7 /* UIFont+SmartTrucking.m */; };
 		3686788B9AC8D17F64DC2384 /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867D2BA966DCAEB240BDDF /* ApiClient.m */; };
+		36867B265CA756EFB8F9CA19 /* GoodsSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368675B2B4A33226C23F72B2 /* GoodsSummaryViewController.m */; };
 		36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */; };
 		36867E4F8700F2737A29F750 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368678D88DBF2E4F6D58DC53 /* PublishViewController.m */; };
 		36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368674E1227DD200EFEF046E /* release.xcconfig */; };
@@ -51,6 +52,7 @@
 		368672A137C57FDBE40430F2 /* PublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishViewController.h; sourceTree = "<group>"; };
 		36867427058ACE886D62E244 /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
 		368674E1227DD200EFEF046E /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		368675B2B4A33226C23F72B2 /* GoodsSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsSummaryViewController.m; sourceTree = "<group>"; };
 		368675CCE862A6965184AE10 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = common.xcconfig; sourceTree = "<group>"; };
 		36867763F50586822930A8EF /* GoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsCell.m; sourceTree = "<group>"; };
 		368678A4B143E7E69BB8F748 /* Goods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goods.h; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		36867A94257486DDADAB3CC3 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
 		36867CCCF2600D8A42A8C916 /* UIFont+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SmartTrucking.h"; sourceTree = "<group>"; };
 		36867D2BA966DCAEB240BDDF /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
+		36867E85EA628DAD49E68323 /* GoodsSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsSummaryViewController.h; sourceTree = "<group>"; };
 		36867EEF60408FB5FF28577F /* UIColor+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SmartTrucking.m"; sourceTree = "<group>"; };
 		36867F3858EF67485981AB91 /* GoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsViewController.m; sourceTree = "<group>"; };
 		36867F9D0FFD2A1AC5442AE6 /* Goods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goods.m; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 				368672A137C57FDBE40430F2 /* PublishViewController.h */,
 				36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */,
 				36867A94257486DDADAB3CC3 /* MyAccountViewController.h */,
+				368675B2B4A33226C23F72B2 /* GoodsSummaryViewController.m */,
+				36867E85EA628DAD49E68323 /* GoodsSummaryViewController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */,
 				368676950B79930720B55DA9 /* UIColor+SmartTrucking.m in Sources */,
 				3686786252891C134CFF3673 /* UIFont+SmartTrucking.m in Sources */,
+				36867B265CA756EFB8F9CA19 /* GoodsSummaryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

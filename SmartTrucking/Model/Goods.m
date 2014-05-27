@@ -13,12 +13,26 @@
   return self;
 }
 
+- (NSString *)specialCarryingPermit {
+  return _specialCarryingPermitRequired? @"Required" : @"No";
+}
+
+- (NSString *)palletJack {
+  return _palletJackRequired? @"Required" : @"No";
+}
+
+
+- (NSString *)getWeight{
+  return [NSString stringWithFormat:@"%@T", _weight];
+}
+
 - (NSString *)formatDate: (NSString *)date {
   NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
   [dateFormatter setDateFormat:@"dd/MM/yy hh:mm a"];
   NSString *str_date = [dateFormatter stringFromDate:[self parseDate:date]];
   return str_date;
 }
+
 - (NSDate*) parseDate:(NSString*)date {
   NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
   [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
