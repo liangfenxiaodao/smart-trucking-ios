@@ -16,9 +16,9 @@
   [self.navigationItem setTitle:@"Summary"];
   self.sectionsAndRows = [NSMutableArray arrayWithArray:@[
           @[@{@"price" : @"Reference Rate: "}, @{@"volume" : @"Volume: "}, @{@"weight" : @"Weight: "}],
-          @[@{@"fromSuburb" : @"Pick up: "}, @{@"toSuburb" : @"Drop off: "}, @{@"formattedPickupTime" : @"ETP: "}, @{@"formattedArriveTime" : @"ETA: "}],
-          @[@{@"carType" : @"Car Type: "}, @{@"specialCarryingPermit" : @"Special Carrying Permit: "}, @{@"palletJack" : @"Pallet Jack: "}, @{@"tailGate" : @"Tailgate: "}],
-          @[@{@"biddingAmount" : @"Bidding Activity"}, @{@"sellerName" : @"Seller"}]
+          @[@{@"fromSuburb" : @"Pick up: "}, @{@"formattedPickupTime" : @"ETP: "}, @{@"toSuburb" : @"Drop off: "}, @{@"formattedArriveTime" : @"ETA: "}],
+          @[@{@"vehicleType" : @"Vehicle Type: "}, @{@"specialCarryingPermit" : @"Special Carrying Permit: "}, @{@"palletJack" : @"Pallet Jack: "}, @{@"tailGate" : @"Tailgate: "}],
+          @[@{@"biddingAmount" : @"Bidding Activity"}, @{@"customerName" : @"Customer"}]
   ]];
   return self;
 }
@@ -42,12 +42,19 @@
   NSString *propertyKey = [dictionary allKeys][0];
   cell.textLabel.text = [dictionary valueForKey:propertyKey];
   id value = [[self goods] valueForKey:propertyKey];
-  if ([value isKindOfClass:[NSString class]])
+  if ([value isKindOfClass:[NSString class]]) {
     cell.detailTextLabel.text = value;
-  else if ([propertyKey isEqualToString:@"price"])
+  }
+  else if ([propertyKey isEqualToString:@"price"]) {
     cell.detailTextLabel.text = [NSString stringWithFormat:@"$%@", value];
-  else
-    cell.detailTextLabel.text = [(NSNumber *)value stringValue];
+  }
+  else {
+    cell.detailTextLabel.text = [(NSNumber *) value stringValue];
+  }
+
+  if(indexPath.section == 3){
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+  }
   return cell;
 }
 

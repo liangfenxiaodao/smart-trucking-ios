@@ -12,12 +12,12 @@
 @property(nonatomic, strong) NSString *volume;
 @property(nonatomic, strong) NSString *formattedPickupTime;
 @property(nonatomic, strong) NSString *formattedArriveTime;
-@property(nonatomic, strong) NSString *carType;
+@property(nonatomic, strong) NSString *vehicleType;
 @property(nonatomic, assign) BOOL specialCarryingPermitRequired;
 @property(nonatomic, assign) BOOL palletJackRequired;
 @property(nonatomic, strong) NSString *tailGate;
 @property(nonatomic, assign) int biddingAmount;
-@property(nonatomic, strong) NSString *sellerName;
+@property(nonatomic, strong) NSString *customerName;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 - (NSString *)specialCarryingPermit;
