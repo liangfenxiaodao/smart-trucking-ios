@@ -26,7 +26,7 @@ static ApiClient *sharedInstance;
 }
 
 - (void)getAllGoodsWithSuccess:(void(^)(NSArray *result))successBlock error:(void(^)(NSError *error))errorBlock {
-  [_requestOperationManager GET:@"/goods"
+  [_requestOperationManager GET:@"/listings"
      parameters:nil
      success:^(AFHTTPRequestOperation *operation, id response) {
        NSMutableArray *result = [[NSMutableArray alloc]init];
