@@ -10,14 +10,14 @@
 		2C6F0955564844B0B1129F69 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5729114564585936844CA /* libPods.a */; };
 		3686702F7DA5ABCC55CAD1F3 /* debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3686798695D53EC257390DFA /* debug.xcconfig */; };
 		368672230E915FE6FE534FB0 /* common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368675CCE862A6965184AE10 /* common.xcconfig */; };
-		36867482797A84B510A91371 /* GoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867763F50586822930A8EF /* GoodsCell.m */; };
+		36867482797A84B510A91371 /* ListingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867763F50586822930A8EF /* ListingsCell.m */; };
 		3686751DFEFCADE2834E1736 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A4A0403146DB99DFB66 /* SearchViewController.m */; };
 		368676950B79930720B55DA9 /* UIColor+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867EEF60408FB5FF28577F /* UIColor+SmartTrucking.m */; };
-		368677ED565AAB5E51ED3080 /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F3858EF67485981AB91 /* GoodsViewController.m */; };
-		3686785F59A0BB34B4E59699 /* Goods.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F9D0FFD2A1AC5442AE6 /* Goods.m */; };
+		368677ED565AAB5E51ED3080 /* ListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F3858EF67485981AB91 /* ListingsViewController.m */; };
+		3686785F59A0BB34B4E59699 /* Listing.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F9D0FFD2A1AC5442AE6 /* Listing.m */; };
 		3686786252891C134CFF3673 /* UIFont+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = 368679863396CB326E8879F7 /* UIFont+SmartTrucking.m */; };
 		3686788B9AC8D17F64DC2384 /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867D2BA966DCAEB240BDDF /* ApiClient.m */; };
-		36867B265CA756EFB8F9CA19 /* GoodsSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368675B2B4A33226C23F72B2 /* GoodsSummaryViewController.m */; };
+		36867B265CA756EFB8F9CA19 /* ListingsSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368675B2B4A33226C23F72B2 /* ListingsSummaryViewController.m */; };
 		36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */; };
 		36867E4F8700F2737A29F750 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368678D88DBF2E4F6D58DC53 /* PublishViewController.m */; };
 		36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368674E1227DD200EFEF046E /* release.xcconfig */; };
@@ -46,29 +46,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		368670B7581994460386517F /* GoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsViewController.h; sourceTree = "<group>"; };
+		368670B7581994460386517F /* ListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsViewController.h; sourceTree = "<group>"; };
 		36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
 		36867225497198AFDAC080F2 /* UIColor+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SmartTrucking.h"; sourceTree = "<group>"; };
 		368672A137C57FDBE40430F2 /* PublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishViewController.h; sourceTree = "<group>"; };
 		36867427058ACE886D62E244 /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
 		368674E1227DD200EFEF046E /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
-		368675B2B4A33226C23F72B2 /* GoodsSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsSummaryViewController.m; sourceTree = "<group>"; };
+		368675B2B4A33226C23F72B2 /* ListingsSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsSummaryViewController.m; sourceTree = "<group>"; };
 		368675CCE862A6965184AE10 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = common.xcconfig; sourceTree = "<group>"; };
-		36867763F50586822930A8EF /* GoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsCell.m; sourceTree = "<group>"; };
-		368678A4B143E7E69BB8F748 /* Goods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goods.h; sourceTree = "<group>"; };
+		36867763F50586822930A8EF /* ListingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsCell.m; sourceTree = "<group>"; };
+		368678A4B143E7E69BB8F748 /* Listing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listing.h; sourceTree = "<group>"; };
 		368678D88DBF2E4F6D58DC53 /* PublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishViewController.m; sourceTree = "<group>"; };
 		3686796956F47C37488E5D84 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		368679863396CB326E8879F7 /* UIFont+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SmartTrucking.m"; sourceTree = "<group>"; };
 		3686798695D53EC257390DFA /* debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		36867A4A0403146DB99DFB66 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		36867A8568D822761D2786CE /* GoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsCell.h; sourceTree = "<group>"; };
+		36867A8568D822761D2786CE /* ListingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsCell.h; sourceTree = "<group>"; };
 		36867A94257486DDADAB3CC3 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
 		36867CCCF2600D8A42A8C916 /* UIFont+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SmartTrucking.h"; sourceTree = "<group>"; };
 		36867D2BA966DCAEB240BDDF /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
-		36867E85EA628DAD49E68323 /* GoodsSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsSummaryViewController.h; sourceTree = "<group>"; };
+		36867E85EA628DAD49E68323 /* ListingsSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsSummaryViewController.h; sourceTree = "<group>"; };
 		36867EEF60408FB5FF28577F /* UIColor+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SmartTrucking.m"; sourceTree = "<group>"; };
-		36867F3858EF67485981AB91 /* GoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsViewController.m; sourceTree = "<group>"; };
-		36867F9D0FFD2A1AC5442AE6 /* Goods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goods.m; sourceTree = "<group>"; };
+		36867F3858EF67485981AB91 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsViewController.m; sourceTree = "<group>"; };
+		36867F9D0FFD2A1AC5442AE6 /* Listing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Listing.m; sourceTree = "<group>"; };
 		3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		BD84505016193D534B7F2ED5 /* SmartTruckingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTruckingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD84546F903691CC22FCF176 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -117,8 +117,8 @@
 		3686755CDAB9171CE20826E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				36867763F50586822930A8EF /* GoodsCell.m */,
-				36867A8568D822761D2786CE /* GoodsCell.h */,
+				36867763F50586822930A8EF /* ListingsCell.m */,
+				36867A8568D822761D2786CE /* ListingsCell.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,8 +126,8 @@
 		36867864C87D2A5E93F0EF27 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				36867F9D0FFD2A1AC5442AE6 /* Goods.m */,
-				368678A4B143E7E69BB8F748 /* Goods.h */,
+				36867F9D0FFD2A1AC5442AE6 /* Listing.m */,
+				368678A4B143E7E69BB8F748 /* Listing.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,16 +156,16 @@
 		36867FDF0EFB07A1C9A78B4E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				36867F3858EF67485981AB91 /* GoodsViewController.m */,
-				368670B7581994460386517F /* GoodsViewController.h */,
+				36867F3858EF67485981AB91 /* ListingsViewController.m */,
+				368670B7581994460386517F /* ListingsViewController.h */,
 				36867A4A0403146DB99DFB66 /* SearchViewController.m */,
 				3686796956F47C37488E5D84 /* SearchViewController.h */,
 				368678D88DBF2E4F6D58DC53 /* PublishViewController.m */,
 				368672A137C57FDBE40430F2 /* PublishViewController.h */,
 				36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */,
 				36867A94257486DDADAB3CC3 /* MyAccountViewController.h */,
-				368675B2B4A33226C23F72B2 /* GoodsSummaryViewController.m */,
-				36867E85EA628DAD49E68323 /* GoodsSummaryViewController.h */,
+				368675B2B4A33226C23F72B2 /* ListingsSummaryViewController.m */,
+				36867E85EA628DAD49E68323 /* ListingsSummaryViewController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -379,15 +379,15 @@
 				BD845B756B6772CBBA1F6E3B /* main.m in Sources */,
 				BD8458CCEDCDF861786A5B79 /* AppDelegate.m in Sources */,
 				3686788B9AC8D17F64DC2384 /* ApiClient.m in Sources */,
-				3686785F59A0BB34B4E59699 /* Goods.m in Sources */,
-				368677ED565AAB5E51ED3080 /* GoodsViewController.m in Sources */,
-				36867482797A84B510A91371 /* GoodsCell.m in Sources */,
+				3686785F59A0BB34B4E59699 /* Listing.m in Sources */,
+				368677ED565AAB5E51ED3080 /* ListingsViewController.m in Sources */,
+				36867482797A84B510A91371 /* ListingsCell.m in Sources */,
 				3686751DFEFCADE2834E1736 /* SearchViewController.m in Sources */,
 				36867E4F8700F2737A29F750 /* PublishViewController.m in Sources */,
 				36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */,
 				368676950B79930720B55DA9 /* UIColor+SmartTrucking.m in Sources */,
 				3686786252891C134CFF3673 /* UIFont+SmartTrucking.m in Sources */,
-				36867B265CA756EFB8F9CA19 /* GoodsSummaryViewController.m in Sources */,
+				36867B265CA756EFB8F9CA19 /* ListingsSummaryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

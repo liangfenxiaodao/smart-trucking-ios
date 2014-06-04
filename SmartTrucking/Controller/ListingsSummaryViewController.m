@@ -1,15 +1,15 @@
-#import "GoodsSummaryViewController.h"
-#import "Goods.h"
+#import "ListingsSummaryViewController.h"
+#import "Listing.h"
 
-@interface GoodsSummaryViewController ()
-@property(nonatomic, strong) Goods *goods;
+@interface ListingsSummaryViewController ()
+@property(nonatomic, strong) Listing *goods;
 @property(nonatomic, strong) NSMutableArray *sectionsAndRows;
 @end
 
-@implementation GoodsSummaryViewController {
+@implementation ListingsSummaryViewController {
 
 }
-- (id)initWithGoods:(Goods *)goods {
+- (id)initWithGoods:(Listing *)goods {
   self = [super initWithStyle:UITableViewStyleGrouped];
   if (!self) return nil;
   self.goods = goods;

@@ -1,9 +1,8 @@
-#import "GoodsCell.h"
+#import "ListingsCell.h"
 #import "Masonry.h"
-#import "Goods.h"
+#import "Listing.h"
 
-@interface GoodsCell ()
-@property(nonatomic, strong) UILabel *nameLabel;
+@interface ListingsCell ()
 @property(nonatomic, strong) UILabel *fromLabel;
 @property(nonatomic, strong) UILabel *toLabel;
 @property(nonatomic, strong) UILabel *pickUpTimeLabel;
@@ -14,12 +13,12 @@
 @property (nonatomic, strong) UILabel *volumeLabel;
 @end
 
-@implementation GoodsCell {
+@implementation ListingsCell {
 
 }
 
 - (id)init {
-  self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"GoodsCell"];
+  self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ListingsCell"];
   if (!self) return nil;
   self.fromLabel = [self createLabelWith:[UIFont goodsLocationFont]];
   self.toLabel = [self createLabelWith:[UIFont goodsLocationFont]];
@@ -70,8 +69,7 @@
   }];
 }
 
-- (void)setGoods:(Goods *)goods{
-  [self.nameLabel setText:goods.name];
+- (void)setGoods:(Listing *)goods{
   [self.fromLabel setText:goods.fromSuburb];
   [self.toLabel setText:goods.toSuburb];
   [self.pickUpTimeLabel setText:goods.formattedPickupTime];

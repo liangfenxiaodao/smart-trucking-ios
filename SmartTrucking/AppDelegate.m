@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "GoodsViewController.h"
+#import "ListingsViewController.h"
 #import "SearchViewController.h"
 #import "PublishViewController.h"
 #import "MyAccountViewController.h"
@@ -17,7 +17,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   UITabBarController *tabBarController = [[UITabBarController alloc] init];
-  UINavigationController *goodsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[GoodsViewController alloc] init]];
+  UINavigationController *goodsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[ListingsViewController alloc] init]];
   [tabBarController setViewControllers:@[
           goodsNavigationController,
           [[SearchViewController alloc] init],

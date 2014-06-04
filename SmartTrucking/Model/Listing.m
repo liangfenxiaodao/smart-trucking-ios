@@ -1,13 +1,23 @@
-#import "Goods.h"
+#import "Listing.h"
 
-@implementation Goods {
+@implementation Listing {
 
 }
 
 - (id)initWithDictionary:(NSDictionary *)dictionary {
   self = [super init];
   if (!self) return nil;
-  [self setValuesForKeysWithDictionary:dictionary];
+  self.id = dictionary[@"_id"];
+  self.userId = dictionary[@"user_id"];
+  self.arriveTime = dictionary[@"arrive_time"];
+  self.bidEndingTime = dictionary[@"bid_ending_time"];
+  self.palletJackRequired = (BOOL) dictionary[@"pallet_jack_required"];
+  self.price = (int) dictionary[@"price"];
+  self.specialCarryingPermitRequired = (BOOL) dictionary[@"special_carrying_permit_required"];
+  self.tailGate = dictionary[@"tail_gate"];
+  self.vehicleType = dictionary[@"vehicle_type"];
+  self.volume = dictionary[@"volume"];
+  self.weight = dictionary[@"weight"];
   self.formattedPickupTime = [self formatDate:self.pickUpTime];
   self.formattedArriveTime = [self formatDate:self.arriveTime];
   return self;
@@ -35,7 +45,7 @@
 
 - (NSDate*) parseDate:(NSString*)date {
   NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-  [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+  [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssXXX"];
   [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
   return [formatter dateFromString:date];
 }

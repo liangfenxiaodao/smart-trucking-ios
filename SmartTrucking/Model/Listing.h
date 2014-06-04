@@ -1,7 +1,8 @@
 #import <Foundation/Foundation.h>
 
-@interface Goods : NSObject
-@property(nonatomic, strong) NSString *name;
+@interface Listing : NSObject
+@property(nonatomic, strong) NSString *id;
+@property(nonatomic, strong) NSString *userId;
 @property(nonatomic, strong) NSString *fromSuburb;
 @property(nonatomic, strong) NSString *toSuburb;
 @property(nonatomic, strong) NSString *pickUpTime;

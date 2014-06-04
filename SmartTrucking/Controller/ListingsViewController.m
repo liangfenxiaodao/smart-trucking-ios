@@ -1,16 +1,16 @@
-#import "GoodsViewController.h"
+#import "ListingsViewController.h"
 #import "MBProgressHUD.h"
 #import "ApiClient.h"
-#import "Goods.h"
-#import "GoodsCell.h"
-#import "GoodsSummaryViewController.h"
+#import "Listing.h"
+#import "ListingsCell.h"
+#import "ListingsSummaryViewController.h"
 
-@interface GoodsViewController ()
+@interface ListingsViewController ()
 
 @property(nonatomic, strong) NSMutableArray *goodsArray;
 @end
 
-@implementation GoodsViewController {
+@implementation ListingsViewController {
 
 }
 
@@ -35,10 +35,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  Goods *goods = [_goodsArray objectAtIndex:(NSUInteger) indexPath.row];
-  GoodsCell *goodsCell = [tableView dequeueReusableCellWithIdentifier:@"GoodsCell"];
+  Listing *goods = [_goodsArray objectAtIndex:(NSUInteger) indexPath.row];
+  ListingsCell *goodsCell = [tableView dequeueReusableCellWithIdentifier:@"ListingsCell"];
   if(goodsCell == nil){
-    goodsCell = [[GoodsCell alloc]init];
+    goodsCell = [[ListingsCell alloc]init];
   }
   [goodsCell setGoods:goods];
   return goodsCell;
@@ -62,8 +62,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  Goods *goods = [self.goodsArray objectAtIndex:(NSUInteger) indexPath.row];
-  GoodsSummaryViewController *summaryViewController = [[GoodsSummaryViewController alloc] initWithGoods:goods];
+  Listing *goods = [self.goodsArray objectAtIndex:(NSUInteger) indexPath.row];
+  ListingsSummaryViewController *summaryViewController = [[ListingsSummaryViewController alloc] initWithGoods:goods];
   [self.navigationController pushViewController:summaryViewController animated:YES];
 }
 
