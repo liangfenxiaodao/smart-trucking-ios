@@ -3,5 +3,5 @@
 @class Listing;
 
 @interface ListingsCell : UITableViewCell
-- (void)setGoods:(Listing *)goods;
+- (void)setGoods:(Listing *)listing;
 @end

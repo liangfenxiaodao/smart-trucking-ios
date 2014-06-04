@@ -41,15 +41,15 @@
   }];
   [self.pickUpTimeLabel mas_makeConstraints:^(MASConstraintMaker *maker){
     maker.top.equalTo(self.fromLabel.mas_bottom).with.offset(5);
-    maker.left.equalTo(self.mas_left).with.offset(10);
+    maker.left.equalTo(self.fromLabel.mas_left);
   }];
   [self.volumeLabel mas_makeConstraints:^(MASConstraintMaker *maker){
     maker.top.equalTo(self.pickUpTimeLabel.mas_bottom).with.offset(15);
-    maker.left.equalTo(self.mas_left).with.offset(10);
+    maker.left.equalTo(self.fromLabel.mas_left);
   }];
   [self.weightLabel mas_makeConstraints:^(MASConstraintMaker *maker){
     maker.top.equalTo(self.volumeLabel.mas_top);
-    maker.right.equalTo(self.priceLabel.mas_left).with.offset(-90);
+    maker.centerX.equalTo(self.mas_centerX);
   }];
   [self.priceLabel mas_makeConstraints:^(MASConstraintMaker *maker){
     maker.top.equalTo(self.volumeLabel.mas_top);
@@ -69,14 +69,14 @@
   }];
 }
 
-- (void)setGoods:(Listing *)goods{
-  [self.fromLabel setText:goods.fromSuburb];
-  [self.toLabel setText:goods.toSuburb];
-  [self.pickUpTimeLabel setText:goods.formattedPickupTime];
-  [self.arriveTimeLabel setText:goods.formattedArriveTime];
-  [self.volumeLabel setText:[NSString stringWithFormat:@"%@", goods.volume]];
-  [self.weightLabel setText:goods.weight];
-  [self.priceLabel setText:[NSString stringWithFormat:@"Rate: $%i", goods.price]];
+- (void)setGoods:(Listing *)listing {
+  [self.fromLabel setText:listing.fromSuburb];
+  [self.toLabel setText:listing.toSuburb];
+  [self.pickUpTimeLabel setText:listing.formattedPickupTime];
+  [self.arriveTimeLabel setText:listing.formattedArriveTime];
+  [self.volumeLabel setText:[NSString stringWithFormat:@"%@", listing.volume]];
+  [self.weightLabel setText:listing.weight];
+  [self.priceLabel setText:[NSString stringWithFormat:@"Rate: $%i", listing.price]];
 };
 
 - (UILabel *)createLabel {

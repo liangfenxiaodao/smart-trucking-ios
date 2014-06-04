@@ -1,4 +1,5 @@
 #import "Listing.h"
+#import "NSString+ObjectiveSugar.h"
 
 @implementation Listing {
 
@@ -9,15 +10,20 @@
   if (!self) return nil;
   self.id = dictionary[@"_id"];
   self.userId = dictionary[@"user_id"];
+  self.pickUpTime = dictionary[@"pick_up_time"];
   self.arriveTime = dictionary[@"arrive_time"];
   self.bidEndingTime = dictionary[@"bid_ending_time"];
-  self.palletJackRequired = (BOOL) dictionary[@"pallet_jack_required"];
-  self.price = (int) dictionary[@"price"];
-  self.specialCarryingPermitRequired = (BOOL) dictionary[@"special_carrying_permit_required"];
+  self.palletJackRequired = [dictionary[@"pallet_jack_required"] boolValue];
+  self.price = [dictionary[@"price"] intValue];
+  self.specialCarryingPermitRequired = [dictionary[@"special_carrying_permit_required"] boolValue];
   self.tailGate = dictionary[@"tail_gate"];
   self.vehicleType = dictionary[@"vehicle_type"];
   self.volume = dictionary[@"volume"];
   self.weight = dictionary[@"weight"];
+  self.fromAddress = dictionary[@"from_address"];
+  self.toAddress = dictionary[@"to_address"];
+  self.fromSuburb = [self.fromAddress split:@","][1];
+  self.toSuburb = [self.toAddress split:@","][1];
   self.formattedPickupTime = [self formatDate:self.pickUpTime];
   self.formattedArriveTime = [self formatDate:self.arriveTime];
   return self;
