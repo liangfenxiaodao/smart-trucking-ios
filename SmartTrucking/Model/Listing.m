@@ -1,5 +1,6 @@
 #import "Listing.h"
 #import "NSString+ObjectiveSugar.h"
+#import "Address.h"
 
 @implementation Listing {
 
@@ -20,10 +21,10 @@
   self.vehicleType = dictionary[@"vehicle_type"];
   self.volume = dictionary[@"volume"];
   self.weight = dictionary[@"weight"];
-  self.fromAddress = dictionary[@"from_address"];
-  self.toAddress = dictionary[@"to_address"];
-  self.fromSuburb = [self.fromAddress split:@","][1];
-  self.toSuburb = [self.toAddress split:@","][1];
+  self.fromAddress = [[Address alloc]initWithString: dictionary[@"from_address"]];
+  self.toAddress = [[Address alloc]initWithString: dictionary[@"to_address"]];
+  self.fromSuburb = self.fromAddress.suburb;
+  self.toSuburb = self.toAddress.suburb;
   self.formattedPickupTime = [self formatDate:self.pickUpTime];
   self.formattedArriveTime = [self formatDate:self.arriveTime];
   return self;

@@ -1,12 +1,14 @@
 #import <Foundation/Foundation.h>
 
+@class Address;
+
 @interface Listing : NSObject
 @property(nonatomic, strong) NSString *id;
 @property(nonatomic, strong) NSString *userId;
 @property(nonatomic, strong) NSString *fromSuburb;
 @property(nonatomic, strong) NSString *toSuburb;
-@property(nonatomic, strong) NSString *fromAddress;
-@property(nonatomic, strong) NSString *toAddress;
+@property(nonatomic, strong) Address *fromAddress;
+@property(nonatomic, strong) Address *toAddress;
 @property(nonatomic, strong) NSString *pickUpTime;
 @property(nonatomic, strong) NSString *arriveTime;
 @property(nonatomic, assign) int price;

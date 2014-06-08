@@ -9,19 +9,20 @@
 #import "AppDelegate.h"
 #import "ListingsViewController.h"
 #import "SearchViewController.h"
-#import "PublishViewController.h"
 #import "MyAccountViewController.h"
+#import "AddListingViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   UITabBarController *tabBarController = [[UITabBarController alloc] init];
-  UINavigationController *goodsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[ListingsViewController alloc] init]];
+  UINavigationController *listingsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[ListingsViewController alloc] init]];
+  UINavigationController *addListingNavigationController = [[UINavigationController alloc] initWithRootViewController:[[AddListingViewController alloc]init] ];
   [tabBarController setViewControllers:@[
-          goodsNavigationController,
+          listingsNavigationController,
           [[SearchViewController alloc] init],
-          [[PublishViewController alloc] init],
+          addListingNavigationController,
           [[MyAccountViewController alloc] init]]];
   self.window.rootViewController = tabBarController;
   self.window.backgroundColor = [UIColor whiteColor];
