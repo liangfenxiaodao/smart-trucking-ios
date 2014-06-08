@@ -16,22 +16,20 @@
 - (id)initWithStyle:(UITableViewStyle)style {
   self = [super initWithStyle:style];
   if (self) {
-    [self.tabBarItem setTitle:@"发布"];
-    [self.tabBarItem setImage:[UIImage imageNamed:@"pen"]];
-
     Address *address1 = [[Address alloc] initWithString:@"6 Marama Street, Blackburn South, Melbourne, VIC, 3130, Australia"];
     Address *address2 = [[Address alloc] initWithString:@"18/20 Hull Road, Croydon, Melbourne, VIC, 3136, Australia"];
     self.address = [NSArray arrayWithObjects:address1, address2, nil];
     self.vehicleTypes = [NSArray arrayWithObjects:@"Van", @"Tray", @"Tautliner", @"Semi Trailor", nil];
     self.tailgates = [NSArray arrayWithObjects:@"not required", @"1.0T", @"1.5T", @"2.0T", @"2.5T", nil];
-    [self.navigationItem setTitle:@"Add Listing"];
+    self.navigationItem.leftBarButtonItem = self.cancelButton;
+    self.navigationItem.rightBarButtonItem = self.saveButton;
     [self initializeForm];
   }
   return self;
 }
 
 - (void)initializeForm {
-  XLFormDescriptor *form = [XLFormDescriptor formDescriptor];
+  XLFormDescriptor *form = [XLFormDescriptor formDescriptorWithTitle:@"Add Listing"];
 
   [self addPickupSection:form];
   [self addArriveSection:form];
@@ -58,10 +56,13 @@
   [row.cellConfigAtConfigure setObject:@"Reference Rate" forKey:@"textField.placeholder"];
   [section addFormRow:row];
 
+  row = [XLFormRowDescriptor formRowDescriptorWithTag:@"bidEndingTime" rowType:XLFormRowDescriptorTypeDateTimeInline title:@"Bid ending"];
+  row.value = [NSDate dateWithTimeIntervalSinceNow:60 * 60 * 25];
+  [section addFormRow:row];
+
   section = [XLFormSectionDescriptor formSection];
   [form addFormSection:section];
 
-  // Repeat
   row = [XLFormRowDescriptor formRowDescriptorWithTag:@"vehicleType" rowType:XLFormRowDescriptorTypeSelectorActionSheet title:@"Vehicle type"];
   row.selectorTitle = @"Vehicle Type";
   row.selectorOptions = @[[XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:self.vehicleTypes[0]],
@@ -98,7 +99,7 @@
   section = [XLFormSectionDescriptor formSectionWithTitle:@"Arrive"];
   [form addFormSection:section];
 
-  row = [XLFormRowDescriptor formRowDescriptorWithTag:@"arriveAddress" rowType:XLFormRowDescriptorTypeSelectorPush title:@"Select"];
+  row = [XLFormRowDescriptor formRowDescriptorWithTag:@"arriveAddress" rowType:XLFormRowDescriptorTypeSelectorActionSheet title:@"Select"];
   row.selectorOptions = @[[XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:((Address *) self.address[0]).description],
           [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:((Address *) self.address[1]).description]
   ];
@@ -131,7 +132,7 @@
   section = [XLFormSectionDescriptor formSectionWithTitle:@"Pick up"];
   [form addFormSection:section];
 
-  row = [XLFormRowDescriptor formRowDescriptorWithTag:@"pickupAddress" rowType:XLFormRowDescriptorTypeSelectorPush title:@"Select"];
+  row = [XLFormRowDescriptor formRowDescriptorWithTag:@"pickupAddress" rowType:XLFormRowDescriptorTypeSelectorActionSheet title:@"Select"];
   row.selectorOptions = @[
           [XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:((Address *) self.address[0]).description],
           [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:((Address *) self.address[1]).description]

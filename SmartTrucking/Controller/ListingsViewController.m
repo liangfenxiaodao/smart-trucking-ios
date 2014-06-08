@@ -4,6 +4,7 @@
 #import "Listing.h"
 #import "ListingsCell.h"
 #import "ListingsSummaryViewController.h"
+#import "AddListingViewController.h"
 
 @interface ListingsViewController ()
 
@@ -21,13 +22,15 @@
   [self.tabBarItem setTitle:@"Listings"];
   [self.tabBarItem setImage:[UIImage imageNamed:@"interstate_truck"]];
   [self.navigationItem.rightBarButtonItem = [UIBarButtonItem alloc]
-          initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add)];
+          initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addListing)];
   _goodsArray = [[NSMutableArray alloc] init];
   return self;
 }
 
-- (void)add {
-  NSLog(@"add");
+- (void)addListing {
+  AddListingViewController *addListingViewController = [[AddListingViewController alloc]init];
+  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addListingViewController];
+  [self presentViewController:navigationController animated:YES completion:^{}];
 }
 
 - (void)viewDidLoad {

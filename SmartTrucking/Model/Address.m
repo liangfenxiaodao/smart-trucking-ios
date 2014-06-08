@@ -24,7 +24,7 @@
 }
 
 - (NSString *)description {
-  return self.string;
+  return [NSString stringWithFormat:@"%@, %@, %@, %@, %@", self.street, self.suburb, self.city, self.state, self.postcode];
 }
 
 @end
