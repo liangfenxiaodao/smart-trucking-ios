@@ -20,9 +20,14 @@
   [self.navigationItem setTitle:@"Listings"];
   [self.tabBarItem setTitle:@"Listings"];
   [self.tabBarItem setImage:[UIImage imageNamed:@"interstate_truck"]];
-  
+  [self.navigationItem.rightBarButtonItem = [UIBarButtonItem alloc]
+          initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add)];
   _goodsArray = [[NSMutableArray alloc] init];
   return self;
+}
+
+- (void)add {
+  NSLog(@"add");
 }
 
 - (void)viewDidLoad {

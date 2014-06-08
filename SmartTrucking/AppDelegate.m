@@ -10,7 +10,7 @@
 #import "ListingsViewController.h"
 #import "SearchViewController.h"
 #import "MyAccountViewController.h"
-#import "AddListingViewController.h"
+#import "MoreInformationViewController.h"
 
 @implementation AppDelegate
 
@@ -18,12 +18,12 @@
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   UITabBarController *tabBarController = [[UITabBarController alloc] init];
   UINavigationController *listingsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[ListingsViewController alloc] init]];
-  UINavigationController *addListingNavigationController = [[UINavigationController alloc] initWithRootViewController:[[AddListingViewController alloc]init] ];
   [tabBarController setViewControllers:@[
           listingsNavigationController,
           [[SearchViewController alloc] init],
-          addListingNavigationController,
-          [[MyAccountViewController alloc] init]]];
+          [[MyAccountViewController alloc] init],
+          [[UINavigationController alloc] initWithRootViewController:[[MoreInformationViewController alloc] init]]
+  ]];
   self.window.rootViewController = tabBarController;
   self.window.backgroundColor = [UIColor whiteColor];
   [self.window makeKeyAndVisible];
