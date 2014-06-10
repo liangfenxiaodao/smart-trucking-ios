@@ -20,6 +20,7 @@
   self.vehicleType = dictionary[@"vehicle_type"];
   self.volume = dictionary[@"volume"];
   self.weight = dictionary[@"weight"];
+  self.jobNumber = dictionary[@"job_number"];
   self.pickupAddress = [[Address alloc]initWithString: dictionary[@"from_address"]];
   self.arriveAddress = [[Address alloc]initWithString: dictionary[@"to_address"]];
   self.fromSuburb = self.pickupAddress.suburb;

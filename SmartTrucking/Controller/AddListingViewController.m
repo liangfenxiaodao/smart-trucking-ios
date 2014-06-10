@@ -202,11 +202,14 @@
     id address = _address[(NSUInteger) addressIndex];
     [listing setValue:address forKey:propertyName];
   }];
-  [@[@"pickupTime", @"arriveTime", @"weight", @"price", @"bidEndingTime", @"specialCarryingPermitRequired", @"palletJackRequired"] each:^(id propertyName) {
+  [@[@"pickupTime", @"arriveTime", @"weight", @"price", @"bidEndingTime", @"jobNumber"] each:^(id propertyName) {
     [listing setValue:[[self.form formRowWithTag:propertyName] value] forKey:propertyName];
   }];
   [@[@"volume", @"vehicleType", @"tailgate"] each:^(id propertyName){
     [listing setValue:[[[self.form formRowWithTag:propertyName] value] formDisplayText] forKey:propertyName];
+  }];
+  [@[@"specialCarryingPermitRequired", @"palletJackRequired"] each:^(id propertyName){
+    [listing setValue:[NSNumber numberWithBool:[[self.form formRowWithTag:propertyName].value boolValue]] forKey:propertyName];
   }];
   listing.userId = @"538db70c250c9e56be000001";
   [[ApiClient client] addListing:listing

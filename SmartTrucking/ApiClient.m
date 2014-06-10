@@ -32,15 +32,16 @@ static ApiClient *sharedInstance;
      @"to_address_id": listing.arriveAddress.id,
      @"user_id": listing.userId,
      @"price": [NSNumber numberWithInt:listing.price],
-     @"weight": listing.weight,
-     @"volume": listing.volume,
+     @"weight": listing.weight?:@"0",
+     @"volume": listing.volume?:@"1.2x2.4x1.2",
      @"pick_up_time": listing.pickupTime,
      @"arrive_time": listing.arriveTime,
      @"bid_ending_time": listing.bidEndingTime,
-     @"vehicle_type": listing.vehicleType,
+     @"vehicle_type": listing.vehicleType?:@"Van",
+     @"job_number": listing.jobNumber,
      @"special_carrying_permit_required": [NSNumber numberWithBool:listing.specialCarryingPermitRequired],
      @"pallet_jack_required": [NSNumber numberWithBool:listing.palletJackRequired],
-     @"tail_gate": listing.tailgate}
+     @"tail_gate": listing.tailgate?:@"Not Required"}
      success:^(AFHTTPRequestOperation *operation, id response){
        successBlock();
      }

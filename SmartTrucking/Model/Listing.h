@@ -23,6 +23,7 @@
 @property(nonatomic, strong) NSString *tailgate;
 @property(nonatomic, assign) int biddingAmount;
 @property(nonatomic, strong) NSString *customerName;
+@property (nonatomic, strong) NSString *jobNumber;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
