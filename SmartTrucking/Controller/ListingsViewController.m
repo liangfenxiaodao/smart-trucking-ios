@@ -60,7 +60,7 @@
   [super viewDidAppear:animated];
   MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   hud.labelText = @"Loading...";
-  [[ApiClient client] getAllGoodsWithSuccess:^(NSArray *result) {
+  [[ApiClient client] getAllListingsWithSuccess:^(NSArray *result) {
     _goodsArray = [NSMutableArray arrayWithArray:result];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     [self.tableView reloadData];

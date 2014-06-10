@@ -1,5 +1,4 @@
 #import "Listing.h"
-#import "NSString+ObjectiveSugar.h"
 #import "Address.h"
 
 @implementation Listing {
@@ -11,21 +10,21 @@
   if (!self) return nil;
   self.id = dictionary[@"_id"];
   self.userId = dictionary[@"user_id"];
-  self.pickUpTime = dictionary[@"pick_up_time"];
-  self.arriveTime = dictionary[@"arrive_time"];
-  self.bidEndingTime = dictionary[@"bid_ending_time"];
+  self.pickupTime = [self parseDate:dictionary[@"pick_up_time"]];
+  self.arriveTime = [self parseDate:dictionary[@"arrive_time"]];
+  self.bidEndingTime = [self parseDate: dictionary[@"bid_ending_time"]];
   self.palletJackRequired = [dictionary[@"pallet_jack_required"] boolValue];
   self.price = [dictionary[@"price"] intValue];
   self.specialCarryingPermitRequired = [dictionary[@"special_carrying_permit_required"] boolValue];
-  self.tailGate = dictionary[@"tail_gate"];
+  self.tailgate = dictionary[@"tail_gate"];
   self.vehicleType = dictionary[@"vehicle_type"];
   self.volume = dictionary[@"volume"];
   self.weight = dictionary[@"weight"];
-  self.fromAddress = [[Address alloc]initWithString: dictionary[@"from_address"]];
-  self.toAddress = [[Address alloc]initWithString: dictionary[@"to_address"]];
-  self.fromSuburb = self.fromAddress.suburb;
-  self.toSuburb = self.toAddress.suburb;
-  self.formattedPickupTime = [self formatDate:self.pickUpTime];
+  self.pickupAddress = [[Address alloc]initWithString: dictionary[@"from_address"]];
+  self.arriveAddress = [[Address alloc]initWithString: dictionary[@"to_address"]];
+  self.fromSuburb = self.pickupAddress.suburb;
+  self.toSuburb = self.arriveAddress.suburb;
+  self.formattedPickupTime = [self formatDate:self.pickupTime];
   self.formattedArriveTime = [self formatDate:self.arriveTime];
   return self;
 }
@@ -38,15 +37,10 @@
   return _palletJackRequired? @"Required" : @"No";
 }
 
-
-- (NSString *)getWeight{
-  return [NSString stringWithFormat:@"%@T", _weight];
-}
-
-- (NSString *)formatDate: (NSString *)date {
+- (NSString *)formatDate: (NSDate *)date {
   NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
   [dateFormatter setDateFormat:@"dd/MM/yy hh:mm a"];
-  NSString *str_date = [dateFormatter stringFromDate:[self parseDate:date]];
+  NSString *str_date = [dateFormatter stringFromDate:date];
   return str_date;
 }
 

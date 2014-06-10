@@ -1,6 +1,7 @@
 #import "ApiClient.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "Listing.h"
+#import "Address.h"
 #import <AFNetworking/AFNetworking.h>
 
 @interface ApiClient ()
@@ -25,7 +26,30 @@ static ApiClient *sharedInstance;
   return sharedInstance;
 }
 
-- (void)getAllGoodsWithSuccess:(void(^)(NSArray *result))successBlock error:(void(^)(NSError *error))errorBlock {
+- (void)addListing: (Listing *)listing WithSuccess:(void(^)())successBlock error: (void(^)(NSError *error))errorBlock {
+  [_requestOperationManager POST:@"/listings"
+     parameters:@{@"from_address_id": listing.pickupAddress.id,
+     @"to_address_id": listing.arriveAddress.id,
+     @"user_id": listing.userId,
+     @"price": [NSNumber numberWithInt:listing.price],
+     @"weight": listing.weight,
+     @"volume": listing.volume,
+     @"pick_up_time": listing.pickupTime,
+     @"arrive_time": listing.arriveTime,
+     @"bid_ending_time": listing.bidEndingTime,
+     @"vehicle_type": listing.vehicleType,
+     @"special_carrying_permit_required": [NSNumber numberWithBool:listing.specialCarryingPermitRequired],
+     @"pallet_jack_required": [NSNumber numberWithBool:listing.palletJackRequired],
+     @"tail_gate": listing.tailgate}
+     success:^(AFHTTPRequestOperation *operation, id response){
+       successBlock();
+     }
+     failure:^(AFHTTPRequestOperation *operation, NSError *error){
+       errorBlock(error);
+     }];
+}
+
+- (void)getAllListingsWithSuccess:(void (^)(NSArray *result))successBlock error:(void(^)(NSError *error))errorBlock {
   [_requestOperationManager GET:@"/listings"
      parameters:nil
      success:^(AFHTTPRequestOperation *operation, id response) {

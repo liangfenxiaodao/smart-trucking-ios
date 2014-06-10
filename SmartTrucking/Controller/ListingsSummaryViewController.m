@@ -17,7 +17,7 @@
   self.sectionsAndRows = [NSMutableArray arrayWithArray:@[
           @[@{@"price" : @"Reference Rate: "}, @{@"volume" : @"Volume: "}, @{@"weight" : @"Weight: "}],
           @[@{@"fromSuburb" : @"Pick up: "}, @{@"formattedPickupTime" : @"ETP: "}, @{@"toSuburb" : @"Drop off: "}, @{@"formattedArriveTime" : @"ETA: "}],
-          @[@{@"vehicleType" : @"Vehicle Type: "}, @{@"specialCarryingPermit" : @"Special Carrying Permit: "}, @{@"palletJack" : @"Pallet Jack: "}, @{@"tailGate" : @"Tailgate: "}],
+          @[@{@"vehicleType" : @"Vehicle Type: "}, @{@"specialCarryingPermit" : @"Special Carrying Permit: "}, @{@"palletJack" : @"Pallet Jack: "}, @{@"tailgate" : @"Tailgate: "}],
           @[@{@"biddingAmount" : @"Bidding Activity"}, @{@"customerName" : @"Customer"}]
   ]];
   return self;

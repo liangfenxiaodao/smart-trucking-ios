@@ -1,6 +1,7 @@
 #import "ListingsCell.h"
 #import "Masonry.h"
 #import "Listing.h"
+#import "Address.h"
 
 @interface ListingsCell ()
 @property(nonatomic, strong) UILabel *fromLabel;
@@ -70,8 +71,8 @@
 }
 
 - (void)setGoods:(Listing *)listing {
-  [self.fromLabel setText:listing.fromSuburb];
-  [self.toLabel setText:listing.toSuburb];
+  [self.fromLabel setText:listing.pickupAddress.suburb];
+  [self.toLabel setText:listing.arriveAddress.suburb];
   [self.pickUpTimeLabel setText:listing.formattedPickupTime];
   [self.arriveTimeLabel setText:listing.formattedArriveTime];
   [self.volumeLabel setText:[NSString stringWithFormat:@"%@", listing.volume]];

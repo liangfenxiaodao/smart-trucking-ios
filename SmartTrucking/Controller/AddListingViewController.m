@@ -1,6 +1,9 @@
 #import "AddListingViewController.h"
 #import "XLForm.h"
 #import "Address.h"
+#import "Listing.h"
+#import "NSArray+ObjectiveSugar.h"
+#import "ApiClient.h"
 
 @interface AddListingViewController ()
 @property(nonatomic, strong) NSArray *address;
@@ -17,7 +20,9 @@
   self = [super initWithStyle:style];
   if (self) {
     Address *address1 = [[Address alloc] initWithString:@"6 Marama Street, Blackburn South, Melbourne, VIC, 3130, Australia"];
+    address1.id = @"538dc1a3250c9ece44000001";
     Address *address2 = [[Address alloc] initWithString:@"18/20 Hull Road, Croydon, Melbourne, VIC, 3136, Australia"];
+    address2.id = @"538dc108250c9e9a68000001";
     self.address = [NSArray arrayWithObjects:address1, address2, nil];
     self.vehicleTypes = [NSArray arrayWithObjects:@"Van", @"Tray", @"Tautliner", @"Semi Trailor", nil];
     self.tailgates = [NSArray arrayWithObjects:@"not required", @"1.0T", @"1.5T", @"2.0T", @"2.5T", nil];
@@ -39,7 +44,7 @@
   section = [XLFormSectionDescriptor formSection];
   [form addFormSection:section];
 
-  row = [XLFormRowDescriptor formRowDescriptorWithTag:@"weight" rowType:XLFormRowDescriptorTypeSelectorActionSheet title:@"Weight"];
+  row = [XLFormRowDescriptor formRowDescriptorWithTag:@"volume" rowType:XLFormRowDescriptorTypeSelectorActionSheet title:@"Volume"];
   row.selectorOptions =
           @[
                   [XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:@"1.2x2.4x1.2"],
@@ -48,16 +53,16 @@
           ];
   [section addFormRow:row];
 
-  row = [XLFormRowDescriptor formRowDescriptorWithTag:@"volume" rowType:XLFormRowDescriptorTypeInteger];
-  [row.cellConfigAtConfigure setObject:@"Volume" forKey:@"textField.placeholder"];
+  row = [XLFormRowDescriptor formRowDescriptorWithTag:@"weight" rowType:XLFormRowDescriptorTypeInteger];
+  [row.cellConfigAtConfigure setObject:@"Weight" forKey:@"textField.placeholder"];
   [section addFormRow:row];
 
-  row = [XLFormRowDescriptor formRowDescriptorWithTag:@"referenceRate" rowType:XLFormRowDescriptorTypeInteger];
+  row = [XLFormRowDescriptor formRowDescriptorWithTag:@"price" rowType:XLFormRowDescriptorTypeInteger];
   [row.cellConfigAtConfigure setObject:@"Reference Rate" forKey:@"textField.placeholder"];
   [section addFormRow:row];
 
   row = [XLFormRowDescriptor formRowDescriptorWithTag:@"bidEndingTime" rowType:XLFormRowDescriptorTypeDateTimeInline title:@"Bid ending"];
-  row.value = [NSDate dateWithTimeIntervalSinceNow:60 * 60 * 25];
+  row.value = [NSDate dateWithTimeIntervalSinceNow:60 * 60 * 24];
   [section addFormRow:row];
 
   section = [XLFormSectionDescriptor formSection];
@@ -72,8 +77,8 @@
   ];
   [section addFormRow:row];
 
-  [section addFormRow:[XLFormRowDescriptor formRowDescriptorWithTag:@"specialCarryingPermit" rowType:XLFormRowDescriptorTypeBooleanSwitch title:@"Special carrying permit"]];
-  [section addFormRow:[XLFormRowDescriptor formRowDescriptorWithTag:@"palletJack" rowType:XLFormRowDescriptorTypeBooleanSwitch title:@"Pallet Jack"]];
+  [section addFormRow:[XLFormRowDescriptor formRowDescriptorWithTag:@"specialCarryingPermitRequired" rowType:XLFormRowDescriptorTypeBooleanSwitch title:@"Special carrying permit"]];
+  [section addFormRow:[XLFormRowDescriptor formRowDescriptorWithTag:@"palletJackRequired" rowType:XLFormRowDescriptorTypeBooleanSwitch title:@"Pallet Jack"]];
 
   row = [XLFormRowDescriptor formRowDescriptorWithTag:@"tailgate" rowType:XLFormRowDescriptorTypeSelectorActionSheet title:@"Tailgate"];
   row.selectorTitle = @"Tailgate";
@@ -121,7 +126,7 @@
   [section addFormRow:row];
 
   row = [XLFormRowDescriptor formRowDescriptorWithTag:@"arriveTime" rowType:XLFormRowDescriptorTypeDateTimeInline title:@"ETA"];
-  row.value = [NSDate dateWithTimeIntervalSinceNow:60 * 60 * 25];
+  row.value = [NSDate dateWithTimeIntervalSinceNow:60 * 60 * 24];
   [section addFormRow:row];
 }
 
@@ -174,7 +179,7 @@
     [self updateRowWithTag:@"pickupStreet" andNewvalue:selectedAddress.street];
     [self updateRowWithTag:@"pickupSuburb" andNewvalue:selectedAddress.suburb];
     [self updateRowWithTag:@"pickupPostcode" andNewvalue:selectedAddress.postcode];
-  } else if([rowDescriptor.tag isEqualToString:@"arriveAddress"]) {
+  } else if ([rowDescriptor.tag isEqualToString:@"arriveAddress"]) {
     Address *selectedAddress = _address[(NSUInteger) [[(XLFormOptionsObject *) newValue formValue] integerValue]];
     [self updateRowWithTag:@"arriveStreet" andNewvalue:selectedAddress.street];
     [self updateRowWithTag:@"arriveSuburb" andNewvalue:selectedAddress.suburb];
@@ -187,4 +192,30 @@
   [descriptor setValue:newValue];
   [[descriptor cellForFormController:self] update];
 }
+
+- (void)savePressed:(UIBarButtonItem *)saveButton {
+  [self.tableView endEditing:YES];
+
+  Listing *listing = [[Listing alloc] init];
+  [@[@"pickupAddress", @"arriveAddress"] each:^(id propertyName){
+    NSInteger addressIndex = [[[[self.form formRowWithTag:propertyName] value] formValue] integerValue];
+    id address = _address[(NSUInteger) addressIndex];
+    [listing setValue:address forKey:propertyName];
+  }];
+  [@[@"pickupTime", @"arriveTime", @"weight", @"price", @"bidEndingTime", @"specialCarryingPermitRequired", @"palletJackRequired"] each:^(id propertyName) {
+    [listing setValue:[[self.form formRowWithTag:propertyName] value] forKey:propertyName];
+  }];
+  [@[@"volume", @"vehicleType", @"tailgate"] each:^(id propertyName){
+    [listing setValue:[[[self.form formRowWithTag:propertyName] value] formDisplayText] forKey:propertyName];
+  }];
+  listing.userId = @"538db70c250c9e56be000001";
+  [[ApiClient client] addListing:listing
+     WithSuccess:^() {
+
+     }
+     error:^(NSError *error) {
+       NSLog(@"error: %@", error);
+     }];
+}
+
 @end
