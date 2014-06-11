@@ -41,9 +41,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>Server Address</key>
+  <key>Server Address</key>
 	<string>${SERVER_ADDRESS}</string>
 	<key>Server Protocol</key>
 	<string>${SERVER_PROTOCAL}</string>
+  <key>UIRequiredDeviceCapabilities</key>
+  <array>
+      <string>location-services</string>
+  </array>
 </dict>
 </plist>

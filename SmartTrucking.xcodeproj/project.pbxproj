@@ -12,6 +12,7 @@
 		368672230E915FE6FE534FB0 /* common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368675CCE862A6965184AE10 /* common.xcconfig */; };
 		3686733CBECC9FC28EE26491 /* MoreInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368677406FE7423FA61EF3CE /* MoreInformationViewController.m */; };
 		36867482797A84B510A91371 /* ListingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867763F50586822930A8EF /* ListingsCell.m */; };
+		368675195B5CDA5EB4502195 /* ListingsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686717CC2C382E381546C09 /* ListingsMapViewController.m */; };
 		3686751DFEFCADE2834E1736 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A4A0403146DB99DFB66 /* SearchViewController.m */; };
 		368676950B79930720B55DA9 /* UIColor+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867EEF60408FB5FF28577F /* UIColor+SmartTrucking.m */; };
 		368677731C5C4E1E7F81A45C /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 368671D7C449D7478AE091E2 /* Address.m */; };
@@ -23,6 +24,8 @@
 		36867CE13860D98C340E8C69 /* AddListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368676386517727931322CAA /* AddListingViewController.m */; };
 		36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */; };
 		36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368674E1227DD200EFEF046E /* release.xcconfig */; };
+		4964F1E71948804E00EB661E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964F1E61948804E00EB661E /* CoreLocation.framework */; };
+		4964F1E91948829900EB661E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964F1E81948829900EB661E /* MapKit.framework */; };
 		BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */; };
 		BD84519A563002F19E7A1950 /* SmartTruckingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845CF952F93904B19B0A4A /* SmartTruckingTests.m */; };
 		BD84520E336995ED89FC850B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84546F903691CC22FCF176 /* UIKit.framework */; };
@@ -51,6 +54,7 @@
 		368670B7581994460386517F /* ListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsViewController.h; sourceTree = "<group>"; };
 		368671319E136F5ED03C5AAB /* AddListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddListingViewController.h; sourceTree = "<group>"; };
 		36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
+		3686717CC2C382E381546C09 /* ListingsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsMapViewController.m; sourceTree = "<group>"; };
 		368671D7C449D7478AE091E2 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 		36867225497198AFDAC080F2 /* UIColor+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SmartTrucking.h"; sourceTree = "<group>"; };
 		368672827B191402D243D557 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 		36867A4A0403146DB99DFB66 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		36867A8568D822761D2786CE /* ListingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsCell.h; sourceTree = "<group>"; };
 		36867A94257486DDADAB3CC3 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
+		36867B02CF2E90A5ACF7B5E2 /* ListingsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsMapViewController.h; sourceTree = "<group>"; };
 		36867CCCF2600D8A42A8C916 /* UIFont+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SmartTrucking.h"; sourceTree = "<group>"; };
 		36867D2BA966DCAEB240BDDF /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
 		36867E85EA628DAD49E68323 /* ListingsSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsSummaryViewController.h; sourceTree = "<group>"; };
@@ -76,6 +81,8 @@
 		36867F3858EF67485981AB91 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsViewController.m; sourceTree = "<group>"; };
 		36867F9D0FFD2A1AC5442AE6 /* Listing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Listing.m; sourceTree = "<group>"; };
 		3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		4964F1E61948804E00EB661E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4964F1E81948829900EB661E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BD84505016193D534B7F2ED5 /* SmartTruckingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTruckingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD84546F903691CC22FCF176 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BD84558A796C79341FFE7EE4 /* SmartTrucking-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "SmartTrucking-Info.plist"; sourceTree = "<group>"; };
@@ -100,9 +107,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4964F1E71948804E00EB661E /* CoreLocation.framework in Frameworks */,
 				BD845CAB32682000F9621392 /* Foundation.framework in Frameworks */,
 				BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */,
 				BD845CE13493261CD4269D6C /* UIKit.framework in Frameworks */,
+				4964F1E91948829900EB661E /* MapKit.framework in Frameworks */,
 				2C6F0955564844B0B1129F69 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +185,8 @@
 				368671319E136F5ED03C5AAB /* AddListingViewController.h */,
 				368677406FE7423FA61EF3CE /* MoreInformationViewController.m */,
 				368673C1524AE468B1848E99 /* MoreInformationViewController.h */,
+				3686717CC2C382E381546C09 /* ListingsMapViewController.m */,
+				36867B02CF2E90A5ACF7B5E2 /* ListingsMapViewController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -206,6 +217,8 @@
 		BD845668D3FBE98A6FE27CDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4964F1E81948829900EB661E /* MapKit.framework */,
+				4964F1E61948804E00EB661E /* CoreLocation.framework */,
 				BD845F75EBF0CC7D2BE902F9 /* Foundation.framework */,
 				BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */,
 				BD84546F903691CC22FCF176 /* UIKit.framework */,
@@ -306,6 +319,15 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = none;
+				TargetAttributes = {
+					BD8455170B87DCB156741248 = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = BD8458C6FD82FEEF3C92A121 /* Build configuration list for PBXProject "SmartTrucking" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -400,6 +422,7 @@
 				36867CE13860D98C340E8C69 /* AddListingViewController.m in Sources */,
 				368677731C5C4E1E7F81A45C /* Address.m in Sources */,
 				3686733CBECC9FC28EE26491 /* MoreInformationViewController.m in Sources */,
+				368675195B5CDA5EB4502195 /* ListingsMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

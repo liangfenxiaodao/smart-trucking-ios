@@ -11,15 +11,15 @@
 #import "SearchViewController.h"
 #import "MyAccountViewController.h"
 #import "MoreInformationViewController.h"
+#import "ListingsMapViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   UITabBarController *tabBarController = [[UITabBarController alloc] init];
-  UINavigationController *listingsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[ListingsViewController alloc] init]];
   [tabBarController setViewControllers:@[
-          listingsNavigationController,
+          [[ListingsMapViewController alloc] init],
           [[SearchViewController alloc] init],
           [[MyAccountViewController alloc] init],
           [[UINavigationController alloc] initWithRootViewController:[[MoreInformationViewController alloc] init]]
