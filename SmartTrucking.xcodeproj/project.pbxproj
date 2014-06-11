@@ -24,7 +24,6 @@
 		36867CE13860D98C340E8C69 /* AddListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368676386517727931322CAA /* AddListingViewController.m */; };
 		36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */; };
 		36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368674E1227DD200EFEF046E /* release.xcconfig */; };
-		4964F1E71948804E00EB661E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964F1E61948804E00EB661E /* CoreLocation.framework */; };
 		4964F1E91948829900EB661E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964F1E81948829900EB661E /* MapKit.framework */; };
 		BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */; };
 		BD84519A563002F19E7A1950 /* SmartTruckingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845CF952F93904B19B0A4A /* SmartTruckingTests.m */; };
@@ -107,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4964F1E71948804E00EB661E /* CoreLocation.framework in Frameworks */,
 				BD845CAB32682000F9621392 /* Foundation.framework in Frameworks */,
 				BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */,
 				BD845CE13493261CD4269D6C /* UIKit.framework in Frameworks */,

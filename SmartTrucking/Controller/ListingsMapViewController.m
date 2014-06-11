@@ -1,12 +1,13 @@
-#import <CoreLocation/CoreLocation.h>
 #import "ListingsMapViewController.h"
 #import "Masonry.h"
 #import <MapKit/MapKit.h>
-@interface ListingsMapViewController()
-@property (nonatomic, strong) MKMapView* mapView;
+
+@interface ListingsMapViewController ()
+@property(nonatomic, strong) MKMapView *mapView;
 
 @property(nonatomic) CLLocationCoordinate2D targetCoordinate;
 @end
+
 @implementation ListingsMapViewController {
 
 }
@@ -16,15 +17,11 @@
   [self.tabBarItem setTitle:@"Listings"];
   [self.tabBarItem setImage:[UIImage imageNamed:@"interstate_truck"]];
 
-  self.locationManager = [[CLLocationManager alloc] init];
-  self.locationManager.delegate = self;
-  self.locationManager.distanceFilter = kCLDistanceFilterNone;
-  self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-  [self.locationManager startUpdatingLocation];
-
   self.view = [[UIView alloc] init];
 
   self.mapView = MKMapView.new;
+  [self.mapView setShowsUserLocation:YES];
+  [self.mapView setDelegate:self];
   [self.view addSubview:self.mapView];
   [self.mapView mas_makeConstraints:^(MASConstraintMaker *make) {
     make.top.equalTo(self.view.mas_top);
@@ -35,15 +32,10 @@
   return self;
 }
 
-- (void)locationManager:(CLLocationManager *)manager
-     didUpdateLocations:(NSArray *)locations {
-  CLLocation *location = [locations lastObject];
-  NSLog(@"lat%f - lon%f", location.coordinate.latitude, location.coordinate.longitude);
-  [self.locationManager stopUpdatingLocation];
-  self.targetCoordinate = location.coordinate;
-  MKCoordinateSpan span = MKCoordinateSpanMake(0.02, 0.02);
-  MKCoordinateRegion region = MKCoordinateRegionMake(self.targetCoordinate, span);
-  [self.mapView setRegion:region animated:NO];
-  [self.mapView regionThatFits:region];
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+  self.targetCoordinate = userLocation.coordinate;
+  MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.targetCoordinate, 2000, 2000);
+  [self.mapView setRegion:region animated:YES];
+//  [self.mapView regionThatFits:region];
 }
 @end

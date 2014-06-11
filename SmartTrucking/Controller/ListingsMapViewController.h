@@ -1,9 +1,5 @@
 #import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@protocol CLLocationManagerDelegate;
-@class CLLocationManager;
-
-@interface ListingsMapViewController : UIViewController <CLLocationManagerDelegate>
-@property(nonatomic, strong) CLLocationManager *locationManager;
+@interface ListingsMapViewController : UIViewController <MKMapViewDelegate>
 @end
