@@ -1,11 +1,16 @@
 #import "ListingsMapViewController.h"
 #import "Masonry.h"
 #import <MapKit/MapKit.h>
+#import <ObjectiveSugar/NSArray+ObjectiveSugar.h>
+#import "MBProgressHUD.h"
+#import "ApiClient.h"
+#import "Listing.h"
+#import "Address.h"
 
 @interface ListingsMapViewController ()
 @property(nonatomic, strong) MKMapView *mapView;
-
-@property(nonatomic) CLLocationCoordinate2D targetCoordinate;
+@property(nonatomic, strong) NSMutableArray *listings;
+@property(nonatomic) BOOL userLocationUpdated;
 @end
 
 @implementation ListingsMapViewController {
@@ -33,9 +38,58 @@
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
-  self.targetCoordinate = userLocation.coordinate;
-  MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.targetCoordinate, 2000, 2000);
+  if (self.userLocationUpdated) {
+    return;
+  }
+  self.userLocationUpdated = YES;
+  MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2000, 2000);
   [self.mapView setRegion:region animated:YES];
-//  [self.mapView regionThatFits:region];
+  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+  [[ApiClient client] getAllListingsWithSuccess:^(NSArray *result) {
+    self.listings = [NSMutableArray arrayWithArray:result];
+    [self showListings:self.listings];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+  } error:^(NSError *error) {
+    NSLog(@"error: %@", error);
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+  }];
 }
+
+- (void)showListings:(NSMutableArray *)listings {
+  [self.mapView removeAnnotations:self.mapView.annotations];
+  [listings each:^(Listing *listing) {
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = CLLocationCoordinate2DMake(listing.pickupAddress.latitude, listing.pickupAddress.longitude);
+    point.title = listing.pickupAddress.street;
+    point.subtitle = listing.pickupAddress.suburb;
+    [self.mapView addAnnotation:point];
+  }];
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation {
+  if([annotation isKindOfClass:[MKUserLocation class]]){
+    return nil;
+  }
+  static NSString *annotationIdentifier = @"annotationIdentifier";
+
+  MKPinAnnotationView *pinView =
+          (MKPinAnnotationView *) [self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
+  if (pinView == nil) {
+    MKPinAnnotationView *customPinView = [[MKPinAnnotationView alloc]
+            initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
+    customPinView.pinColor = MKPinAnnotationColorPurple;
+    customPinView.animatesDrop = YES;
+    customPinView.canShowCallout = YES;
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
+    customPinView.rightCalloutAccessoryView = rightButton;
+    return customPinView;
+  }
+  else {
+    pinView.annotation = annotation;
+  }
+  return pinView;
+}
+
 @end

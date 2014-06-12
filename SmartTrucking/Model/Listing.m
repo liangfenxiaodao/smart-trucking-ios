@@ -23,8 +23,8 @@
   self.jobNumber = dictionary[@"job_number"];
   self.pickupAddress = [[Address alloc]initWithString: dictionary[@"from_address"]];
   self.arriveAddress = [[Address alloc]initWithString: dictionary[@"to_address"]];
-  self.fromSuburb = self.pickupAddress.suburb;
-  self.toSuburb = self.arriveAddress.suburb;
+//  self.fromSuburb = self.pickupAddress.suburb;
+//  self.toSuburb = self.arriveAddress.suburb;
   self.formattedPickupTime = [self formatDate:self.pickupTime];
   self.formattedArriveTime = [self formatDate:self.arriveTime];
   return self;

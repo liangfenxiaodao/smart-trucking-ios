@@ -2,7 +2,6 @@
 #import "Address.h"
 
 @interface Address ()
-@property(nonatomic, copy) NSString *string;
 @end
 
 @implementation Address {
@@ -19,7 +18,8 @@
   self.state = array[3];
   self.postcode = array[4];
   self.country = array[5];
-  self.string = address;
+  self.latitude = [array[6] doubleValue];
+  self.longitude = [array[7] doubleValue];
   return self;
 }
 

@@ -56,8 +56,8 @@ static ApiClient *sharedInstance;
      success:^(AFHTTPRequestOperation *operation, id response) {
        NSMutableArray *result = [[NSMutableArray alloc]init];
        for(NSDictionary *goodDictionary in response){
-          Listing *good = [[Listing alloc] initWithDictionary:goodDictionary];
-         [result addObject:good];
+          Listing *listing = [[Listing alloc] initWithDictionary:goodDictionary];
+         [result addObject:listing];
        }
        successBlock(result);
      }failure:^(AFHTTPRequestOperation *operation, NSError *error) {

@@ -8,6 +8,8 @@
 @property(nonatomic, strong) NSString *state;
 @property(nonatomic, strong) NSString *postcode;
 @property(nonatomic, strong) NSString *country;
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
 
 - (instancetype)initWithString:(NSString *)address;
 @end
