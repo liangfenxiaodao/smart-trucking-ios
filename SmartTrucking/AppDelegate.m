@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ListingsViewController.h"
 #import "SearchViewController.h"
 #import "MyAccountViewController.h"
 #import "MoreInformationViewController.h"
@@ -19,7 +18,7 @@
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   UITabBarController *tabBarController = [[UITabBarController alloc] init];
   [tabBarController setViewControllers:@[
-          [[ListingsMapViewController alloc] init],
+          [[UINavigationController alloc] initWithRootViewController:[[ListingsMapViewController alloc] init]],
           [[SearchViewController alloc] init],
           [[MyAccountViewController alloc] init],
           [[UINavigationController alloc] initWithRootViewController:[[MoreInformationViewController alloc] init]]

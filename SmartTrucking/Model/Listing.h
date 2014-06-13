@@ -25,6 +25,10 @@
 @property(nonatomic, strong) NSString *customerName;
 @property (nonatomic, strong) NSString *jobNumber;
 
+@property(nonatomic, copy) NSString *fromSuburb;
+
+@property(nonatomic, copy) NSString *toSuburb;
+
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
 - (NSString *)specialCarryingPermit;

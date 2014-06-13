@@ -1,22 +1,22 @@
-#import "ListingsSummaryViewController.h"
+#import "ListingSummaryViewController.h"
 #import "Listing.h"
 
-@interface ListingsSummaryViewController ()
-@property(nonatomic, strong) Listing *goods;
+@interface ListingSummaryViewController ()
+@property(nonatomic, strong) Listing *listing;
 @property(nonatomic, strong) NSMutableArray *sectionsAndRows;
 @end
 
-@implementation ListingsSummaryViewController {
+@implementation ListingSummaryViewController {
 
 }
-- (id)initWithGoods:(Listing *)goods {
+- (id)initWithListings:(Listing *)listings {
   self = [super initWithStyle:UITableViewStyleGrouped];
   if (!self) return nil;
-  self.goods = goods;
+  self.listing = listings;
   [self.navigationItem setTitle:@"Summary"];
   self.sectionsAndRows = [NSMutableArray arrayWithArray:@[
           @[@{@"price" : @"Reference Rate: "}, @{@"volume" : @"Volume: "}, @{@"weight" : @"Weight: "}],
-          @[@{@"fromSuburb" : @"Pick up: "}, @{@"formattedPickupTime" : @"ETP: "}, @{@"toSuburb" : @"Drop off: "}, @{@"formattedArriveTime" : @"ETA: "}],
+          @[@{@"fromSuburb" : @"Pick up: "}, @{@"formattedPickupTime" : @"ETP: "}, @{@"toSuburb" : @"Delivery: "}, @{@"formattedArriveTime" : @"ETA: "}],
           @[@{@"vehicleType" : @"Vehicle Type: "}, @{@"specialCarryingPermit" : @"Special Carrying Permit: "}, @{@"palletJack" : @"Pallet Jack: "}, @{@"tailgate" : @"Tailgate: "}, @{@"jobNumber": @"Job Number:"}],
           @[@{@"biddingAmount" : @"Bidding Activity"}, @{@"customerName" : @"Customer"}]
   ]];
@@ -41,7 +41,7 @@
   NSDictionary *dictionary = [[self.sectionsAndRows objectAtIndex:(NSUInteger) indexPath.section] objectAtIndex:(NSUInteger) indexPath.row];
   NSString *propertyKey = [dictionary allKeys][0];
   cell.textLabel.text = [dictionary valueForKey:propertyKey];
-  id value = [[self goods] valueForKey:propertyKey];
+  id value = [[self listing] valueForKey:propertyKey];
   if ([value isKindOfClass:[NSString class]]) {
     cell.detailTextLabel.text = value;
   }

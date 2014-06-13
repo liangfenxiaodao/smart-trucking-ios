@@ -3,7 +3,7 @@
 #import "ApiClient.h"
 #import "Listing.h"
 #import "ListingsCell.h"
-#import "ListingsSummaryViewController.h"
+#import "ListingSummaryViewController.h"
 #import "AddListingViewController.h"
 
 @interface ListingsViewController ()
@@ -21,8 +21,7 @@
   [self.navigationItem setTitle:@"Listings"];
   [self.tabBarItem setTitle:@"Listings"];
   [self.tabBarItem setImage:[UIImage imageNamed:@"interstate_truck"]];
-  [self.navigationItem.rightBarButtonItem = [UIBarButtonItem alloc]
-          initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addListing)];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addListing)];
   _goodsArray = [[NSMutableArray alloc] init];
   return self;
 }
@@ -71,7 +70,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   Listing *goods = [self.goodsArray objectAtIndex:(NSUInteger) indexPath.row];
-  ListingsSummaryViewController *summaryViewController = [[ListingsSummaryViewController alloc] initWithGoods:goods];
+  ListingSummaryViewController *summaryViewController = [[ListingSummaryViewController alloc] initWithListings:goods];
   [self.navigationController pushViewController:summaryViewController animated:YES];
 }
 
