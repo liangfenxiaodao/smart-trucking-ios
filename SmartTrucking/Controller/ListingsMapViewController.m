@@ -38,6 +38,21 @@
   return self;
 }
 
+- (void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(NSError *)error {
+  MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+  [self.navigationController.view addSubview:HUD];
+
+  HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cancel"]];
+
+  HUD.mode = MBProgressHUDModeCustomView;
+
+  HUD.labelText = @"Location services disabled";
+
+  [HUD show:YES];
+  [HUD hide:YES afterDelay:2];
+}
+
+
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
   if (self.userLocationUpdated) {
     return;
