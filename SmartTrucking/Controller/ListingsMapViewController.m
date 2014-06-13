@@ -61,8 +61,8 @@
   [listings each:^(Listing *listing) {
     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
     point.coordinate = CLLocationCoordinate2DMake(listing.pickupAddress.latitude, listing.pickupAddress.longitude);
-    point.title = listing.pickupAddress.street;
-    point.subtitle = listing.pickupAddress.suburb;
+    point.title = [NSString stringWithFormat:@"Delivery: %@", listing.arriveAddress.suburb];
+    point.subtitle = [NSString stringWithFormat:@"%@, %@T, $%i", listing.volume, listing.weight, listing.price];
     [self.mapView addAnnotation:point];
   }];
 }
@@ -78,7 +78,7 @@
   if (pinView == nil) {
     MKPinAnnotationView *customPinView = [[MKPinAnnotationView alloc]
             initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
-    customPinView.pinColor = MKPinAnnotationColorPurple;
+    customPinView.pinColor = MKPinAnnotationColorRed;
     customPinView.animatesDrop = YES;
     customPinView.canShowCallout = YES;
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
