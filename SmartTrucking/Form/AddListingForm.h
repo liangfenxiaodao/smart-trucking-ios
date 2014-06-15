@@ -17,4 +17,10 @@
 @property(nonatomic, strong) NSString *vehicleType;
 @property(nonatomic, assign) BOOL specialCarryingPermitRequired;
 @property(nonatomic, assign) BOOL palletJackRequired;
+
+- (instancetype)initWithAddresses:(NSArray *)addresses
+                     vehicleTypes:(NSArray *)vehicleTypes
+                        tailgates:(NSArray *)tailgates;
+
+
 @end
