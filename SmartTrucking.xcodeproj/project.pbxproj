@@ -24,6 +24,7 @@
 		36867B265CA756EFB8F9CA19 /* ListingSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368675B2B4A33226C23F72B2 /* ListingSummaryViewController.m */; };
 		36867CE13860D98C340E8C69 /* AddListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368676386517727931322CAA /* AddListingViewController.m */; };
 		36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */; };
+		36867E0F496E5164A3C68640 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867574420FC03229EB2051 /* FXForms.m */; };
 		36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368674E1227DD200EFEF046E /* release.xcconfig */; };
 		4964F1E91948829900EB661E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964F1E81948829900EB661E /* MapKit.framework */; };
 		BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */; };
@@ -61,6 +62,8 @@
 		368673C1524AE468B1848E99 /* MoreInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInformationViewController.h; sourceTree = "<group>"; };
 		36867427058ACE886D62E244 /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
 		368674E1227DD200EFEF046E /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		36867574420FC03229EB2051 /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
+		36867596F12E83612CE0A122 /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
 		368675B2B4A33226C23F72B2 /* ListingSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSummaryViewController.m; sourceTree = "<group>"; };
 		368675CCE862A6965184AE10 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = common.xcconfig; sourceTree = "<group>"; };
 		368676386517727931322CAA /* AddListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddListingViewController.m; sourceTree = "<group>"; };
@@ -130,6 +133,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		368670DE309C615FC52F2D93 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				368671BC269D885F9CF2BD7F /* FXForms */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		368671BC269D885F9CF2BD7F /* FXForms */ = {
+			isa = PBXGroup;
+			children = (
+				36867574420FC03229EB2051 /* FXForms.m */,
+				36867596F12E83612CE0A122 /* FXForms.h */,
+			);
+			path = FXForms;
+			sourceTree = "<group>";
+		};
 		3686755CDAB9171CE20826E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +273,7 @@
 				36867FDF0EFB07A1C9A78B4E /* Controller */,
 				3686755CDAB9171CE20826E6 /* View */,
 				36867A3DBC4E986845819DDF /* Category */,
+				368670DE309C615FC52F2D93 /* Libraries */,
 			);
 			path = SmartTrucking;
 			sourceTree = "<group>";
@@ -427,6 +448,7 @@
 				3686733CBECC9FC28EE26491 /* MoreInformationViewController.m in Sources */,
 				368675195B5CDA5EB4502195 /* ListingsMapViewController.m in Sources */,
 				36867252D1561D1EE5171D78 /* STAnnotation.m in Sources */,
+				36867E0F496E5164A3C68640 /* FXForms.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
