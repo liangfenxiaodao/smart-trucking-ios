@@ -1,5 +1,5 @@
 #import "AddListingNewFormViewController.h"
-#import "CreateListingForm.h"
+#import "AddListingForm.h"
 
 @implementation AddListingNewFormViewController {
 
@@ -10,7 +10,8 @@
   if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]))
   {
     //set up form
-    self.formController.form = [[CreateListingForm alloc] init];
+    self.formController.form = [[AddListingForm alloc] init];
+    [self.navigationItem setTitle:@"Add Listing"];
   }
   return self;
 }

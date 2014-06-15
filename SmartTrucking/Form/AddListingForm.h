@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "FXForms.h"
 
-@interface CreateListingForm : NSObject <FXForm>
+@interface AddListingForm : NSObject <FXForm>
 @property(nonatomic, strong) NSNumber *weight;
 @property(nonatomic, strong) NSNumber *length;
 @property(nonatomic, strong) NSNumber *width;

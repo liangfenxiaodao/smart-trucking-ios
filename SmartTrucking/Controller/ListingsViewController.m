@@ -8,7 +8,7 @@
 
 @interface ListingsViewController ()
 
-@property(nonatomic, strong) NSMutableArray *goodsArray;
+@property(nonatomic, strong) NSMutableArray *listingsArray;
 @end
 
 @implementation ListingsViewController {
@@ -19,17 +19,8 @@
   self = [super init];
   if (!self) return nil;
   [self.navigationItem setTitle:@"Listings"];
-  [self.tabBarItem setTitle:@"Listings"];
-  [self.tabBarItem setImage:[UIImage imageNamed:@"interstate_truck"]];
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addListing)];
-  _goodsArray = [[NSMutableArray alloc] init];
+  _listingsArray = [[NSMutableArray alloc] init];
   return self;
-}
-
-- (void)addListing {
-  AddListingViewController *addListingViewController = [[AddListingViewController alloc]init];
-  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addListingViewController];
-  [self presentViewController:navigationController animated:YES completion:^{}];
 }
 
 - (void)viewDidLoad {
@@ -38,11 +29,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return _goodsArray.count;
+  return _listingsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  Listing *goods = [_goodsArray objectAtIndex:(NSUInteger) indexPath.row];
+  Listing *goods = [_listingsArray objectAtIndex:(NSUInteger) indexPath.row];
   ListingsCell *goodsCell = [tableView dequeueReusableCellWithIdentifier:@"ListingsCell"];
   if(goodsCell == nil){
     goodsCell = [[ListingsCell alloc]init];
@@ -60,7 +51,7 @@
   MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   hud.labelText = @"Loading...";
   [[ApiClient client] getAllListingsWithSuccess:^(NSArray *result) {
-    _goodsArray = [NSMutableArray arrayWithArray:result];
+    _listingsArray = [NSMutableArray arrayWithArray:result];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     [self.tableView reloadData];
   } error:^(NSError *error) {
@@ -69,7 +60,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  Listing *goods = [self.goodsArray objectAtIndex:(NSUInteger) indexPath.row];
+  Listing *goods = [self.listingsArray objectAtIndex:(NSUInteger) indexPath.row];
   ListingSummaryViewController *summaryViewController = [[ListingSummaryViewController alloc] initWithListings:goods];
   [self.navigationController pushViewController:summaryViewController animated:YES];
 }
