@@ -19,11 +19,13 @@
 - (id)initWithStyle:(UITableViewStyle)style {
   self = [super initWithStyle:style];
   if (self) {
-    Address *address1 = [[Address alloc] initWithString:@"6 Marama Street, Blackburn South, Melbourne, VIC, 3130, Australia"];
-    address1.id = @"538dc1a3250c9ece44000001";
-    Address *address2 = [[Address alloc] initWithString:@"18/20 Hull Road, Croydon, Melbourne, VIC, 3136, Australia"];
-    address2.id = @"538dc108250c9e9a68000001";
-    self.address = [NSArray arrayWithObjects:address1, address2, nil];
+    Address *address1 = [[Address alloc] initWithString:@"18 Jackson Street, Croydon, Melbourne, VIC, 3136, Australia, -37.794483, 145.288522"];
+    address1.id = @"539ae977250c9e59e3000002";
+    Address *address2 = [[Address alloc] initWithString:@"12 Hull Road, Croydon, Melbourne, VIC, 3136, Australia, -37.797225, 145.291577"];
+    address2.id = @"5399a4d8250c9e97c0000001";
+    Address *address3 = [[Address alloc] initWithString:@"65 Hewish Road, Croydon, Melbourne, VIC, 3136, Australia, -37.797225, 145.291577"];
+    address3.id = @"539ae9ac250c9e59e3000003";
+    self.address = [NSArray arrayWithObjects:address1, address2, address3, nil];
     self.vehicleTypes = [NSArray arrayWithObjects:@"Van", @"Tray", @"Tautliner", @"Semi Trailor", nil];
     self.tailgates = [NSArray arrayWithObjects:@"not required", @"1.0T", @"1.5T", @"2.0T", @"2.5T", nil];
     self.navigationItem.leftBarButtonItem = self.cancelButton;
@@ -105,8 +107,10 @@
   [form addFormSection:section];
 
   row = [XLFormRowDescriptor formRowDescriptorWithTag:@"arriveAddress" rowType:XLFormRowDescriptorTypeSelectorActionSheet title:@"Select"];
-  row.selectorOptions = @[[XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:((Address *) self.address[0]).description],
-          [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:((Address *) self.address[1]).description]
+  row.selectorOptions = @[
+          [XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:((Address *) self.address[0]).description],
+          [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:((Address *) self.address[1]).description],
+          [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:((Address *) self.address[2]).description]
   ];
   [section addFormRow:row];
 
@@ -140,8 +144,18 @@
   row = [XLFormRowDescriptor formRowDescriptorWithTag:@"pickupAddress" rowType:XLFormRowDescriptorTypeSelectorActionSheet title:@"Select"];
   row.selectorOptions = @[
           [XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:((Address *) self.address[0]).description],
-          [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:((Address *) self.address[1]).description]
+          [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:((Address *) self.address[1]).description],
+          [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:((Address *) self.address[2]).description]
   ];
+  [section addFormRow:row];
+
+  row = [XLFormRowDescriptor formRowDescriptorWithTag:@"selectorActionSheet" rowType:XLFormRowDescriptorTypeSelectorActionSheet title:@"Selector Sheet"];
+  row.selectorOptions = @[
+          [XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:@"18 Jackson Street, Croydon, Melbourne, VIC, 3136"],
+          [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:@"12 Hull Road, Croydon, Melbourne, VIC, 3136"],
+          [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"65 Hewish Road, Croydon, Melbourne, VIC, 3136"]
+  ];
+  row.value = [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Option 3"];
   [section addFormRow:row];
 
   row = [XLFormRowDescriptor formRowDescriptorWithTag:@"pickupStreet" rowType:XLFormRowDescriptorTypeText];
@@ -197,7 +211,7 @@
   [self.tableView endEditing:YES];
 
   Listing *listing = [[Listing alloc] init];
-  [@[@"pickupAddress", @"arriveAddress"] each:^(id propertyName){
+  [@[@"pickupAddress", @"arriveAddress"] each:^(id propertyName) {
     NSInteger addressIndex = [[[[self.form formRowWithTag:propertyName] value] formValue] integerValue];
     id address = _address[(NSUInteger) addressIndex];
     [listing setValue:address forKey:propertyName];
@@ -205,20 +219,20 @@
   [@[@"pickupTime", @"arriveTime", @"weight", @"price", @"bidEndingTime", @"jobNumber"] each:^(id propertyName) {
     [listing setValue:[[self.form formRowWithTag:propertyName] value] forKey:propertyName];
   }];
-  [@[@"volume", @"vehicleType", @"tailgate"] each:^(id propertyName){
+  [@[@"volume", @"vehicleType", @"tailgate"] each:^(id propertyName) {
     [listing setValue:[[[self.form formRowWithTag:propertyName] value] formDisplayText] forKey:propertyName];
   }];
-  [@[@"specialCarryingPermitRequired", @"palletJackRequired"] each:^(id propertyName){
+  [@[@"specialCarryingPermitRequired", @"palletJackRequired"] each:^(id propertyName) {
     [listing setValue:[NSNumber numberWithBool:[[self.form formRowWithTag:propertyName].value boolValue]] forKey:propertyName];
   }];
   listing.userId = @"538db70c250c9e56be000001";
   [[ApiClient client] addListing:listing
-     WithSuccess:^() {
+                     WithSuccess:^() {
 
-     }
-     error:^(NSError *error) {
-       NSLog(@"error: %@", error);
-     }];
+                     }
+                           error:^(NSError *error) {
+                             NSLog(@"error: %@", error);
+                           }];
 }
 
 @end

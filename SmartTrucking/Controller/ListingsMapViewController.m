@@ -8,6 +8,7 @@
 #import "Address.h"
 #import "STAnnotation.h"
 #import "ListingSummaryViewController.h"
+#import "AddListingViewController.h"
 
 @interface ListingsMapViewController ()
 @property(nonatomic, strong) MKMapView *mapView;
@@ -23,31 +24,34 @@
   if (!self) return nil;
   [self.tabBarItem setTitle:@"Listings"];
   [self.tabBarItem setImage:[UIImage imageNamed:@"interstate_truck"]];
+
+  [self.navigationItem setTitle:@"Listings"];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+          initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addListing)];
+
   self.view = [[UIView alloc] init];
   self.mapView = MKMapView.new;
-  [self.navigationItem setTitle:@"Listings"];
   [self.mapView setShowsUserLocation:YES];
   [self.mapView setDelegate:self];
   [self.view addSubview:self.mapView];
   [self.mapView mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.top.equalTo(self.view.mas_top);
-    make.right.equalTo(self.view.mas_right);
-    make.bottom.equalTo(self.view.mas_bottom);
-    make.left.equalTo(self.view.mas_left);
+    make.edges.equalTo(self.view);
   }];
   return self;
+}
+
+- (void)addListing {
+  AddListingViewController *addListingViewController = [[AddListingViewController alloc]init];
+  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addListingViewController];
+  [self presentViewController:navigationController animated:YES completion:^{}];
 }
 
 - (void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(NSError *)error {
   MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
   [self.navigationController.view addSubview:HUD];
-
   HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cancel"]];
-
   HUD.mode = MBProgressHUDModeCustomView;
-
   HUD.labelText = @"Location services disabled";
-
   [HUD show:YES];
   [HUD hide:YES afterDelay:2];
 }
@@ -66,7 +70,7 @@
     self.listings = [NSMutableArray arrayWithArray:result];
     [self showListings:self.listings];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
-  }                                       error:^(NSError *error) {
+  } error:^(NSError *error) {
     NSLog(@"error: %@", error);
     [MBProgressHUD hideHUDForView:self.view animated:YES];
   }];

@@ -54,6 +54,7 @@ static ApiClient *sharedInstance;
   [_requestOperationManager GET:@"/listings"
      parameters:nil
      success:^(AFHTTPRequestOperation *operation, id response) {
+       NSLog(@"get all listings success");
        NSMutableArray *result = [[NSMutableArray alloc]init];
        for(NSDictionary *goodDictionary in response){
           Listing *listing = [[Listing alloc] initWithDictionary:goodDictionary];
