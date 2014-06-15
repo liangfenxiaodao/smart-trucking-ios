@@ -2180,12 +2180,17 @@ static BOOL *FXFormSetValueForKey(id<FXForm> form, id value, NSString *key)
         self.textView.autocorrectionType = UITextAutocorrectionTypeDefault;
         self.textView.autocapitalizationType = UITextAutocapitalizationTypeSentences;
         self.textView.keyboardType = UIKeyboardTypeAlphabet;
+    } else if ([self.field.type isEqualToString:FXFormFieldTypeFloat])
+    {
+      self.textView.autocorrectionType = UITextAutocorrectionTypeNo;
+      self.textView.autocapitalizationType = UITextAutocapitalizationTypeNone;
+      self.textView.keyboardType = UIKeyboardTypeDecimalPad;
     }
     else if ([self.field.type isEqualToString:FXFormFieldTypeNumber] || [self.field.type isEqualToString:FXFormFieldTypeInteger])
     {
         self.textView.autocorrectionType = UITextAutocorrectionTypeNo;
         self.textView.autocapitalizationType = UITextAutocapitalizationTypeNone;
-        self.textView.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+        self.textView.keyboardType = UIKeyboardTypeNumberPad;
     }
     else if ([self.field.type isEqualToString:FXFormFieldTypePassword])
     {
