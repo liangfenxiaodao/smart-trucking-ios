@@ -9,6 +9,7 @@
 #import "STAnnotation.h"
 #import "ListingSummaryViewController.h"
 #import "AddListingViewController.h"
+#import "AddListingNewFormViewController.h"
 
 @interface ListingsMapViewController ()
 @property(nonatomic, strong) MKMapView *mapView;
@@ -41,7 +42,7 @@
 }
 
 - (void)addListing {
-  AddListingViewController *addListingViewController = [[AddListingViewController alloc]init];
+  AddListingNewFormViewController *addListingViewController = [[AddListingNewFormViewController alloc]init];
   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addListingViewController];
   [self presentViewController:navigationController animated:YES completion:^{}];
 }

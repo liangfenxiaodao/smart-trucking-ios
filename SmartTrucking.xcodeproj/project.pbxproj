@@ -21,11 +21,13 @@
 		3686785F59A0BB34B4E59699 /* Listing.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F9D0FFD2A1AC5442AE6 /* Listing.m */; };
 		3686786252891C134CFF3673 /* UIFont+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = 368679863396CB326E8879F7 /* UIFont+SmartTrucking.m */; };
 		3686788B9AC8D17F64DC2384 /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867D2BA966DCAEB240BDDF /* ApiClient.m */; };
+		36867A7BF3437BB789207ACB /* AddListingNewFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867966EAD4243021AED2D3 /* AddListingNewFormViewController.m */; };
 		36867B265CA756EFB8F9CA19 /* ListingSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368675B2B4A33226C23F72B2 /* ListingSummaryViewController.m */; };
 		36867CE13860D98C340E8C69 /* AddListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368676386517727931322CAA /* AddListingViewController.m */; };
 		36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */; };
 		36867E0F496E5164A3C68640 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867574420FC03229EB2051 /* FXForms.m */; };
 		36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368674E1227DD200EFEF046E /* release.xcconfig */; };
+		36867F6100E504D088221A45 /* CreateListingForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686751D60A928352F50D775 /* CreateListingForm.m */; };
 		4964F1E91948829900EB661E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964F1E81948829900EB661E /* MapKit.framework */; };
 		BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */; };
 		BD84519A563002F19E7A1950 /* SmartTruckingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845CF952F93904B19B0A4A /* SmartTruckingTests.m */; };
@@ -59,17 +61,21 @@
 		368671D7C449D7478AE091E2 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 		36867225497198AFDAC080F2 /* UIColor+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SmartTrucking.h"; sourceTree = "<group>"; };
 		368672827B191402D243D557 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		368672D0EEA91BDF848B1D3E /* CreateListingForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateListingForm.h; sourceTree = "<group>"; };
 		368673C1524AE468B1848E99 /* MoreInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInformationViewController.h; sourceTree = "<group>"; };
 		36867427058ACE886D62E244 /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
 		368674E1227DD200EFEF046E /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		3686751D60A928352F50D775 /* CreateListingForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateListingForm.m; sourceTree = "<group>"; };
 		36867574420FC03229EB2051 /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
 		36867596F12E83612CE0A122 /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
 		368675B2B4A33226C23F72B2 /* ListingSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSummaryViewController.m; sourceTree = "<group>"; };
 		368675CCE862A6965184AE10 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = common.xcconfig; sourceTree = "<group>"; };
+		3686760C0886B8C931132AE8 /* AddListingNewFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddListingNewFormViewController.h; sourceTree = "<group>"; };
 		368676386517727931322CAA /* AddListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddListingViewController.m; sourceTree = "<group>"; };
 		368677406FE7423FA61EF3CE /* MoreInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInformationViewController.m; sourceTree = "<group>"; };
 		36867763F50586822930A8EF /* ListingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsCell.m; sourceTree = "<group>"; };
 		368678A4B143E7E69BB8F748 /* Listing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listing.h; sourceTree = "<group>"; };
+		36867966EAD4243021AED2D3 /* AddListingNewFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddListingNewFormViewController.m; sourceTree = "<group>"; };
 		3686796956F47C37488E5D84 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		368679704D6C55C24FDB1190 /* STAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAnnotation.h; sourceTree = "<group>"; };
 		368679863396CB326E8879F7 /* UIFont+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SmartTrucking.m"; sourceTree = "<group>"; };
@@ -193,6 +199,15 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		36867F0869CBB722FA1F3A78 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				3686751D60A928352F50D775 /* CreateListingForm.m */,
+				368672D0EEA91BDF848B1D3E /* CreateListingForm.h */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
 		36867FDF0EFB07A1C9A78B4E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +225,8 @@
 				368673C1524AE468B1848E99 /* MoreInformationViewController.h */,
 				3686717CC2C382E381546C09 /* ListingsMapViewController.m */,
 				36867B02CF2E90A5ACF7B5E2 /* ListingsMapViewController.h */,
+				36867966EAD4243021AED2D3 /* AddListingNewFormViewController.m */,
+				3686760C0886B8C931132AE8 /* AddListingNewFormViewController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -274,6 +291,7 @@
 				3686755CDAB9171CE20826E6 /* View */,
 				36867A3DBC4E986845819DDF /* Category */,
 				368670DE309C615FC52F2D93 /* Libraries */,
+				36867F0869CBB722FA1F3A78 /* Form */,
 			);
 			path = SmartTrucking;
 			sourceTree = "<group>";
@@ -449,6 +467,8 @@
 				368675195B5CDA5EB4502195 /* ListingsMapViewController.m in Sources */,
 				36867252D1561D1EE5171D78 /* STAnnotation.m in Sources */,
 				36867E0F496E5164A3C68640 /* FXForms.m in Sources */,
+				36867F6100E504D088221A45 /* CreateListingForm.m in Sources */,
+				36867A7BF3437BB789207ACB /* AddListingNewFormViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

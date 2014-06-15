@@ -1976,11 +1976,17 @@ static BOOL *FXFormSetValueForKey(id<FXForm> form, id value, NSString *key)
         self.textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
         self.textField.keyboardType = UIKeyboardTypeAlphabet;
     }
-    else if ([self.field.type isEqualToString:FXFormFieldTypeNumber] || [self.field.type isEqualToString:FXFormFieldTypeInteger])
+    else if ([self.field.type isEqualToString:FXFormFieldTypeNumber])
+    {
+      self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
+      self.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+      self.textField.keyboardType = UIKeyboardTypeDecimalPad;
+    }
+    else if ([self.field.type isEqualToString:FXFormFieldTypeInteger])
     {
         self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
         self.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-        self.textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+        self.textField.keyboardType = UIKeyboardTypeNumberPad;
     }
     else if ([self.field.type isEqualToString:FXFormFieldTypePassword])
     {
@@ -2031,7 +2037,7 @@ static BOOL *FXFormSetValueForKey(id<FXForm> form, id value, NSString *key)
     }
     else if ([self.field.type isEqualToString:FXFormFieldTypeInteger])
     {
-        value = @([self.textField.text longLongValue]);
+        value = @([self.textField.text integerValue]);
     }
     else if ([self.field.valueClass isSubclassOfClass:[NSURL class]])
     {
@@ -2180,13 +2186,13 @@ static BOOL *FXFormSetValueForKey(id<FXForm> form, id value, NSString *key)
         self.textView.autocorrectionType = UITextAutocorrectionTypeDefault;
         self.textView.autocapitalizationType = UITextAutocapitalizationTypeSentences;
         self.textView.keyboardType = UIKeyboardTypeAlphabet;
-    } else if ([self.field.type isEqualToString:FXFormFieldTypeFloat])
+    } else if ([self.field.type isEqualToString:FXFormFieldTypeNumber] || [self.field.type isEqualToString:FXFormFieldTypeFloat])
     {
       self.textView.autocorrectionType = UITextAutocorrectionTypeNo;
       self.textView.autocapitalizationType = UITextAutocapitalizationTypeNone;
       self.textView.keyboardType = UIKeyboardTypeDecimalPad;
     }
-    else if ([self.field.type isEqualToString:FXFormFieldTypeNumber] || [self.field.type isEqualToString:FXFormFieldTypeInteger])
+    else if ( [self.field.type isEqualToString:FXFormFieldTypeInteger])
     {
         self.textView.autocorrectionType = UITextAutocorrectionTypeNo;
         self.textView.autocapitalizationType = UITextAutocapitalizationTypeNone;
