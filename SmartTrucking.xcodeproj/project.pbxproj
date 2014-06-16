@@ -23,7 +23,6 @@
 		3686788B9AC8D17F64DC2384 /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867D2BA966DCAEB240BDDF /* ApiClient.m */; };
 		36867A7BF3437BB789207ACB /* AddListingNewFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867966EAD4243021AED2D3 /* AddListingNewFormViewController.m */; };
 		36867B265CA756EFB8F9CA19 /* ListingSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368675B2B4A33226C23F72B2 /* ListingSummaryViewController.m */; };
-		36867CE13860D98C340E8C69 /* AddListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368676386517727931322CAA /* AddListingViewController.m */; };
 		36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */; };
 		36867E0F496E5164A3C68640 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867574420FC03229EB2051 /* FXForms.m */; };
 		36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368674E1227DD200EFEF046E /* release.xcconfig */; };
@@ -55,7 +54,6 @@
 
 /* Begin PBXFileReference section */
 		368670B7581994460386517F /* ListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsViewController.h; sourceTree = "<group>"; };
-		368671319E136F5ED03C5AAB /* AddListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddListingViewController.h; sourceTree = "<group>"; };
 		36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
 		3686717CC2C382E381546C09 /* ListingsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsMapViewController.m; sourceTree = "<group>"; };
 		368671D7C449D7478AE091E2 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 		368675B2B4A33226C23F72B2 /* ListingSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSummaryViewController.m; sourceTree = "<group>"; };
 		368675CCE862A6965184AE10 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = common.xcconfig; sourceTree = "<group>"; };
 		3686760C0886B8C931132AE8 /* AddListingNewFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddListingNewFormViewController.h; sourceTree = "<group>"; };
-		368676386517727931322CAA /* AddListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddListingViewController.m; sourceTree = "<group>"; };
 		368677406FE7423FA61EF3CE /* MoreInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInformationViewController.m; sourceTree = "<group>"; };
 		36867763F50586822930A8EF /* ListingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsCell.m; sourceTree = "<group>"; };
 		368678A4B143E7E69BB8F748 /* Listing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listing.h; sourceTree = "<group>"; };
@@ -219,8 +216,6 @@
 				36867A94257486DDADAB3CC3 /* MyAccountViewController.h */,
 				368675B2B4A33226C23F72B2 /* ListingSummaryViewController.m */,
 				36867E85EA628DAD49E68323 /* ListingSummaryViewController.h */,
-				368676386517727931322CAA /* AddListingViewController.m */,
-				368671319E136F5ED03C5AAB /* AddListingViewController.h */,
 				368677406FE7423FA61EF3CE /* MoreInformationViewController.m */,
 				368673C1524AE468B1848E99 /* MoreInformationViewController.h */,
 				3686717CC2C382E381546C09 /* ListingsMapViewController.m */,
@@ -461,7 +456,6 @@
 				368676950B79930720B55DA9 /* UIColor+SmartTrucking.m in Sources */,
 				3686786252891C134CFF3673 /* UIFont+SmartTrucking.m in Sources */,
 				36867B265CA756EFB8F9CA19 /* ListingSummaryViewController.m in Sources */,
-				36867CE13860D98C340E8C69 /* AddListingViewController.m in Sources */,
 				368677731C5C4E1E7F81A45C /* Address.m in Sources */,
 				3686733CBECC9FC28EE26491 /* MoreInformationViewController.m in Sources */,
 				368675195B5CDA5EB4502195 /* ListingsMapViewController.m in Sources */,

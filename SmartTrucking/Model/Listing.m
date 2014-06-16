@@ -14,7 +14,7 @@
   self.arriveTime = [self parseDate:dictionary[@"arrive_time"]];
   self.bidEndingTime = [self parseDate: dictionary[@"bid_ending_time"]];
   self.palletJackRequired = [dictionary[@"pallet_jack_required"] boolValue];
-  self.price = [dictionary[@"price"] intValue];
+  self.referenceRate = [dictionary[@"referenceRate"] intValue];
   self.specialCarryingPermitRequired = [dictionary[@"special_carrying_permit_required"] boolValue];
   self.tailgate = dictionary[@"tail_gate"];
   self.vehicleType = dictionary[@"vehicle_type"];

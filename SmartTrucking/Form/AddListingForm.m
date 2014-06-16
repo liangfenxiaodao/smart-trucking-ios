@@ -28,18 +28,26 @@
   return @[
     @{FXFormFieldKey : @"pickupAddress", FXFormFieldTitle : @"Pick up",
             FXFormFieldHeader : @"Transport",
-            FXFormFieldOptions : [self.addresses map:^(Address *address){return [address description];}]},
+            FXFormFieldOptions : self.addresses,
+            FXFormFieldValueTransformer : ^(Address *address) {
+              return [address description];
+            }
+    },
     @{FXFormFieldKey : @"pickupTime", FXFormFieldTitle : @"ETP", FXFormFieldType : FXFormFieldTypeDateTime},
     @{FXFormFieldKey : @"arriveAddress", FXFormFieldTitle : @"Delivery",
-            FXFormFieldOptions : [self.addresses map:^(Address *address){return [address description];}]},
+            FXFormFieldOptions : self.addresses,
+            FXFormFieldValueTransformer : ^(Address *address) {
+              return [address description];
+            }
+    },
     @{FXFormFieldKey : @"arriveTime", FXFormFieldTitle : @"ETA", FXFormFieldType : FXFormFieldTypeDateTime},
 
     @{FXFormFieldKey : @"length", FXFormFieldHeader : @""},
     @"width",
     @"height",
     @"weight",
-    @{FXFormFieldKey : @"price", FXFormFieldTitle : @"Reference rate", FXFormFieldType : FXFormFieldTypeInteger},
-    @"bidEndingTime",
+    @{FXFormFieldKey : @"referenceRate", FXFormFieldTitle : @"Reference rate", FXFormFieldType : FXFormFieldTypeInteger},
+    @{FXFormFieldKey: @"bidEndingTime",FXFormFieldType : FXFormFieldTypeDateTime},
 
     @{FXFormFieldKey : @"vehicleType", FXFormFieldTitle : @"Vehicle type", FXFormFieldHeader : @"",
             FXFormFieldOptions : self.vehicleTypes,

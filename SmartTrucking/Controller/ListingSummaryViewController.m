@@ -15,7 +15,7 @@
   self.listing = listings;
   [self.navigationItem setTitle:@"Summary"];
   self.sectionsAndRows = [NSMutableArray arrayWithArray:@[
-          @[@{@"price" : @"Reference Rate: "}, @{@"volume" : @"Volume: "}, @{@"weight" : @"Weight: "}],
+          @[@{@"referenceRate" : @"Reference Rate: "}, @{@"volume" : @"Volume: "}, @{@"weight" : @"Weight: "}],
           @[@{@"fromSuburb" : @"Pick up: "}, @{@"formattedPickupTime" : @"ETP: "}, @{@"toSuburb" : @"Delivery: "}, @{@"formattedArriveTime" : @"ETA: "}],
           @[@{@"vehicleType" : @"Vehicle Type: "}, @{@"specialCarryingPermit" : @"Special Carrying Permit: "}, @{@"palletJack" : @"Pallet Jack: "}, @{@"tailgate" : @"Tailgate: "}, @{@"jobNumber": @"Job Number:"}],
           @[@{@"biddingAmount" : @"Bidding Activity"}, @{@"customerName" : @"Customer"}]
@@ -45,7 +45,7 @@
   if ([value isKindOfClass:[NSString class]]) {
     cell.detailTextLabel.text = value;
   }
-  else if ([propertyKey isEqualToString:@"price"]) {
+  else if ([propertyKey isEqualToString:@"referenceRate"]) {
     cell.detailTextLabel.text = [NSString stringWithFormat:@"$%@", value];
   }
   else {

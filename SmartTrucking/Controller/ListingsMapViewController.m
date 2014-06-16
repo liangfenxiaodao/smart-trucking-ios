@@ -8,7 +8,6 @@
 #import "Address.h"
 #import "STAnnotation.h"
 #import "ListingSummaryViewController.h"
-#import "AddListingViewController.h"
 #import "AddListingNewFormViewController.h"
 
 @interface ListingsMapViewController ()
@@ -83,7 +82,7 @@
     STAnnotation *point = [[STAnnotation alloc] init];
     point.coordinate = CLLocationCoordinate2DMake(listing.pickupAddress.latitude, listing.pickupAddress.longitude);
     point.title = [NSString stringWithFormat:@"Delivery: %@", listing.arriveAddress.suburb];
-    point.subtitle = [NSString stringWithFormat:@"%@, %@T, $%i", listing.volume, listing.weight, listing.price];
+    point.subtitle = [NSString stringWithFormat:@"%@, %@T, $%i", listing.volume, listing.weight, listing.referenceRate];
     point.listing = listing;
     [self.mapView addAnnotation:point];
   }];
