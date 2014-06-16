@@ -76,7 +76,7 @@
   [self.pickUpTimeLabel setText:listing.formattedPickupTime];
   [self.arriveTimeLabel setText:listing.formattedArriveTime];
   [self.volumeLabel setText:[NSString stringWithFormat:@"%@", listing.volume]];
-  [self.weightLabel setText:listing.weight];
+  [self.weightLabel setText:[NSString stringWithFormat:@"%@T", listing.weight]];
   [self.priceLabel setText:[NSString stringWithFormat:@"Rate: $%i", listing.referenceRate]];
 };
 

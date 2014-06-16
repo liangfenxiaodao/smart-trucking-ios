@@ -12,7 +12,7 @@
 @property(nonatomic, assign) int referenceRate;
 @property(nonatomic, strong) NSDate *bidEndingTime;
 @property(nonatomic, strong) NSString *weight;
-@property(nonatomic, strong) NSString *volume;
+@property(nonatomic, strong, getter=getVolume) NSString *volume;
 @property(nonatomic, strong) NSString *length;
 @property(nonatomic, strong) NSString *width;
 @property(nonatomic, strong) NSString *height;

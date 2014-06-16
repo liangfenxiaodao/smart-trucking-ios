@@ -18,8 +18,10 @@
   self.specialCarryingPermitRequired = [dictionary[@"special_carrying_permit_required"] boolValue];
   self.tailgate = dictionary[@"tail_gate"];
   self.vehicleType = dictionary[@"vehicle_type"];
-  self.volume = dictionary[@"volume"];
   self.weight = dictionary[@"weight"];
+  self.length = dictionary[@"length"];
+  self.width = dictionary[@"width"];
+  self.height = dictionary[@"height"];
   self.jobNumber = dictionary[@"job_number"];
   self.pickupAddress = [[Address alloc]initWithString: dictionary[@"from_address"]];
   self.arriveAddress = [[Address alloc]initWithString: dictionary[@"to_address"]];
@@ -36,6 +38,10 @@
 
 - (NSString *)palletJack {
   return _palletJackRequired? @"Required" : @"No";
+}
+
+- (NSString *)getVolume {
+  return [NSString stringWithFormat:@"%@ x %@ x %@", self.length, self.width, self.height];
 }
 
 - (NSString *)formatDate: (NSDate *)date {
