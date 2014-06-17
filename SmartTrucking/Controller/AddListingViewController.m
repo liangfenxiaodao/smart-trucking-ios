@@ -1,17 +1,19 @@
 #import <ObjectiveSugar/NSArray+ObjectiveSugar.h>
-#import "AddListingNewFormViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
+#import "AddListingViewController.h"
 #import "AddListingForm.h"
 #import "Address.h"
 #import "Listing.h"
 #import "ApiClient.h"
+#import "ListingsMapViewController.h"
 
-@interface AddListingNewFormViewController ()
+@interface AddListingViewController ()
 @property(nonatomic, strong) NSArray *address;
 @property(nonatomic, strong) NSArray *vehicleTypes;
 @property(nonatomic, strong) NSArray *tailgates;
 @end
 
-@implementation AddListingNewFormViewController {
+@implementation AddListingViewController {
 
 }
 
@@ -47,12 +49,20 @@
     [listing setValue:[form valueForKey:propertyName] forKey:propertyName];
   }];
   listing.userId = @"538dc203250c9e08f0000002";
+  MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+  [self.navigationController.view addSubview:HUD];
+
+  HUD.labelText = @"processing...";
   [[ApiClient client] addListing:listing
     WithSuccess:^() {
-
+      [self dismissViewControllerAnimated:YES completion:^{
+        [self.delegate listingCreated:listing];
+        [HUD hide:YES];
+      }];
     }
     error:^(NSError *error) {
-     NSLog(@"error: %@", error);
+      [HUD hide:YES];
+       NSLog(@"error: %@", error);
     }
   ];
 }

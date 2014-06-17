@@ -8,7 +8,7 @@
 #import "Address.h"
 #import "STAnnotation.h"
 #import "ListingSummaryViewController.h"
-#import "AddListingNewFormViewController.h"
+#import "AddListingViewController.h"
 
 @interface ListingsMapViewController ()
 @property(nonatomic, strong) MKMapView *mapView;
@@ -41,7 +41,8 @@
 }
 
 - (void)addListing {
-  AddListingNewFormViewController *addListingViewController = [[AddListingNewFormViewController alloc]init];
+  AddListingViewController *addListingViewController = [[AddListingViewController alloc]init];
+  addListingViewController.delegate = self;
   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addListingViewController];
   [self presentViewController:navigationController animated:YES completion:^{}];
 }
@@ -79,13 +80,17 @@
 - (void)showListings:(NSMutableArray *)listings {
   [self.mapView removeAnnotations:self.mapView.annotations];
   [listings each:^(Listing *listing) {
-    STAnnotation *point = [[STAnnotation alloc] init];
-    point.coordinate = CLLocationCoordinate2DMake(listing.pickupAddress.latitude, listing.pickupAddress.longitude);
-    point.title = [NSString stringWithFormat:@"Delivery: %@", listing.arriveAddress.suburb];
-    point.subtitle = [NSString stringWithFormat:@"%@, %@T, $%i", listing.volume, listing.weight, listing.referenceRate];
-    point.listing = listing;
-    [self.mapView addAnnotation:point];
+    [self addAnnotationForListing:listing];
   }];
+}
+
+- (void)addAnnotationForListing:(Listing *)listing {
+  STAnnotation *point = [[STAnnotation alloc] init];
+  point.coordinate = CLLocationCoordinate2DMake(listing.pickupAddress.latitude, listing.pickupAddress.longitude);
+  point.title = [NSString stringWithFormat:@"Delivery: %@", listing.arriveAddress.suburb];
+  point.subtitle = [NSString stringWithFormat:@"%@, %@T, $%i", listing.volume, listing.weight, listing.referenceRate];
+  point.listing = listing;
+  [self.mapView addAnnotation:point];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation {
@@ -103,11 +108,6 @@
     customPinView.animatesDrop = YES;
     customPinView.canShowCallout = YES;
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    // note: when the detail disclosure button is tapped, we respond to it via:
-    //       calloutAccessoryControlTapped delegate method
-    //
-    // by using "calloutAccessoryControlTapped", it's a convenient way to find out which annotation was tapped
-    //
     [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
     customPinView.rightCalloutAccessoryView = rightButton;
     return customPinView;
@@ -122,5 +122,10 @@
   STAnnotation *annotation = (STAnnotation *) [view annotation];
   ListingSummaryViewController *summaryViewController = [[ListingSummaryViewController alloc] initWithListings:annotation.listing];
   [self.navigationController pushViewController:summaryViewController animated:YES];
+}
+
+- (void)listingCreated:(Listing *)listing {
+  NSLog(@"listing created");
+  [self addAnnotationForListing:listing];
 }
 @end
