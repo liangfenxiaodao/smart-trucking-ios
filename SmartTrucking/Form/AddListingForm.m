@@ -50,13 +50,10 @@
     @{FXFormFieldKey: @"bidEndingTime",FXFormFieldType : FXFormFieldTypeDateTime},
 
     @{FXFormFieldKey : @"vehicleType", FXFormFieldTitle : @"Vehicle type", FXFormFieldHeader : @"",
-            FXFormFieldOptions : self.vehicleTypes,
-            FXFormFieldPlaceholder: @"None",
-            FXFormFieldCell: [FXFormOptionPickerCell class]},
+            FXFormFieldOptions : self.vehicleTypes},
     @{FXFormFieldKey : @"specialCarryingPermitRequired", FXFormFieldTitle : @"Specail carrying permit"},
     @{FXFormFieldKey : @"palletJackRequired", FXFormFieldTitle : @"Pallet jack"},
-    @{FXFormFieldKey : @"tailgate", FXFormFieldOptions : self.tailgates, FXFormFieldPlaceholder: @"None",
-            FXFormFieldCell: [FXFormOptionPickerCell class]},
+    @{FXFormFieldKey : @"tailgate", FXFormFieldOptions : self.tailgates},
 
     @{FXFormFieldKey : @"jobNumber", FXFormFieldTitle : @"Job number", FXFormFieldHeader : @"", FXFormFieldType : FXFormFieldTypeInteger}
   ];
