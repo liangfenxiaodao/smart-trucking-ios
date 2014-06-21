@@ -36,18 +36,11 @@
 }
 
 - (void)donePressed {
-  AddListingForm *form = (AddListingForm *) self.formController.form;
-  Listing *listing = [[Listing alloc] init];
-  [@[@"pickupTime", @"arriveTime", @"bidEndingTime",
-          @"weight", @"referenceRate", @"length",@"width", @"height",
-          @"specialCarryingPermitRequired", @"palletJackRequired",
-          @"vehicleType", @"tailgate", @"jobNumber", @"pickupAddress", @"arriveAddress"] each:^(id propertyName) {
-    [listing setValue:[form valueForKey:propertyName] forKey:propertyName];
-  }];
-  listing.userId = self.user.id;
+  Listing *listing = [self populateListingFromInput];
+
   MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
   [self.navigationController.view addSubview:HUD];
-
+  [HUD show:YES];
   HUD.labelText = @"processing...";
   [[ApiClient client] addListing:listing
     WithSuccess:^() {
@@ -61,6 +54,19 @@
        NSLog(@"error: %@", error);
     }
   ];
+}
+
+- (Listing *)populateListingFromInput {
+  AddListingForm *form = (AddListingForm *) self.formController.form;
+  Listing *listing = [[Listing alloc] init];
+  [@[@"pickupTime", @"arriveTime", @"bidEndingTime",
+          @"weight", @"referenceRate", @"length",@"width", @"height",
+          @"specialCarryingPermitRequired", @"palletJackRequired",
+          @"vehicleType", @"tailgate", @"jobNumber", @"pickupAddress", @"arriveAddress"] each:^(id propertyName) {
+    [listing setValue:[form valueForKey:propertyName] forKey:propertyName];
+  }];
+  listing.userId = self.user.id;
+  return listing;
 }
 
 - (void)cancelPressed {
