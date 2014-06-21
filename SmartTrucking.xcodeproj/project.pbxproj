@@ -26,6 +26,7 @@
 		36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */; };
 		36867E0F496E5164A3C68640 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867574420FC03229EB2051 /* FXForms.m */; };
 		36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368674E1227DD200EFEF046E /* release.xcconfig */; };
+		36867EE34AEFDE8A0C511181 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867AA656C492231C2A7B71 /* User.m */; };
 		36867F6100E504D088221A45 /* AddListingForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686751D60A928352F50D775 /* AddListingForm.m */; };
 		4964F1E91948829900EB661E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964F1E81948829900EB661E /* MapKit.framework */; };
 		BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */; };
@@ -80,8 +81,10 @@
 		36867A4A0403146DB99DFB66 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		36867A8568D822761D2786CE /* ListingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsCell.h; sourceTree = "<group>"; };
 		36867A94257486DDADAB3CC3 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
+		36867AA656C492231C2A7B71 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		36867B02CF2E90A5ACF7B5E2 /* ListingsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsMapViewController.h; sourceTree = "<group>"; };
 		36867B730F4EBBA62F804A63 /* STAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAnnotation.m; sourceTree = "<group>"; };
+		36867C6F748CCED5D29427D2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		36867CCCF2600D8A42A8C916 /* UIFont+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SmartTrucking.h"; sourceTree = "<group>"; };
 		36867D2BA966DCAEB240BDDF /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
 		36867E85EA628DAD49E68323 /* ListingSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingSummaryViewController.h; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				368678A4B143E7E69BB8F748 /* Listing.h */,
 				368671D7C449D7478AE091E2 /* Address.m */,
 				368672827B191402D243D557 /* Address.h */,
+				36867AA656C492231C2A7B71 /* User.m */,
+				36867C6F748CCED5D29427D2 /* User.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 				36867E0F496E5164A3C68640 /* FXForms.m in Sources */,
 				36867F6100E504D088221A45 /* AddListingForm.m in Sources */,
 				36867A7BF3437BB789207ACB /* AddListingViewController.m in Sources */,
+				36867EE34AEFDE8A0C511181 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

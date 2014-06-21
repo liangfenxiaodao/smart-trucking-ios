@@ -2,6 +2,7 @@
 #import "AFHTTPRequestOperationManager.h"
 #import "Listing.h"
 #import "Address.h"
+#import "User.h"
 #import <AFNetworking/AFNetworking.h>
 
 @interface ApiClient ()
@@ -24,6 +25,19 @@ static ApiClient *sharedInstance;
   });
 
   return sharedInstance;
+}
+
+- (void)getUserBy:(NSString *)userId WithSuccess:(void(^)())successBlock error: (void(^)(NSError *error))errorBlock{
+  [_requestOperationManager GET:[NSString stringWithFormat:@"/users/%@", userId]
+    parameters:nil
+    success:^(AFHTTPRequestOperation *operation, id response) {
+      User *user = [[User alloc] initWithDictionary:response];
+      successBlock();
+    }
+    failure:^(AFHTTPRequestOperation *operation, NSError *error){
+      errorBlock(error);
+    }
+  ];
 }
 
 - (void)addListing: (Listing *)listing WithSuccess:(void(^)())successBlock error: (void(^)(NSError *error))errorBlock {

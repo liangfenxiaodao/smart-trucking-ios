@@ -27,4 +27,11 @@
   return [NSString stringWithFormat:@"%@, %@, %@, %@, %@", self.street, self.suburb, self.city, self.state, self.postcode];
 }
 
+- (instancetype)initFromDictionary:(NSDictionary *)dictionary {
+  self = [super init];
+  if(!self) return nil;
+  [self setValuesForKeysWithDictionary:dictionary];
+  return self;
+}
+
 @end

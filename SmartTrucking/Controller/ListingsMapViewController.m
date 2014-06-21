@@ -10,6 +10,13 @@
 #import "ListingSummaryViewController.h"
 #import "AddListingViewController.h"
 
+#ifdef DEBUG
+static NSString *userId = @"53a563a6250c9e6040000001";
+#else
+static NSString *userId = @"53a563e3250c9e1005000001";
+#endif
+
+
 @interface ListingsMapViewController ()
 @property(nonatomic, strong) MKMapView *mapView;
 @property(nonatomic, strong) NSMutableArray *listings;
@@ -48,6 +55,10 @@
 }
 
 - (void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(NSError *)error {
+  [self showErrorMessage];
+}
+
+- (void)showErrorMessage {
   MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
   [self.navigationController.view addSubview:HUD];
   HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cancel"]];
@@ -56,7 +67,6 @@
   [HUD show:YES];
   [HUD hide:YES afterDelay:2];
 }
-
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
   if (self.userLocationUpdated) {
@@ -70,7 +80,13 @@
   [[ApiClient client] getAllListingsWithSuccess:^(NSArray *result) {
     self.listings = [NSMutableArray arrayWithArray:result];
     [self showListings:self.listings];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+
+    [[ApiClient client] getUserBy:userId WithSuccess:^(){
+      [MBProgressHUD hideHUDForView:self.view animated:YES];
+    } error:^(NSError *error){
+      NSLog(@"error: %@", error);
+      [MBProgressHUD hideHUDForView:self.view animated:YES];
+    }];
   } error:^(NSError *error) {
     NSLog(@"error: %@", error);
     [MBProgressHUD hideHUDForView:self.view animated:YES];

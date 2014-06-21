@@ -12,4 +12,6 @@
 @property (nonatomic) double longitude;
 
 - (instancetype)initWithString:(NSString *)address;
+
+- (id)initFromDictionary:(NSDictionary *)dictionary;
 @end
