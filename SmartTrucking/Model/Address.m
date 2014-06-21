@@ -34,4 +34,7 @@
   return self;
 }
 
+- (NSString *)getId{
+  return [self valueForKey:@"_id"];
+}
 @end

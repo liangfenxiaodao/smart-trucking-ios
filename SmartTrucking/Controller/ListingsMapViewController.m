@@ -5,6 +5,7 @@
 #import "MBProgressHUD.h"
 #import "ApiClient.h"
 #import "Listing.h"
+#import "User.h"
 #import "Address.h"
 #import "STAnnotation.h"
 #import "ListingSummaryViewController.h"
@@ -21,6 +22,7 @@ static NSString *userId = @"53a563e3250c9e1005000001";
 @property(nonatomic, strong) MKMapView *mapView;
 @property(nonatomic, strong) NSMutableArray *listings;
 @property(nonatomic) BOOL userLocationUpdated;
+@property(nonatomic, strong) User *user;
 @end
 
 @implementation ListingsMapViewController {
@@ -48,8 +50,7 @@ static NSString *userId = @"53a563e3250c9e1005000001";
 }
 
 - (void)addListing {
-  AddListingViewController *addListingViewController = [[AddListingViewController alloc]init];
-  addListingViewController.delegate = self;
+  AddListingViewController *addListingViewController = [[AddListingViewController alloc] initWithUser:self.user delegate:self];
   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addListingViewController];
   [self presentViewController:navigationController animated:YES completion:^{}];
 }
@@ -81,7 +82,8 @@ static NSString *userId = @"53a563e3250c9e1005000001";
     self.listings = [NSMutableArray arrayWithArray:result];
     [self showListings:self.listings];
 
-    [[ApiClient client] getUserBy:userId WithSuccess:^(){
+    [[ApiClient client] getUserBy:userId WithSuccess:^(User *user){
+      self.user = user;
       [MBProgressHUD hideHUDForView:self.view animated:YES];
     } error:^(NSError *error){
       NSLog(@"error: %@", error);

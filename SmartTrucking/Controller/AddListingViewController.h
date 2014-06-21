@@ -2,7 +2,9 @@
 #import "FXForms.h"
 
 @class ListingsMapViewController;
+@class User;
 
 @interface AddListingViewController : FXFormViewController
-@property (nonatomic, strong) ListingsMapViewController *delegate;
+
+- (id)initWithUser:(User *)user delegate:(ListingsMapViewController *)delegate;
 @end

@@ -2,11 +2,12 @@
 
 @class AFHTTPRequestOperationManager;
 @class Listing;
+@class User;
 
 @interface ApiClient : NSObject
 + (ApiClient *)client;
 
-- (void)getUserBy:(NSString *)userId WithSuccess:(void (^)())successBlock error:(void (^)(NSError *error))errorBlock;
+- (void)getUserBy:(NSString *)userId WithSuccess:(void (^)(User *user))successBlock error:(void (^)(NSError *error))errorBlock;
 
 - (void)addListing:(Listing *)listing WithSuccess:(void (^)())successBlock error:(void (^)(NSError *error))errorBlock;
 

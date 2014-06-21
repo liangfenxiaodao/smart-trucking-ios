@@ -27,12 +27,12 @@ static ApiClient *sharedInstance;
   return sharedInstance;
 }
 
-- (void)getUserBy:(NSString *)userId WithSuccess:(void(^)())successBlock error: (void(^)(NSError *error))errorBlock{
+- (void)getUserBy:(NSString *)userId WithSuccess:(void (^)(User *user))successBlock error: (void(^)(NSError *error))errorBlock{
   [_requestOperationManager GET:[NSString stringWithFormat:@"/users/%@", userId]
     parameters:nil
     success:^(AFHTTPRequestOperation *operation, id response) {
       User *user = [[User alloc] initWithDictionary:response];
-      successBlock();
+      successBlock(user);
     }
     failure:^(AFHTTPRequestOperation *operation, NSError *error){
       errorBlock(error);
@@ -70,7 +70,6 @@ static ApiClient *sharedInstance;
   [_requestOperationManager GET:@"/listings"
      parameters:nil
      success:^(AFHTTPRequestOperation *operation, id response) {
-       NSLog(@"get all listings success");
        NSMutableArray *result = [[NSMutableArray alloc]init];
        for(NSDictionary *goodDictionary in response){
           Listing *listing = [[Listing alloc] initWithDictionary:goodDictionary];
