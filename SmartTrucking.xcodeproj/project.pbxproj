@@ -12,6 +12,7 @@
 		368672230E915FE6FE534FB0 /* common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368675CCE862A6965184AE10 /* common.xcconfig */; };
 		36867252D1561D1EE5171D78 /* STAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867B730F4EBBA62F804A63 /* STAnnotation.m */; };
 		3686733CBECC9FC28EE26491 /* MoreInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368677406FE7423FA61EF3CE /* MoreInformationViewController.m */; };
+		36867356DD7D7B8503CF9663 /* BiddingActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686764CE8FF380951FE572D /* BiddingActivitiesViewController.m */; };
 		36867482797A84B510A91371 /* ListingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867763F50586822930A8EF /* ListingsCell.m */; };
 		368675195B5CDA5EB4502195 /* ListingsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686717CC2C382E381546C09 /* ListingsMapViewController.m */; };
 		3686751DFEFCADE2834E1736 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A4A0403146DB99DFB66 /* SearchViewController.m */; };
@@ -70,6 +71,7 @@
 		368675B2B4A33226C23F72B2 /* ListingSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSummaryViewController.m; sourceTree = "<group>"; };
 		368675CCE862A6965184AE10 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = common.xcconfig; sourceTree = "<group>"; };
 		3686760C0886B8C931132AE8 /* AddListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddListingViewController.h; sourceTree = "<group>"; };
+		3686764CE8FF380951FE572D /* BiddingActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiddingActivitiesViewController.m; sourceTree = "<group>"; };
 		368677406FE7423FA61EF3CE /* MoreInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInformationViewController.m; sourceTree = "<group>"; };
 		36867763F50586822930A8EF /* ListingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsCell.m; sourceTree = "<group>"; };
 		368678A4B143E7E69BB8F748 /* Listing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listing.h; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		36867CCCF2600D8A42A8C916 /* UIFont+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SmartTrucking.h"; sourceTree = "<group>"; };
 		36867D2BA966DCAEB240BDDF /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
 		36867E85EA628DAD49E68323 /* ListingSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingSummaryViewController.h; sourceTree = "<group>"; };
+		36867ECC57A8BCF67791B292 /* BiddingActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiddingActivitiesViewController.h; sourceTree = "<group>"; };
 		36867EEF60408FB5FF28577F /* UIColor+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SmartTrucking.m"; sourceTree = "<group>"; };
 		36867F3858EF67485981AB91 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsViewController.m; sourceTree = "<group>"; };
 		36867F9D0FFD2A1AC5442AE6 /* Listing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Listing.m; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 				36867B02CF2E90A5ACF7B5E2 /* ListingsMapViewController.h */,
 				36867966EAD4243021AED2D3 /* AddListingViewController.m */,
 				3686760C0886B8C931132AE8 /* AddListingViewController.h */,
+				3686764CE8FF380951FE572D /* BiddingActivitiesViewController.m */,
+				36867ECC57A8BCF67791B292 /* BiddingActivitiesViewController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 				36867F6100E504D088221A45 /* AddListingForm.m in Sources */,
 				36867A7BF3437BB789207ACB /* AddListingViewController.m in Sources */,
 				36867EE34AEFDE8A0C511181 /* User.m in Sources */,
+				36867356DD7D7B8503CF9663 /* BiddingActivitiesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

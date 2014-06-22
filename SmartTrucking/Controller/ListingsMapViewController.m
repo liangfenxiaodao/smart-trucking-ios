@@ -138,7 +138,7 @@ static NSString *userId = @"53a563e3250c9e1005000001";
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
   STAnnotation *annotation = (STAnnotation *) [view annotation];
-  ListingSummaryViewController *summaryViewController = [[ListingSummaryViewController alloc] initWithListings:annotation.listing];
+  ListingSummaryViewController *summaryViewController = [[ListingSummaryViewController alloc] initWithListing:annotation.listing];
   [self.navigationController pushViewController:summaryViewController animated:YES];
 }
 

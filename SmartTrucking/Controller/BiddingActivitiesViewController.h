@@ -2,6 +2,6 @@
 
 @class Listing;
 
-@interface ListingSummaryViewController : UITableViewController
+@interface BiddingActivitiesViewController : UITableViewController
 - (id)initWithListing:(Listing *)listing;
 @end

@@ -1,5 +1,6 @@
 #import "ListingSummaryViewController.h"
 #import "Listing.h"
+#import "BiddingActivitiesViewController.h"
 
 @interface ListingSummaryViewController ()
 @property(nonatomic, strong) Listing *listing;
@@ -9,10 +10,10 @@
 @implementation ListingSummaryViewController {
 
 }
-- (id)initWithListings:(Listing *)listings {
+- (id)initWithListing:(Listing *)listing {
   self = [super initWithStyle:UITableViewStyleGrouped];
   if (!self) return nil;
-  self.listing = listings;
+  self.listing = listing;
   [self.navigationItem setTitle:@"Summary"];
   self.sectionsAndRows = [NSMutableArray arrayWithArray:@[
           @[@{@"referenceRate" : @"Reference Rate: "}, @{@"volume" : @"Volume: "}, @{@"weight" : @"Weight: "}],
@@ -58,5 +59,13 @@
   return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  if(indexPath.section == 3){
+    if(indexPath.row == 0){
+      BiddingActivitiesViewController *biddingActivitiesViewController = [[BiddingActivitiesViewController alloc] initWithListing:self.listing];
+      [self.navigationController pushViewController:biddingActivitiesViewController animated:YES];
+    }
+  }
+}
 
 @end

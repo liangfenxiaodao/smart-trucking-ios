@@ -60,7 +60,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   Listing *goods = [self.listingsArray objectAtIndex:(NSUInteger) indexPath.row];
-  ListingSummaryViewController *summaryViewController = [[ListingSummaryViewController alloc] initWithListings:goods];
+  ListingSummaryViewController *summaryViewController = [[ListingSummaryViewController alloc] initWithListing:goods];
   [self.navigationController pushViewController:summaryViewController animated:YES];
 }
 
