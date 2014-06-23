@@ -69,4 +69,7 @@
   }
 }
 
+- (void)placeBidding {
+  
+}
 @end

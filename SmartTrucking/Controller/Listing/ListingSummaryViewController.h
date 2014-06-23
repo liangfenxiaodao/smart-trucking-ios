@@ -4,4 +4,6 @@
 
 @interface ListingSummaryViewController : UITableViewController
 - (id)initWithListing:(Listing *)listing;
+
+- (void)placeBidding;
 @end
