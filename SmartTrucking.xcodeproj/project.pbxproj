@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C6F0955564844B0B1129F69 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5729114564585936844CA /* libPods.a */; };
 		3686702F7DA5ABCC55CAD1F3 /* debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3686798695D53EC257390DFA /* debug.xcconfig */; };
+		3686703C12065102182A8A91 /* BiddingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867FF52275EADBE80AE18A /* BiddingButton.m */; };
 		368672230E915FE6FE534FB0 /* common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368675CCE862A6965184AE10 /* common.xcconfig */; };
 		36867252D1561D1EE5171D78 /* STAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867B730F4EBBA62F804A63 /* STAnnotation.m */; };
 		3686733CBECC9FC28EE26491 /* MoreInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368677406FE7423FA61EF3CE /* MoreInformationViewController.m */; };
@@ -85,6 +86,7 @@
 		36867A94257486DDADAB3CC3 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
 		36867AA656C492231C2A7B71 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		36867B02CF2E90A5ACF7B5E2 /* ListingsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsMapViewController.h; sourceTree = "<group>"; };
+		36867B51F641BD99D3A32555 /* BiddingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiddingButton.h; sourceTree = "<group>"; };
 		36867B730F4EBBA62F804A63 /* STAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAnnotation.m; sourceTree = "<group>"; };
 		36867C6F748CCED5D29427D2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		36867CCCF2600D8A42A8C916 /* UIFont+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SmartTrucking.h"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		36867EEF60408FB5FF28577F /* UIColor+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SmartTrucking.m"; sourceTree = "<group>"; };
 		36867F3858EF67485981AB91 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsViewController.m; sourceTree = "<group>"; };
 		36867F9D0FFD2A1AC5442AE6 /* Listing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Listing.m; sourceTree = "<group>"; };
+		36867FF52275EADBE80AE18A /* BiddingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiddingButton.m; sourceTree = "<group>"; };
 		3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4964F1E61948804E00EB661E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4964F1E81948829900EB661E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -166,6 +169,8 @@
 				36867A8568D822761D2786CE /* ListingsCell.h */,
 				36867B730F4EBBA62F804A63 /* STAnnotation.m */,
 				368679704D6C55C24FDB1190 /* STAnnotation.h */,
+				36867FF52275EADBE80AE18A /* BiddingButton.m */,
+				36867B51F641BD99D3A32555 /* BiddingButton.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 				36867A7BF3437BB789207ACB /* AddListingViewController.m in Sources */,
 				36867EE34AEFDE8A0C511181 /* User.m in Sources */,
 				36867356DD7D7B8503CF9663 /* BiddingActivitiesViewController.m in Sources */,
+				3686703C12065102182A8A91 /* BiddingButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

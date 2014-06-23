@@ -1,6 +1,7 @@
 #import "ListingSummaryViewController.h"
 #import "Listing.h"
 #import "BiddingActivitiesViewController.h"
+#import "BiddingButton.h"
 
 @interface ListingSummaryViewController ()
 @property(nonatomic, strong) Listing *listing;
@@ -26,7 +27,7 @@
 
 - (void)loadView {
   [super loadView];
-  [self.tableView setTableFooterView:[[UIView alloc] init]];
+  [self.tableView setTableFooterView:[[BiddingButton alloc]init]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

@@ -4,4 +4,6 @@
 + (UIFont *)goodsListFont;
 
 + (UIFont *)goodsLocationFont;
+
++ (UIFont *)buttonFont;
 @end
