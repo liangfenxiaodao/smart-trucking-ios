@@ -27,7 +27,7 @@
 
 - (void)loadView {
   [super loadView];
-  [self.tableView setTableFooterView:[[BiddingButton alloc]init]];
+  [self.tableView setTableFooterView:[[BiddingButton alloc] initWithDelegate:self]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -72,4 +72,6 @@
 - (void)placeBidding {
   
 }
+
+
 @end
