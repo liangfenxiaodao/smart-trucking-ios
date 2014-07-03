@@ -8,8 +8,8 @@
 #import "User.h"
 #import "Address.h"
 #import "STAnnotation.h"
-#import "ListingSummaryViewController.h"
 #import "AddListingViewController.h"
+#import "ListingSummary2ViewController.h"
 
 #ifdef DEBUG
 static NSString *userId = @"53a563a6250c9e6040000001";
@@ -138,7 +138,7 @@ static NSString *userId = @"53a563e3250c9e1005000001";
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
   STAnnotation *annotation = (STAnnotation *) [view annotation];
-  ListingSummaryViewController *summaryViewController = [[ListingSummaryViewController alloc] initWithListing:annotation.listing];
+  ListingSummary2ViewController *summaryViewController = [[ListingSummary2ViewController alloc] initWithListing:annotation.listing];
   [self.navigationController pushViewController:summaryViewController animated:YES];
 }
 

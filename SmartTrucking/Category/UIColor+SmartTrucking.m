@@ -10,6 +10,9 @@
   return [UIColor buildColorWithRed:107 green:170 blue:62];
 }
 
++ (UIColor*) textColor {
+  return [UIColor buildSimpleColor:113];
+}
 
 + (UIColor *)buildSimpleColor:(int)value {
   return [UIColor buildColorWithRed:value green:value blue:value];

@@ -81,11 +81,7 @@
 };
 
 - (UILabel *)createLabel {
-  UILabel *label = UILabel.new;
-  [label setTextColor:[UIColor textColorDark]];
-  [label setFont:[UIFont goodsListFont]];
-  [self.contentView addSubview:label];
-  return label;
+  return [self createLabelWith:[UIFont goodsListFont]];
 }
 
 - (UILabel *)createLabelWith:(UIFont *)font {
