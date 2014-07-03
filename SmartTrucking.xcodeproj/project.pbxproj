@@ -12,28 +12,27 @@
 		3686703C12065102182A8A91 /* BiddingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867FF52275EADBE80AE18A /* BiddingButton.m */; };
 		368670A7B642E0BFE01FEB10 /* AddListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867DAFCE68BC3818ECE69B /* AddListingViewController.m */; };
 		368672230E915FE6FE534FB0 /* common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368675CCE862A6965184AE10 /* common.xcconfig */; };
-		36867252D1561D1EE5171D78 /* STAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867B730F4EBBA62F804A63 /* STAnnotation.m */; };
 		3686733CBECC9FC28EE26491 /* MoreInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368677406FE7423FA61EF3CE /* MoreInformationViewController.m */; };
 		36867482797A84B510A91371 /* ListingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867763F50586822930A8EF /* ListingsCell.m */; };
+		368674FAD44B5E7BD482889C /* ListingSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686715F94A1FD0A215D8D7A /* ListingSummaryView.m */; };
 		368674FB4434AA3377A4375C /* ListingSummary2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686721944D70CB3D829E625 /* ListingSummary2ViewController.m */; };
 		3686751DFEFCADE2834E1736 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A4A0403146DB99DFB66 /* SearchViewController.m */; };
 		368676950B79930720B55DA9 /* UIColor+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867EEF60408FB5FF28577F /* UIColor+SmartTrucking.m */; };
+		3686772B17E34C69EAF08114 /* DashedLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F9ADB72DF3B4C61B066 /* DashedLine.m */; };
 		368677731C5C4E1E7F81A45C /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 368671D7C449D7478AE091E2 /* Address.m */; };
 		368677ED565AAB5E51ED3080 /* ListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F3858EF67485981AB91 /* ListingsViewController.m */; };
-		3686780D39CDB06FEF58059D /* ListingSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867FC5ADD701545DA09509 /* ListingSummaryView.m */; };
 		3686785F59A0BB34B4E59699 /* Listing.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F9D0FFD2A1AC5442AE6 /* Listing.m */; };
 		3686786252891C134CFF3673 /* UIFont+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = 368679863396CB326E8879F7 /* UIFont+SmartTrucking.m */; };
 		3686788B9AC8D17F64DC2384 /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867D2BA966DCAEB240BDDF /* ApiClient.m */; };
 		368678BF6261F68B3A2EF125 /* PlaceBidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 368678D534453DAB9780821F /* PlaceBidView.m */; };
 		3686796D4ABC2007E50C2E99 /* ListingsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686787ECC2351E5A45C011C /* ListingsMapViewController.m */; };
-		36867A97FB2EF1C644D9F575 /* DashedLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 368675D25F3D08E21DACEE7C /* DashedLine.m */; };
-		36867CC6B30459E48CEC6446 /* TopLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867AC2DBCFA532B4425D35 /* TopLineLabel.m */; };
 		36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */; };
 		36867E0F496E5164A3C68640 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867574420FC03229EB2051 /* FXForms.m */; };
 		36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368674E1227DD200EFEF046E /* release.xcconfig */; };
 		36867EAF65A15AE3751566CC /* ListingSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368676306A0967EAEBAB667F /* ListingSummaryViewController.m */; };
 		36867ED510A60E046332963A /* BiddingActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F884176702A20E7405D /* BiddingActivitiesViewController.m */; };
 		36867EE34AEFDE8A0C511181 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867AA656C492231C2A7B71 /* User.m */; };
+		36867F4CFCA59433D7D9DB37 /* STAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686784568ECD3E825E62AC3 /* STAnnotation.m */; };
 		36867F6100E504D088221A45 /* AddListingForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686751D60A928352F50D775 /* AddListingForm.m */; };
 		36867FBEBAA69AC64CF55655 /* PlaceBidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867693D58C15C6252F5F89 /* PlaceBidViewController.m */; };
 		4964F1E91948829900EB661E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964F1E81948829900EB661E /* MapKit.framework */; };
@@ -64,7 +63,7 @@
 /* Begin PBXFileReference section */
 		368670B7581994460386517F /* ListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsViewController.h; sourceTree = "<group>"; };
 		36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
-		368671AFEF460E42729291F9 /* DashedLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedLine.h; sourceTree = "<group>"; };
+		3686715F94A1FD0A215D8D7A /* ListingSummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSummaryView.m; sourceTree = "<group>"; };
 		368671D7C449D7478AE091E2 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 		3686721944D70CB3D829E625 /* ListingSummary2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSummary2ViewController.m; sourceTree = "<group>"; };
 		36867225497198AFDAC080F2 /* UIColor+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SmartTrucking.h"; sourceTree = "<group>"; };
@@ -79,41 +78,39 @@
 		3686751D60A928352F50D775 /* AddListingForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddListingForm.m; sourceTree = "<group>"; };
 		36867574420FC03229EB2051 /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
 		36867596F12E83612CE0A122 /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
-		3686759F3D492A4D77FAFFA7 /* ListingSummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingSummaryView.h; sourceTree = "<group>"; };
+		368675A885676DE48F7C6E6A /* ListingSummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingSummaryView.h; sourceTree = "<group>"; };
 		368675CCE862A6965184AE10 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = common.xcconfig; sourceTree = "<group>"; };
-		368675D25F3D08E21DACEE7C /* DashedLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedLine.m; sourceTree = "<group>"; };
 		368676306A0967EAEBAB667F /* ListingSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSummaryViewController.m; sourceTree = "<group>"; };
 		36867693D58C15C6252F5F89 /* PlaceBidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBidViewController.m; sourceTree = "<group>"; };
 		368677406FE7423FA61EF3CE /* MoreInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInformationViewController.m; sourceTree = "<group>"; };
 		36867763F50586822930A8EF /* ListingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsCell.m; sourceTree = "<group>"; };
+		3686784568ECD3E825E62AC3 /* STAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAnnotation.m; sourceTree = "<group>"; };
 		3686787ECC2351E5A45C011C /* ListingsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsMapViewController.m; sourceTree = "<group>"; };
 		368678A4B143E7E69BB8F748 /* Listing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listing.h; sourceTree = "<group>"; };
 		368678D534453DAB9780821F /* PlaceBidView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBidView.m; sourceTree = "<group>"; };
 		3686796956F47C37488E5D84 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		368679704D6C55C24FDB1190 /* STAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAnnotation.h; sourceTree = "<group>"; };
 		368679863396CB326E8879F7 /* UIFont+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SmartTrucking.m"; sourceTree = "<group>"; };
 		3686798695D53EC257390DFA /* debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		36867A4A0403146DB99DFB66 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		36867A8568D822761D2786CE /* ListingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsCell.h; sourceTree = "<group>"; };
 		36867A94257486DDADAB3CC3 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
 		36867AA656C492231C2A7B71 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		36867AC2DBCFA532B4425D35 /* TopLineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopLineLabel.m; sourceTree = "<group>"; };
 		36867B51F641BD99D3A32555 /* BiddingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiddingButton.h; sourceTree = "<group>"; };
-		36867B561AEBAB3A12C63CB3 /* TopLineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopLineLabel.h; sourceTree = "<group>"; };
-		36867B730F4EBBA62F804A63 /* STAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAnnotation.m; sourceTree = "<group>"; };
+		36867BA66E833117B7DB6CE5 /* DashedLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedLine.h; sourceTree = "<group>"; };
 		36867C6F748CCED5D29427D2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		36867CCCF2600D8A42A8C916 /* UIFont+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SmartTrucking.h"; sourceTree = "<group>"; };
 		36867D2BA966DCAEB240BDDF /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
 		36867D398D1E234451E4F731 /* ListingsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsMapViewController.h; sourceTree = "<group>"; };
 		36867D5556E9D1BAA54E64A5 /* PlaceBidView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceBidView.h; sourceTree = "<group>"; };
 		36867DAFCE68BC3818ECE69B /* AddListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddListingViewController.m; sourceTree = "<group>"; };
+		36867EA168E9706EA2C611C7 /* STAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAnnotation.h; sourceTree = "<group>"; };
 		36867EAEFA695A4598D032DE /* BiddingActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiddingActivitiesViewController.h; sourceTree = "<group>"; };
 		36867EE887BCF5E748705319 /* ListingSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingSummaryViewController.h; sourceTree = "<group>"; };
 		36867EEF60408FB5FF28577F /* UIColor+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SmartTrucking.m"; sourceTree = "<group>"; };
 		36867F3858EF67485981AB91 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsViewController.m; sourceTree = "<group>"; };
 		36867F884176702A20E7405D /* BiddingActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiddingActivitiesViewController.m; sourceTree = "<group>"; };
+		36867F9ADB72DF3B4C61B066 /* DashedLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedLine.m; sourceTree = "<group>"; };
 		36867F9D0FFD2A1AC5442AE6 /* Listing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Listing.m; sourceTree = "<group>"; };
-		36867FC5ADD701545DA09509 /* ListingSummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSummaryView.m; sourceTree = "<group>"; };
 		36867FF52275EADBE80AE18A /* BiddingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiddingButton.m; sourceTree = "<group>"; };
 		3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4964F1E61948804E00EB661E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -185,18 +182,12 @@
 			children = (
 				36867763F50586822930A8EF /* ListingsCell.m */,
 				36867A8568D822761D2786CE /* ListingsCell.h */,
-				36867B730F4EBBA62F804A63 /* STAnnotation.m */,
-				368679704D6C55C24FDB1190 /* STAnnotation.h */,
 				36867FF52275EADBE80AE18A /* BiddingButton.m */,
 				36867B51F641BD99D3A32555 /* BiddingButton.h */,
 				368678D534453DAB9780821F /* PlaceBidView.m */,
 				36867D5556E9D1BAA54E64A5 /* PlaceBidView.h */,
-				36867FC5ADD701545DA09509 /* ListingSummaryView.m */,
-				3686759F3D492A4D77FAFFA7 /* ListingSummaryView.h */,
-				368675D25F3D08E21DACEE7C /* DashedLine.m */,
-				368671AFEF460E42729291F9 /* DashedLine.h */,
-				36867AC2DBCFA532B4425D35 /* TopLineLabel.m */,
-				36867B561AEBAB3A12C63CB3 /* TopLineLabel.h */,
+				36867D301CFDB03827CAE9E3 /* ListingSummary */,
+				36867E25D4486C3297E032DA /* Component */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +235,15 @@
 			path = Listing;
 			sourceTree = "<group>";
 		};
+		36867D301CFDB03827CAE9E3 /* ListingSummary */ = {
+			isa = PBXGroup;
+			children = (
+				3686715F94A1FD0A215D8D7A /* ListingSummaryView.m */,
+				368675A885676DE48F7C6E6A /* ListingSummaryView.h */,
+			);
+			path = ListingSummary;
+			sourceTree = "<group>";
+		};
 		36867DAC816BAE071428110F /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +252,17 @@
 				368675CCE862A6965184AE10 /* common.xcconfig */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		36867E25D4486C3297E032DA /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				36867F9ADB72DF3B4C61B066 /* DashedLine.m */,
+				36867BA66E833117B7DB6CE5 /* DashedLine.h */,
+				3686784568ECD3E825E62AC3 /* STAnnotation.m */,
+				36867EA168E9706EA2C611C7 /* STAnnotation.h */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		36867F0869CBB722FA1F3A78 /* Form */ = {
@@ -510,7 +521,6 @@
 				3686786252891C134CFF3673 /* UIFont+SmartTrucking.m in Sources */,
 				368677731C5C4E1E7F81A45C /* Address.m in Sources */,
 				3686733CBECC9FC28EE26491 /* MoreInformationViewController.m in Sources */,
-				36867252D1561D1EE5171D78 /* STAnnotation.m in Sources */,
 				36867E0F496E5164A3C68640 /* FXForms.m in Sources */,
 				36867F6100E504D088221A45 /* AddListingForm.m in Sources */,
 				36867EE34AEFDE8A0C511181 /* User.m in Sources */,
@@ -521,10 +531,10 @@
 				368670A7B642E0BFE01FEB10 /* AddListingViewController.m in Sources */,
 				36867FBEBAA69AC64CF55655 /* PlaceBidViewController.m in Sources */,
 				368678BF6261F68B3A2EF125 /* PlaceBidView.m in Sources */,
-				3686780D39CDB06FEF58059D /* ListingSummaryView.m in Sources */,
-				36867A97FB2EF1C644D9F575 /* DashedLine.m in Sources */,
-				36867CC6B30459E48CEC6446 /* TopLineLabel.m in Sources */,
 				368674FB4434AA3377A4375C /* ListingSummary2ViewController.m in Sources */,
+				368674FAD44B5E7BD482889C /* ListingSummaryView.m in Sources */,
+				3686772B17E34C69EAF08114 /* DashedLine.m in Sources */,
+				36867F4CFCA59433D7D9DB37 /* STAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
