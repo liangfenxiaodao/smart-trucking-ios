@@ -1,21 +1,18 @@
 #import "ListingSummaryView.h"
 #import "Masonry.h"
 #import "Listing.h"
-#import "DashedLine.h"
 #import "ListingSpecificView.h"
 #import "ListingPositionView.h"
-#import "ListingPositionView.h"
+#import "ListingBasicInfoView.h"
 
 #define HORIZONTAL_OFFSET 20
 
 
 @interface ListingSummaryView ()
 @property(nonatomic, strong) UIScrollView *contentView;
-@property(nonatomic, strong) UILabel *referenceRateLabel;
-@property(nonatomic, strong) UILabel *currentBidLabel;
-@property(nonatomic, strong) UILabel *timeLeftLabel;
-@property (nonatomic, strong) ListingSpecificView *listingSpecificView;
+@property(nonatomic, strong) ListingSpecificView *listingSpecificView;
 @property(nonatomic, strong) ListingPositionView *listingPositionView;
+@property(nonatomic, strong) ListingBasicInfoView *listingBasicInfoView;
 @end
 
 @implementation ListingSummaryView {
@@ -30,9 +27,9 @@
   [self.contentView setBackgroundColor:[UIColor buildColorWithRed:236 green:236 blue:236]];
   [self addSubview:self.contentView];
 
-  self.referenceRateLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Reference rate: %i", listing.referenceRate]];
-  self.currentBidLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Current bid: %i", 50]];
-  self.timeLeftLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Time left: %@", @"1h 20m"]];
+  self.listingBasicInfoView = [[ListingBasicInfoView alloc] initWithListing:listing];
+  self.listingBasicInfoView.backgroundColor = [UIColor whiteColor];
+  [self.contentView addSubview:self.listingBasicInfoView];
 
   self.listingPositionView = [[ListingPositionView alloc] initWithListing:listing];
   self.listingPositionView.backgroundColor = [UIColor whiteColor];
@@ -43,7 +40,6 @@
   [self.contentView addSubview:self.listingSpecificView];
 
   [self setupConstraints];
-  [self layoutSubviews];
   return self;
 }
 
@@ -52,26 +48,15 @@
     maker.edges.mas_equalTo(self);
   }];
 
-  [self.referenceRateLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.contentView).with.offset(10);
-    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
+  [self.listingBasicInfoView mas_makeConstraints:^(MASConstraintMaker *maker) {
+    maker.top.equalTo(self.contentView);
+    maker.left.equalTo(self);
     maker.right.equalTo(self);
-  }];
-
-  [self.currentBidLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.referenceRateLabel.mas_bottom).with.offset(5);
-    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
-    maker.right.equalTo(self);
-  }];
-
-  [self.timeLeftLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.currentBidLabel.mas_bottom).with.offset(5);
-    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
-    maker.right.equalTo(self);
+    maker.height.equalTo(@110);
   }];
 
   [self.listingPositionView mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.timeLeftLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.listingBasicInfoView.mas_bottom).with.offset(10);
     maker.left.equalTo(self);
     maker.right.equalTo(self);
     maker.height.equalTo(@135);
@@ -86,12 +71,4 @@
   }];
 }
 
-- (UILabel *)buildLabelWithText:(NSString *)text {
-  UILabel *label = [[UILabel alloc] init];
-  label.text = text;
-  label.textColor = [UIColor textColor];
-  label.font = [UIFont smallFont];
-  [self.contentView addSubview:label];
-  return label;
-}
 @end

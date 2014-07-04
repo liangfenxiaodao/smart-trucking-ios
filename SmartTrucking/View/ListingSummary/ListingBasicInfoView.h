@@ -3,6 +3,6 @@
 
 @class Listing;
 
-@interface ListingPositionView : AbstractListingSubView
+@interface ListingBasicInfoView : AbstractListingSubView
 - (id)initWithListing:(Listing *)listing;
 @end

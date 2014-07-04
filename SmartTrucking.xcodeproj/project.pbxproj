@@ -29,6 +29,8 @@
 		3686796D4ABC2007E50C2E99 /* ListingsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686787ECC2351E5A45C011C /* ListingsMapViewController.m */; };
 		368679FD138EF15DD4910FCD /* ListingSpecificView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867388CFA4328B2DEE1234 /* ListingSpecificView.m */; };
 		36867D4DFAD08DF13EDC19B7 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */; };
+		36867D4F5934FFA521DF8D10 /* AbstractListingSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867AADA59896A459FC28E1 /* AbstractListingSubView.m */; };
+		36867DA6A319E356413C2E7C /* ListingBasicInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867358BF2B22788CD00CD1 /* ListingBasicInfoView.m */; };
 		36867DAB7D53F2DD5550209B /* ComponentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686754561DD4480B67E80C3 /* ComponentBuilder.m */; };
 		36867E0F496E5164A3C68640 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867574420FC03229EB2051 /* FXForms.m */; };
 		36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368674E1227DD200EFEF046E /* release.xcconfig */; };
@@ -72,7 +74,9 @@
 		36867225497198AFDAC080F2 /* UIColor+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SmartTrucking.h"; sourceTree = "<group>"; };
 		368672827B191402D243D557 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
 		368672D0EEA91BDF848B1D3E /* AddListingForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddListingForm.h; sourceTree = "<group>"; };
+		36867358BF2B22788CD00CD1 /* ListingBasicInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingBasicInfoView.m; sourceTree = "<group>"; };
 		36867388CFA4328B2DEE1234 /* ListingSpecificView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSpecificView.m; sourceTree = "<group>"; };
+		368673AECB8C506D93E79ED0 /* ListingBasicInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingBasicInfoView.h; sourceTree = "<group>"; };
 		368673C1524AE468B1848E99 /* MoreInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInformationViewController.h; sourceTree = "<group>"; };
 		3686740400C254D57102F6B0 /* ListingSummary2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingSummary2ViewController.h; sourceTree = "<group>"; };
 		36867427058ACE886D62E244 /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 		3686784568ECD3E825E62AC3 /* STAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAnnotation.m; sourceTree = "<group>"; };
 		3686787ECC2351E5A45C011C /* ListingsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsMapViewController.m; sourceTree = "<group>"; };
 		368678A4B143E7E69BB8F748 /* Listing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listing.h; sourceTree = "<group>"; };
+		368678AB3EA4C1D082DE4FFD /* AbstractListingSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractListingSubView.h; sourceTree = "<group>"; };
 		368678D534453DAB9780821F /* PlaceBidView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBidView.m; sourceTree = "<group>"; };
 		3686796956F47C37488E5D84 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		368679863396CB326E8879F7 /* UIFont+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SmartTrucking.m"; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 		36867A8568D822761D2786CE /* ListingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsCell.h; sourceTree = "<group>"; };
 		36867A94257486DDADAB3CC3 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
 		36867AA656C492231C2A7B71 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		36867AADA59896A459FC28E1 /* AbstractListingSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractListingSubView.m; sourceTree = "<group>"; };
 		36867B51F641BD99D3A32555 /* BiddingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiddingButton.h; sourceTree = "<group>"; };
 		36867BA66E833117B7DB6CE5 /* DashedLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedLine.h; sourceTree = "<group>"; };
 		36867C6F748CCED5D29427D2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -255,6 +261,10 @@
 				368678233D68683621BDA21F /* ListingSpecificView.h */,
 				36867C74E070A1391564C092 /* ListingPositionView.m */,
 				368674FCCC7C43457C610EFB /* ListingPositionView.h */,
+				36867358BF2B22788CD00CD1 /* ListingBasicInfoView.m */,
+				368673AECB8C506D93E79ED0 /* ListingBasicInfoView.h */,
+				36867AADA59896A459FC28E1 /* AbstractListingSubView.m */,
+				368678AB3EA4C1D082DE4FFD /* AbstractListingSubView.h */,
 			);
 			path = ListingSummary;
 			sourceTree = "<group>";
@@ -553,6 +563,8 @@
 				368679FD138EF15DD4910FCD /* ListingSpecificView.m in Sources */,
 				36867DAB7D53F2DD5550209B /* ComponentBuilder.m in Sources */,
 				368675B461B0212D7821760B /* ListingPositionView.m in Sources */,
+				36867DA6A319E356413C2E7C /* ListingBasicInfoView.m in Sources */,
+				36867D4F5934FFA521DF8D10 /* AbstractListingSubView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
