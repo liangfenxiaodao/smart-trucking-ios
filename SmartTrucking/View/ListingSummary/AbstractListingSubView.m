@@ -6,12 +6,20 @@
 
 }
 
+- (id)init {
+  self = [super init];
+  if (!self) return nil;
+  self.labels = [[NSMutableArray alloc]init];
+  return self;
+}
+
 - (UILabel *)buildLabelWithText:(NSString *)text {
   UILabel *label = [[UILabel alloc] init];
   label.text = text;
   label.textColor = [UIColor textColor];
   label.font = [UIFont smallFont];
   [self addSubview:label];
+  [self.labels addObject:label];
   return label;
 }
 
@@ -30,6 +38,10 @@
 - (void)setupHorizontalConstraint:(MASConstraintMaker *)maker {
   maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
   maker.right.equalTo(self);
+}
+
+- (int) viewHeight {
+  return self.labels.count * 28;
 }
 
 @end

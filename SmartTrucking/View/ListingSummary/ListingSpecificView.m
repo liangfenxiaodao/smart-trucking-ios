@@ -44,22 +44,21 @@
   self.vehicleTypeLabelSeparator = [self buildSubSeparatorLine];
   self.vehicleTypeLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Vehicle type: %@", listing.vehicleType]];
 
-  self.vehicleTypeLabelSeparator = [self buildSubSeparatorLine];
-  self.vehicleTypeLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Vehicle type: %@", listing.vehicleType]];
-  self.specialCarryingPermitLabelSeparator = [self buildSubSeparatorLine];
   if (listing.specialCarryingPermitRequired) {
+    self.specialCarryingPermitLabelSeparator = [self buildSubSeparatorLine];
     self.specialCarryingPermitLabel = [self buildLabelWithText:@"Special carrying permit: Required"];
-  } else {
-    self.specialCarryingPermitLabel = [self buildLabelWithText:@"Special carrying permit: Not Required"];
   }
-  self.palletJackLabelSeparator = [self buildSubSeparatorLine];
+
   if (listing.palletJackRequired) {
+    self.palletJackLabelSeparator = [self buildSubSeparatorLine];
     self.palletJackLabel = [self buildLabelWithText:@"Pallet jack: Required"];
-  } else {
-    self.palletJackLabel = [self buildLabelWithText:@"Pallet jack: Not Required"];
   }
-  self.tailgateLabelSeparator = [self buildSubSeparatorLine];
-  self.tailgateLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Tailgate: %@", listing.tailgate]];
+
+  if (![listing.tailgate isEqualToString:@"Not Required"]) {
+    self.tailgateLabelSeparator = [self buildSubSeparatorLine];
+    self.tailgateLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Tailgate: %@", listing.tailgate]];
+  }
+
   self.jobNumberLabelSeparator = [self buildSubSeparatorLine];
   self.jobNumberLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Job number: %@", listing.jobNumber]];
   [self setupConstraints];
@@ -114,7 +113,11 @@
   }];
 
   [self.palletJackLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.specialCarryingPermitLabel.mas_bottom).with.offset(5);
+    if (self.specialCarryingPermitLabel) {
+      maker.top.equalTo(self.specialCarryingPermitLabel.mas_bottom).with.offset(5);
+    } else {
+      maker.top.equalTo(self.vehicleTypeLabel.mas_bottom).with.offset(5);
+    }
     [self setupSeparatorConstraint:maker];
   }];
 
@@ -124,7 +127,13 @@
   }];
 
   [self.tailgateLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.palletJackLabel.mas_bottom).with.offset(5);
+    if (self.palletJackLabel) {
+      maker.top.equalTo(self.palletJackLabel.mas_bottom).with.offset(5);
+    } else if (self.specialCarryingPermitLabel) {
+      maker.top.equalTo(self.specialCarryingPermitLabel.mas_bottom).with.offset(5);
+    } else {
+      maker.top.equalTo(self.vehicleTypeLabel.mas_bottom).with.offset(5);
+    }
     [self setupSeparatorConstraint:maker];
   }];
 
@@ -134,14 +143,21 @@
   }];
 
   [self.jobNumberLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.tailgateLabel.mas_bottom).with.offset(5);
+    if (self.tailgateLabel) {
+      maker.top.equalTo(self.tailgateLabel.mas_bottom).with.offset(5);
+    } else if (self.palletJackLabel) {
+      maker.top.equalTo(self.palletJackLabel.mas_bottom).with.offset(5);
+    } else if (self.specialCarryingPermitLabel) {
+      maker.top.equalTo(self.specialCarryingPermitLabel.mas_bottom).with.offset(5);
+    } else {
+      maker.top.equalTo(self.vehicleTypeLabel.mas_bottom).with.offset(5);
+    }
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.jobNumberLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
     maker.top.equalTo(self.jobNumberLabelSeparator.mas_bottom).with.offset(5);
     [self setupHorizontalConstraint:maker];
-
   }];
 }
 

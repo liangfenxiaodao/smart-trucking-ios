@@ -52,21 +52,21 @@
     maker.top.equalTo(self.contentView);
     maker.left.equalTo(self);
     maker.right.equalTo(self);
-    maker.height.equalTo(@110);
+    maker.height.mas_equalTo([self.listingBasicInfoView viewHeight]);
   }];
 
   [self.listingPositionView mas_makeConstraints:^(MASConstraintMaker *maker) {
     maker.top.equalTo(self.listingBasicInfoView.mas_bottom).with.offset(10);
     maker.left.equalTo(self);
     maker.right.equalTo(self);
-    maker.height.equalTo(@135);
+    maker.height.mas_equalTo([self.listingPositionView viewHeight]);
   }];
 
   [self.listingSpecificView mas_makeConstraints:^(MASConstraintMaker *maker) {
     maker.top.equalTo(self.listingPositionView.mas_bottom).with.offset(10);
     maker.left.equalTo(self);
     maker.right.equalTo(self);
-    maker.height.equalTo(@215);
+    maker.height.mas_equalTo([self.listingSpecificView viewHeight]);
     maker.bottom.equalTo(self.contentView.mas_bottom).with.offset(-20);
   }];
 }
