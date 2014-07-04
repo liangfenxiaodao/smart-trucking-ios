@@ -17,6 +17,7 @@
 		368674FAD44B5E7BD482889C /* ListingSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686715F94A1FD0A215D8D7A /* ListingSummaryView.m */; };
 		368674FB4434AA3377A4375C /* ListingSummary2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686721944D70CB3D829E625 /* ListingSummary2ViewController.m */; };
 		3686751DFEFCADE2834E1736 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A4A0403146DB99DFB66 /* SearchViewController.m */; };
+		368675B461B0212D7821760B /* ListingPositionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867C74E070A1391564C092 /* ListingPositionView.m */; };
 		368676950B79930720B55DA9 /* UIColor+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867EEF60408FB5FF28577F /* UIColor+SmartTrucking.m */; };
 		3686772B17E34C69EAF08114 /* DashedLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F9ADB72DF3B4C61B066 /* DashedLine.m */; };
 		368677731C5C4E1E7F81A45C /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 368671D7C449D7478AE091E2 /* Address.m */; };
@@ -78,6 +79,7 @@
 		3686742EBF1C9D4874006BC1 /* AddListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddListingViewController.h; sourceTree = "<group>"; };
 		3686747C8F49B0CE8E1CC0A2 /* PlaceBidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceBidViewController.h; sourceTree = "<group>"; };
 		368674E1227DD200EFEF046E /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		368674FCCC7C43457C610EFB /* ListingPositionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingPositionView.h; sourceTree = "<group>"; };
 		3686751D60A928352F50D775 /* AddListingForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddListingForm.m; sourceTree = "<group>"; };
 		3686754561DD4480B67E80C3 /* ComponentBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentBuilder.m; sourceTree = "<group>"; };
 		36867574420FC03229EB2051 /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		36867B51F641BD99D3A32555 /* BiddingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiddingButton.h; sourceTree = "<group>"; };
 		36867BA66E833117B7DB6CE5 /* DashedLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedLine.h; sourceTree = "<group>"; };
 		36867C6F748CCED5D29427D2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		36867C74E070A1391564C092 /* ListingPositionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingPositionView.m; sourceTree = "<group>"; };
 		36867CCCF2600D8A42A8C916 /* UIFont+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SmartTrucking.h"; sourceTree = "<group>"; };
 		36867D2BA966DCAEB240BDDF /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
 		36867D398D1E234451E4F731 /* ListingsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsMapViewController.h; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 				368675A885676DE48F7C6E6A /* ListingSummaryView.h */,
 				36867388CFA4328B2DEE1234 /* ListingSpecificView.m */,
 				368678233D68683621BDA21F /* ListingSpecificView.h */,
+				36867C74E070A1391564C092 /* ListingPositionView.m */,
+				368674FCCC7C43457C610EFB /* ListingPositionView.h */,
 			);
 			path = ListingSummary;
 			sourceTree = "<group>";
@@ -547,6 +552,7 @@
 				36867F4CFCA59433D7D9DB37 /* STAnnotation.m in Sources */,
 				368679FD138EF15DD4910FCD /* ListingSpecificView.m in Sources */,
 				36867DAB7D53F2DD5550209B /* ComponentBuilder.m in Sources */,
+				368675B461B0212D7821760B /* ListingPositionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

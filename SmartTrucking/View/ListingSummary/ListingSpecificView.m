@@ -8,18 +8,21 @@
 
 @interface ListingSpecificView ()
 
-@property(nonatomic, strong) UIView *specificSeparatorLine;
 @property(nonatomic, strong) UILabel *specificLabel;
-@property(nonatomic, strong) UILabel *vehicleTypeLabel;
-@property(nonatomic, strong) UILabel *specialCarryingPermitLabel;
-@property(nonatomic, strong) UILabel *tailgateLabel;
-@property(nonatomic, strong) UILabel *jobNumberLabel;
-@property(nonatomic, strong) UILabel *palletJackLabel;
+@property(nonatomic, strong) DashedLine *volumeLabelSeparator;
+@property(nonatomic, strong) UILabel *volumeLabel;
+@property(nonatomic, strong) DashedLine *weightLabelSeparator;
+@property(nonatomic, strong) UILabel *weightLabel;
 @property(nonatomic, strong) DashedLine *vehicleTypeLabelSeparator;
+@property(nonatomic, strong) UILabel *vehicleTypeLabel;
 @property(nonatomic, strong) DashedLine *specialCarryingPermitLabelSeparator;
+@property(nonatomic, strong) UILabel *specialCarryingPermitLabel;
 @property(nonatomic, strong) DashedLine *palletJackLabelSeparator;
+@property(nonatomic, strong) UILabel *palletJackLabel;
 @property(nonatomic, strong) DashedLine *tailgateLabelSeparator;
+@property(nonatomic, strong) UILabel *tailgateLabel;
 @property(nonatomic, strong) DashedLine *jobNumberLabelSeparator;
+@property(nonatomic, strong) UILabel *jobNumberLabel;
 @end
 
 @implementation ListingSpecificView {
@@ -29,9 +32,18 @@
 - (id)initWithListing:(Listing *)listing {
   self = [super init];
   if (!self) return nil;
-  self.specificSeparatorLine = [self buildSeparatorLine];
   self.specificLabel = [self buildLabelWithText:@"Specifics"];
   self.specificLabel.font = [UIFont smallBoldFont];
+
+  self.volumeLabelSeparator = [self buildSubSeparatorLine];
+  self.volumeLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Volume: %@", listing.volume]];
+
+  self.weightLabelSeparator = [self buildSubSeparatorLine];
+  self.weightLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Weight: %@T", listing.weight]];
+
+  self.vehicleTypeLabelSeparator = [self buildSubSeparatorLine];
+  self.vehicleTypeLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Vehicle type: %@", listing.vehicleType]];
+
   self.vehicleTypeLabelSeparator = [self buildSubSeparatorLine];
   self.vehicleTypeLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Vehicle type: %@", listing.vehicleType]];
   self.specialCarryingPermitLabelSeparator = [self buildSubSeparatorLine];
@@ -50,26 +62,48 @@
   self.tailgateLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Tailgate: %@", listing.tailgate]];
   self.jobNumberLabelSeparator = [self buildSubSeparatorLine];
   self.jobNumberLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Job number: %@", listing.jobNumber]];
-  [self layout];
+  [self setupConstraints];
+  [self layoutSubviews];
+
   return self;
 }
 
-- (void)layout {
-  [self.specificSeparatorLine mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self).with.offset(10);
-    maker.left.equalTo(self);
+- (void)setupConstraints {
+
+  [self.specificLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
+    maker.top.equalTo(self.mas_top).with.offset(5);
+    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
+    maker.right.equalTo(self);
+  }];
+
+  [self.volumeLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
+    maker.top.equalTo(self.specificLabel.mas_bottom).with.offset(5);
+    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
     maker.right.equalTo(self);
     maker.height.mas_equalTo(1);
   }];
 
-  [self.specificLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.specificSeparatorLine.mas_bottom).with.offset(5);
+  [self.volumeLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
+    maker.top.equalTo(self.volumeLabelSeparator.mas_bottom).with.offset(5);
+    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
+    maker.right.equalTo(self);
+  }];
+
+  [self.weightLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
+    maker.top.equalTo(self.volumeLabel.mas_bottom).with.offset(5);
+    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
+    maker.right.equalTo(self);
+    maker.height.mas_equalTo(1);
+  }];
+
+  [self.weightLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
+    maker.top.equalTo(self.weightLabelSeparator.mas_bottom).with.offset(5);
     maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
     maker.right.equalTo(self);
   }];
 
   [self.vehicleTypeLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.specificLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.weightLabel.mas_bottom).with.offset(5);
     maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
     maker.right.equalTo(self);
     maker.height.mas_equalTo(1);
@@ -141,13 +175,6 @@
   label.font = [UIFont smallFont];
   [self addSubview:label];
   return label;
-}
-
-- (UIView *)buildSeparatorLine {
-  UIView *line = [[UIView alloc] init];
-  [line setBackgroundColor:[UIColor grayColor]];
-  [self addSubview:line];
-  return line;
 }
 
 - (DashedLine *)buildSubSeparatorLine {

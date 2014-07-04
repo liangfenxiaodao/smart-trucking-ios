@@ -1,8 +1,7 @@
 #import <Foundation/Foundation.h>
 
 @class Listing;
-@class ListingPositionView;
 
-@interface ListingSummaryView : UIView
+@interface ListingPositionView : UIView
 - (id)initWithListing:(Listing *)listing;
 @end
