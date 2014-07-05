@@ -16,14 +16,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  UITabBarController *tabBarController = [[UITabBarController alloc] init];
-  [tabBarController setViewControllers:@[
-          [[UINavigationController alloc] initWithRootViewController:[[ListingsMapViewController alloc] init]],
-          [[SearchViewController alloc] init],
-          [[MyAccountViewController alloc] init],
-          [[UINavigationController alloc] initWithRootViewController:[[MoreInformationViewController alloc] init]]
-  ]];
-  self.window.rootViewController = tabBarController;
+  UINavigationController *listingsMapViewController = [[UINavigationController alloc] initWithRootViewController:[[ListingsMapViewController alloc] init]];
+//  UITabBarController *tabBarController = [[UITabBarController alloc] init];
+//  [tabBarController setViewControllers:@[
+//          listingsMapViewController,
+//          [[SearchViewController alloc] init],
+//          [[MyAccountViewController alloc] init],
+//          [[UINavigationController alloc] initWithRootViewController:[[MoreInformationViewController alloc] init]]
+//  ]];
+  self.window.rootViewController = listingsMapViewController;
   self.window.backgroundColor = [UIColor whiteColor];
   [self.window makeKeyAndVisible];
   return YES;

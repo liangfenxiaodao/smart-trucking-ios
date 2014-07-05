@@ -45,7 +45,7 @@
   [self.contentView addSubview:self.listingSpecificView];
 
   self.biddingButton = [[BiddingButton alloc] initWithDelegate:delegate];
-  [self.contentView addSubview:self.biddingButton];
+  [self addSubview:self.biddingButton];
   [self setupConstraints];
   return self;
 }
@@ -74,14 +74,14 @@
     maker.left.equalTo(self);
     maker.right.equalTo(self);
     maker.height.mas_equalTo([self.listingSpecificView viewHeight]);
+    maker.bottom.equalTo(self.contentView.mas_bottom).with.offset(-50);
   }];
 
   [self.biddingButton mas_makeConstraints:^(MASConstraintMaker *maker){
-    maker.top.equalTo(self.listingSpecificView.mas_bottom).with.offset(10);
     maker.left.equalTo(self);
     maker.right.equalTo(self);
     maker.height.mas_equalTo(40);
-    maker.bottom.equalTo(self.contentView.mas_bottom).with.offset(-10);
+    maker.bottom.equalTo(self.mas_bottom);
   }];
 }
 
