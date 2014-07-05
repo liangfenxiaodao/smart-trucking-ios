@@ -2,7 +2,7 @@
 
 @class Listing;
 
-@interface ListingSummaryViewController : UITableViewController
+@interface ListingSummaryViewController : UIViewController
 - (id)initWithListing:(Listing *)listing;
 
 - (void)placeBidding;

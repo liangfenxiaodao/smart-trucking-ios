@@ -15,7 +15,7 @@
 		3686733CBECC9FC28EE26491 /* MoreInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368677406FE7423FA61EF3CE /* MoreInformationViewController.m */; };
 		36867482797A84B510A91371 /* ListingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867763F50586822930A8EF /* ListingsCell.m */; };
 		368674FAD44B5E7BD482889C /* ListingSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686715F94A1FD0A215D8D7A /* ListingSummaryView.m */; };
-		368674FB4434AA3377A4375C /* ListingSummary2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686721944D70CB3D829E625 /* ListingSummary2ViewController.m */; };
+		368674FB4434AA3377A4375C /* ListingSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686721944D70CB3D829E625 /* ListingSummaryViewController.m */; };
 		3686751DFEFCADE2834E1736 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A4A0403146DB99DFB66 /* SearchViewController.m */; };
 		368675B461B0212D7821760B /* ListingPositionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867C74E070A1391564C092 /* ListingPositionView.m */; };
 		368676950B79930720B55DA9 /* UIColor+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867EEF60408FB5FF28577F /* UIColor+SmartTrucking.m */; };
@@ -34,7 +34,6 @@
 		36867DAB7D53F2DD5550209B /* ComponentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686754561DD4480B67E80C3 /* ComponentBuilder.m */; };
 		36867E0F496E5164A3C68640 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867574420FC03229EB2051 /* FXForms.m */; };
 		36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 368674E1227DD200EFEF046E /* release.xcconfig */; };
-		36867EAF65A15AE3751566CC /* ListingSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368676306A0967EAEBAB667F /* ListingSummaryViewController.m */; };
 		36867ED510A60E046332963A /* BiddingActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F884176702A20E7405D /* BiddingActivitiesViewController.m */; };
 		36867EE34AEFDE8A0C511181 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867AA656C492231C2A7B71 /* User.m */; };
 		36867F4CFCA59433D7D9DB37 /* STAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686784568ECD3E825E62AC3 /* STAnnotation.m */; };
@@ -70,7 +69,7 @@
 		36867146AF4B2687B5B7E3E7 /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
 		3686715F94A1FD0A215D8D7A /* ListingSummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSummaryView.m; sourceTree = "<group>"; };
 		368671D7C449D7478AE091E2 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
-		3686721944D70CB3D829E625 /* ListingSummary2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSummary2ViewController.m; sourceTree = "<group>"; };
+		3686721944D70CB3D829E625 /* ListingSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSummaryViewController.m; sourceTree = "<group>"; };
 		36867225497198AFDAC080F2 /* UIColor+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SmartTrucking.h"; sourceTree = "<group>"; };
 		368672827B191402D243D557 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
 		368672D0EEA91BDF848B1D3E /* AddListingForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddListingForm.h; sourceTree = "<group>"; };
@@ -78,7 +77,7 @@
 		36867388CFA4328B2DEE1234 /* ListingSpecificView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSpecificView.m; sourceTree = "<group>"; };
 		368673AECB8C506D93E79ED0 /* ListingBasicInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingBasicInfoView.h; sourceTree = "<group>"; };
 		368673C1524AE468B1848E99 /* MoreInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInformationViewController.h; sourceTree = "<group>"; };
-		3686740400C254D57102F6B0 /* ListingSummary2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingSummary2ViewController.h; sourceTree = "<group>"; };
+		3686740400C254D57102F6B0 /* ListingSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingSummaryViewController.h; sourceTree = "<group>"; };
 		36867427058ACE886D62E244 /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
 		3686742EBF1C9D4874006BC1 /* AddListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddListingViewController.h; sourceTree = "<group>"; };
 		3686747C8F49B0CE8E1CC0A2 /* PlaceBidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceBidViewController.h; sourceTree = "<group>"; };
@@ -90,7 +89,6 @@
 		36867596F12E83612CE0A122 /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
 		368675A885676DE48F7C6E6A /* ListingSummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingSummaryView.h; sourceTree = "<group>"; };
 		368675CCE862A6965184AE10 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = common.xcconfig; sourceTree = "<group>"; };
-		368676306A0967EAEBAB667F /* ListingSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingSummaryViewController.m; sourceTree = "<group>"; };
 		36867693D58C15C6252F5F89 /* PlaceBidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBidViewController.m; sourceTree = "<group>"; };
 		368677406FE7423FA61EF3CE /* MoreInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInformationViewController.m; sourceTree = "<group>"; };
 		36867763F50586822930A8EF /* ListingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsCell.m; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 		36867EA168E9706EA2C611C7 /* STAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAnnotation.h; sourceTree = "<group>"; };
 		36867EAEFA695A4598D032DE /* BiddingActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiddingActivitiesViewController.h; sourceTree = "<group>"; };
 		36867EDF81F218F502CB053E /* ComponentBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentBuilder.h; sourceTree = "<group>"; };
-		36867EE887BCF5E748705319 /* ListingSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingSummaryViewController.h; sourceTree = "<group>"; };
 		36867EEF60408FB5FF28577F /* UIColor+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SmartTrucking.m"; sourceTree = "<group>"; };
 		36867F3858EF67485981AB91 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsViewController.m; sourceTree = "<group>"; };
 		36867F884176702A20E7405D /* BiddingActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiddingActivitiesViewController.m; sourceTree = "<group>"; };
@@ -237,17 +234,15 @@
 			isa = PBXGroup;
 			children = (
 				36867D398D1E234451E4F731 /* ListingsMapViewController.h */,
-				368676306A0967EAEBAB667F /* ListingSummaryViewController.m */,
 				36867EAEFA695A4598D032DE /* BiddingActivitiesViewController.h */,
 				3686742EBF1C9D4874006BC1 /* AddListingViewController.h */,
 				3686787ECC2351E5A45C011C /* ListingsMapViewController.m */,
 				36867F884176702A20E7405D /* BiddingActivitiesViewController.m */,
 				36867DAFCE68BC3818ECE69B /* AddListingViewController.m */,
-				36867EE887BCF5E748705319 /* ListingSummaryViewController.h */,
 				36867693D58C15C6252F5F89 /* PlaceBidViewController.m */,
 				3686747C8F49B0CE8E1CC0A2 /* PlaceBidViewController.h */,
-				3686721944D70CB3D829E625 /* ListingSummary2ViewController.m */,
-				3686740400C254D57102F6B0 /* ListingSummary2ViewController.h */,
+				3686721944D70CB3D829E625 /* ListingSummaryViewController.m */,
+				3686740400C254D57102F6B0 /* ListingSummaryViewController.h */,
 			);
 			path = Listing;
 			sourceTree = "<group>";
@@ -550,13 +545,12 @@
 				36867F6100E504D088221A45 /* AddListingForm.m in Sources */,
 				36867EE34AEFDE8A0C511181 /* User.m in Sources */,
 				3686703C12065102182A8A91 /* BiddingButton.m in Sources */,
-				36867EAF65A15AE3751566CC /* ListingSummaryViewController.m in Sources */,
 				3686796D4ABC2007E50C2E99 /* ListingsMapViewController.m in Sources */,
 				36867ED510A60E046332963A /* BiddingActivitiesViewController.m in Sources */,
 				368670A7B642E0BFE01FEB10 /* AddListingViewController.m in Sources */,
 				36867FBEBAA69AC64CF55655 /* PlaceBidViewController.m in Sources */,
 				368678BF6261F68B3A2EF125 /* PlaceBidView.m in Sources */,
-				368674FB4434AA3377A4375C /* ListingSummary2ViewController.m in Sources */,
+				368674FB4434AA3377A4375C /* ListingSummaryViewController.m in Sources */,
 				368674FAD44B5E7BD482889C /* ListingSummaryView.m in Sources */,
 				3686772B17E34C69EAF08114 /* DashedLine.m in Sources */,
 				36867F4CFCA59433D7D9DB37 /* STAnnotation.m in Sources */,

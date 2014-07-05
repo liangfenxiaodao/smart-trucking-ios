@@ -1,6 +1,5 @@
 #import "BiddingButton.h"
 #import "Masonry.h"
-#import "ListingSummaryViewController.h"
 
 @interface BiddingButton ()
 @property(nonatomic, strong) UIButton *biddingButton;
@@ -27,7 +26,7 @@
 
 - (UIButton*)createBiddingButton {
   UIButton *biddingButton = [UIButton buttonWithType:UIButtonTypeCustom];
-  biddingButton.backgroundColor = [UIColor buildColorWithRed:107 green:170 blue:62];
+  biddingButton.backgroundColor = [UIColor buildColorWithRed:142 green:198 blue:63];
   biddingButton.titleLabel.font = [UIFont buttonFont];
   [biddingButton setTitle:@"Place bid" forState:UIControlStateNormal];
   [biddingButton setAccessibilityIdentifier:@"BidButton"];

@@ -4,6 +4,7 @@
 #import "Listing.h"
 #import "ListingsCell.h"
 #import "ListingSummaryViewController.h"
+#import "ListingSummaryViewController.h"
 
 @interface ListingsViewController ()
 
