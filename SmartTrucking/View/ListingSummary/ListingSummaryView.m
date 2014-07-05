@@ -78,10 +78,10 @@
 
   [self.biddingButton mas_makeConstraints:^(MASConstraintMaker *maker){
     maker.top.equalTo(self.listingSpecificView.mas_bottom).with.offset(10);
-    maker.left.equalTo(self).with.offset(10);
-    maker.right.equalTo(self).with.offset(-10);
-    maker.height.mas_equalTo(30);
-    maker.bottom.equalTo(self.contentView.mas_bottom).with.offset(-20);
+    maker.left.equalTo(self);
+    maker.right.equalTo(self);
+    maker.height.mas_equalTo(40);
+    maker.bottom.equalTo(self.contentView.mas_bottom).with.offset(-10);
   }];
 }
 

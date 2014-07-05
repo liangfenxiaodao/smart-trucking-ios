@@ -41,7 +41,7 @@
 }
 
 - (int) viewHeight {
-  return self.labels.count * 28;
+  return self.labels.count * 38;
 }
 
 @end

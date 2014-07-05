@@ -32,37 +32,37 @@
 
 - (void)setupConstraints {
   [self.basicInfoLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.mas_top).with.offset(5);
+    maker.top.equalTo(self.mas_top).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.referenceRateLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.basicInfoLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.basicInfoLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.referenceRateLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.referenceRateLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.referenceRateLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.currentBidLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.referenceRateLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.referenceRateLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.currentBidLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.currentBidLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.currentBidLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.timeLeftLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.currentBidLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.currentBidLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.timeLeftLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.timeLeftLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.timeLeftLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 }

@@ -68,95 +68,95 @@
 - (void)setupConstraints {
 
   [self.specificLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.mas_top).with.offset(5);
+    maker.top.equalTo(self.mas_top).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.volumeLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.specificLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.specificLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.volumeLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.volumeLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.volumeLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.weightLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.volumeLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.volumeLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.weightLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.weightLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.weightLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.vehicleTypeLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.weightLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.weightLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.vehicleTypeLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.vehicleTypeLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.vehicleTypeLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.specialCarryingPermitLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.vehicleTypeLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.vehicleTypeLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.specialCarryingPermitLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.specialCarryingPermitLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.specialCarryingPermitLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.palletJackLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
     if (self.specialCarryingPermitLabel) {
-      maker.top.equalTo(self.specialCarryingPermitLabel.mas_bottom).with.offset(5);
+      maker.top.equalTo(self.specialCarryingPermitLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     } else {
-      maker.top.equalTo(self.vehicleTypeLabel.mas_bottom).with.offset(5);
+      maker.top.equalTo(self.vehicleTypeLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     }
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.palletJackLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.palletJackLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.palletJackLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.tailgateLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
     if (self.palletJackLabel) {
-      maker.top.equalTo(self.palletJackLabel.mas_bottom).with.offset(5);
+      maker.top.equalTo(self.palletJackLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     } else if (self.specialCarryingPermitLabel) {
-      maker.top.equalTo(self.specialCarryingPermitLabel.mas_bottom).with.offset(5);
+      maker.top.equalTo(self.specialCarryingPermitLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     } else {
-      maker.top.equalTo(self.vehicleTypeLabel.mas_bottom).with.offset(5);
+      maker.top.equalTo(self.vehicleTypeLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     }
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.tailgateLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.tailgateLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.tailgateLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.jobNumberLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
     if (self.tailgateLabel) {
-      maker.top.equalTo(self.tailgateLabel.mas_bottom).with.offset(5);
+      maker.top.equalTo(self.tailgateLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     } else if (self.palletJackLabel) {
-      maker.top.equalTo(self.palletJackLabel.mas_bottom).with.offset(5);
+      maker.top.equalTo(self.palletJackLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     } else if (self.specialCarryingPermitLabel) {
-      maker.top.equalTo(self.specialCarryingPermitLabel.mas_bottom).with.offset(5);
+      maker.top.equalTo(self.specialCarryingPermitLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     } else {
-      maker.top.equalTo(self.vehicleTypeLabel.mas_bottom).with.offset(5);
+      maker.top.equalTo(self.vehicleTypeLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     }
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.jobNumberLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.jobNumberLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.jobNumberLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 }

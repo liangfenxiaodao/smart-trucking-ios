@@ -17,9 +17,7 @@
   self.biddingButton = [self createBiddingButton];
   [self addSubview:self.biddingButton];
   [self.biddingButton mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.mas_top);
-    maker.left.equalTo(self.mas_left).with.offset(10);
-    maker.right.equalTo(self.mas_right).with.offset(-10);
+    maker.edges.mas_equalTo(self);
   }];
   return self;
 }

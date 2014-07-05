@@ -40,47 +40,47 @@
 
 - (void)setupConstraints {
   [self.positionLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.mas_top).with.offset(5);
+    maker.top.equalTo(self.mas_top).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.pickupLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.positionLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.positionLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.pickupLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.pickupLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.pickupLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.etpLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.pickupLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.pickupLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.etpLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.etpLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.etpLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.deliveryLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.etpLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.etpLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.deliveryLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.deliveryLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.deliveryLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 
   [self.etaLabelSeparator mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.deliveryLabel.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.deliveryLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupSeparatorConstraint:maker];
   }];
 
   [self.etaLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.etaLabelSeparator.mas_bottom).with.offset(5);
+    maker.top.equalTo(self.etaLabelSeparator.mas_bottom).with.offset(VERTICAL_OFFSET);
     [self setupHorizontalConstraint:maker];
   }];
 }

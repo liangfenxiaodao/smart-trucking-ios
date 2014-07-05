@@ -3,6 +3,7 @@
 
 @class DashedLine;
 
+#define VERTICAL_OFFSET 10
 #define HORIZONTAL_OFFSET 20
 
 @interface AbstractListingSubView : UIView
