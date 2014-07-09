@@ -45,7 +45,7 @@ static ApiClient *sharedInstance;
      parameters:@{@"from_address_id": listing.pickupAddress.id,
      @"to_address_id": listing.arriveAddress.id,
      @"user_id": listing.userId,
-     @"referenceRate": [NSNumber numberWithInt:listing.referenceRate],
+     @"reference_rate": [NSNumber numberWithInt:listing.referenceRate],
      @"weight": listing.weight?:@"0",
      @"length": listing.length?:@"0",
      @"width": listing.width?:@"0",
