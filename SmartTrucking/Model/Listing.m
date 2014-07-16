@@ -25,9 +25,15 @@
   self.jobNumber = dictionary[@"job_number"];
   self.pickupAddress = [[Address alloc]initWithString: dictionary[@"from_address"]];
   self.deliveryAddress = [[Address alloc]initWithString: dictionary[@"to_address"]];
-  self.formattedPickupTime = [self formatDate:self.pickupTime];
-  self.formattedDeliveryTime = [self formatDate:self.deliveryTime];
   return self;
+}
+
+- (NSString *)formattedPickupTime {
+  return [self formatDate:self.pickupTime];
+}
+
+- (NSString *)formattedDeliveryTime {
+  return [self formatDate:self.deliveryTime];
 }
 
 - (NSString *)getVolume {

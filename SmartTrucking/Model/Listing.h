@@ -24,9 +24,8 @@
 
 @property(nonatomic, strong) NSString *customerName;
 
-@property(nonatomic, strong) NSString *formattedPickupTime;
-@property(nonatomic, strong) NSString *formattedDeliveryTime;
-
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
+- (NSString *)formattedPickupTime;
+- (NSString *)formattedDeliveryTime;
 @end
