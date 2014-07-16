@@ -34,13 +34,13 @@
             }
     },
     @{FXFormFieldKey : @"pickupTime", FXFormFieldTitle : @"ETP", FXFormFieldType : FXFormFieldTypeDateTime},
-    @{FXFormFieldKey : @"arriveAddress", FXFormFieldTitle : @"Delivery",
+    @{FXFormFieldKey : @"deliveryAddress", FXFormFieldTitle : @"Delivery",
             FXFormFieldOptions : self.addresses,
             FXFormFieldValueTransformer : ^(Address *address) {
               return [address description];
             }
     },
-    @{FXFormFieldKey : @"arriveTime", FXFormFieldTitle : @"ETA", FXFormFieldType : FXFormFieldTypeDateTime},
+    @{FXFormFieldKey : @"deliveryTime", FXFormFieldTitle : @"ETA", FXFormFieldType : FXFormFieldTypeDateTime},
 
     @{FXFormFieldKey : @"length", FXFormFieldHeader : @""},
     @"width",

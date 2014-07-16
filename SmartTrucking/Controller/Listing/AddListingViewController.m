@@ -26,7 +26,7 @@
   if (!self) return nil;
   self.address = user.addresses;
   self.vehicleTypes = @[@"Van", @"Tray", @"Tautliner", @"Semi Trailor"];
-  self.tailgates = @[@"not required", @"1.0T", @"1.5T", @"2.0T", @"2.5T"];
+  self.tailgates = @[@"Not Required", @"1.0T", @"1.5T", @"2.0T", @"2.5T"];
   self.formController.form = [[AddListingForm alloc] initWithAddresses:self.address vehicleTypes:self.vehicleTypes tailgates:self.tailgates];
 
   [self.navigationItem setTitle:@"Add Listing"];
@@ -59,10 +59,10 @@
 - (Listing *)populateListingFromInput {
   AddListingForm *form = (AddListingForm *) self.formController.form;
   Listing *listing = [[Listing alloc] init];
-  [@[@"pickupTime", @"arriveTime", @"bidEndingTime",
+  [@[@"pickupTime", @"deliveryTime", @"bidEndingTime",
           @"weight", @"referenceRate", @"length",@"width", @"height",
           @"specialCarryingPermitRequired", @"palletJackRequired",
-          @"vehicleType", @"tailgate", @"jobNumber", @"pickupAddress", @"arriveAddress"] each:^(id propertyName) {
+          @"vehicleType", @"tailgate", @"jobNumber", @"pickupAddress", @"deliveryAddress"] each:^(id propertyName) {
     [listing setValue:[form valueForKey:propertyName] forKey:propertyName];
   }];
   listing.userId = self.user.id;

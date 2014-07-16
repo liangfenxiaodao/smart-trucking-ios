@@ -105,7 +105,7 @@ static NSString *userId = @"53a563e3250c9e1005000001";
 - (void)addAnnotationForListing:(Listing *)listing {
   STAnnotation *point = [[STAnnotation alloc] init];
   point.coordinate = CLLocationCoordinate2DMake(listing.pickupAddress.latitude, listing.pickupAddress.longitude);
-  point.title = [NSString stringWithFormat:@"Delivery: %@", listing.arriveAddress.suburb];
+  point.title = [NSString stringWithFormat:@"Delivery: %@", listing.deliveryAddress.suburb];
   point.subtitle = [NSString stringWithFormat:@"%@, %@T, $%i", listing.volume, listing.weight, listing.referenceRate];
   point.listing = listing;
   [self.mapView addAnnotation:point];

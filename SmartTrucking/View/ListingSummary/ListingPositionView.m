@@ -2,6 +2,7 @@
 #import "DashedLine.h"
 #import "Listing.h"
 #import "Masonry.h"
+#import "Address.h"
 
 @interface ListingPositionView ()
 
@@ -27,13 +28,13 @@
   self.positionLabel = [self buildLabelWithText:@"Position"];
   self.positionLabel.font = [UIFont smallBoldFont];
   self.pickupLabelSeparator = [self buildSubSeparatorLine];
-  self.pickupLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Pick up: %@", listing.fromSuburb]];
+  self.pickupLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Pick up: %@", listing.pickupAddress.suburb]];
   self.etpLabelSeparator = [self buildSubSeparatorLine];
   self.etpLabel = [self buildLabelWithText:[NSString stringWithFormat:@"ETP: %@", listing.formattedPickupTime]];
   self.deliveryLabelSeparator = [self buildSubSeparatorLine];
-  self.deliveryLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Delivery: %@", listing.fromSuburb]];
+  self.deliveryLabel = [self buildLabelWithText:[NSString stringWithFormat:@"Delivery: %@", listing.deliveryAddress.suburb]];
   self.etaLabelSeparator = [self buildSubSeparatorLine];
-  self.etaLabel = [self buildLabelWithText:[NSString stringWithFormat:@"ETA: %@", listing.formattedArriveTime]];
+  self.etaLabel = [self buildLabelWithText:[NSString stringWithFormat:@"ETA: %@", listing.formattedDeliveryTime]];
   [self setupConstraints];
   return self;
 }

@@ -43,7 +43,7 @@ static ApiClient *sharedInstance;
 - (void)addListing: (Listing *)listing WithSuccess:(void(^)())successBlock error: (void(^)(NSError *error))errorBlock {
   [_requestOperationManager POST:@"/listings"
      parameters:@{@"from_address_id": listing.pickupAddress.id,
-     @"to_address_id": listing.arriveAddress.id,
+     @"to_address_id": listing.deliveryAddress.id,
      @"user_id": listing.userId,
      @"reference_rate": [NSNumber numberWithInt:listing.referenceRate],
      @"weight": listing.weight?:@"0",
@@ -51,7 +51,7 @@ static ApiClient *sharedInstance;
      @"width": listing.width?:@"0",
      @"height": listing.height?:@"0",
      @"pick_up_time": listing.pickupTime,
-     @"arrive_time": listing.arriveTime,
+     @"arrive_time": listing.deliveryTime,
      @"bid_ending_time": listing.bidEndingTime,
      @"vehicle_type": listing.vehicleType?:@"Van",
      @"job_number": listing.jobNumber,
