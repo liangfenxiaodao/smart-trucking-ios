@@ -12,7 +12,7 @@
 #import "ListingSummaryViewController.h"
 
 #ifdef DEBUG
-static NSString *userId = @"53a563a6250c9e6040000001";
+static NSString *userId = @"53c6740f250c9ebe11000001";
 #else
 static NSString *userId = @"53a563e3250c9e1005000001";
 #endif

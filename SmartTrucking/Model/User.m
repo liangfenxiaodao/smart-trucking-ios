@@ -15,7 +15,7 @@
   self.isCustomer = dictionary[@"is_customer"];
   self.username = dictionary[@"username"];
   self.addresses = [[NSMutableArray alloc] init];
-  [dictionary[@"address"] each:^(NSDictionary *addressDic) {
+  [dictionary[@"addresses"] each:^(NSDictionary *addressDic) {
     [self.addresses addObject:[[Address alloc] initFromDictionary:addressDic]];
   }];
   return self;
