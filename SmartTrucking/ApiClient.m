@@ -27,11 +27,11 @@ static ApiClient *sharedInstance;
   return sharedInstance;
 }
 
-- (void)getUserBy:(NSString *)userId WithSuccess:(void (^)(User *user))successBlock error: (void(^)(NSError *error))errorBlock{
-  [_requestOperationManager GET:[NSString stringWithFormat:@"/users/%@", userId]
+- (void)getUserBy:(NSString *)username WithSuccess:(void (^)(User *user))successBlock error: (void(^)(NSError *error))errorBlock{
+  [_requestOperationManager GET:[NSString stringWithFormat:@"/users/%@", username]
     parameters:nil
     success:^(AFHTTPRequestOperation *operation, id response) {
-      User *user = [[User alloc] initWithDictionary:response];
+      User *user = [[User alloc] initWithDictionary:response[0]];
       successBlock(user);
     }
     failure:^(AFHTTPRequestOperation *operation, NSError *error){

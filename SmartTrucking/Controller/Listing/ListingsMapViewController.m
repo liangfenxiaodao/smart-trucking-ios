@@ -11,12 +11,7 @@
 #import "AddListingViewController.h"
 #import "ListingSummaryViewController.h"
 
-#ifdef DEBUG
-static NSString *userId = @"53c6740f250c9ebe11000001";
-#else
-static NSString *userId = @"53a563e3250c9e1005000001";
-#endif
-
+static NSString *username = @"jacky.li";
 
 @interface ListingsMapViewController ()
 @property(nonatomic, strong) MKMapView *mapView;
@@ -82,13 +77,13 @@ static NSString *userId = @"53a563e3250c9e1005000001";
     self.listings = [NSMutableArray arrayWithArray:result];
     [self showListings:self.listings];
 
-    [[ApiClient client] getUserBy:userId WithSuccess:^(User *user){
-      self.user = user;
-      [MBProgressHUD hideHUDForView:self.view animated:YES];
-    } error:^(NSError *error){
-      NSLog(@"error: %@", error);
-      [MBProgressHUD hideHUDForView:self.view animated:YES];
-    }];
+      [[ApiClient client] getUserBy:username WithSuccess:^(User *user){
+          self.user = user;
+          [MBProgressHUD hideHUDForView:self.view animated:YES];
+      } error:^(NSError *error){
+          NSLog(@"error: %@", error);
+          [MBProgressHUD hideHUDForView:self.view animated:YES];
+      }];
   } error:^(NSError *error) {
     NSLog(@"error: %@", error);
     [MBProgressHUD hideHUDForView:self.view animated:YES];
