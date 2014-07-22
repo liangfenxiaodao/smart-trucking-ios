@@ -62,7 +62,7 @@
   [@[@"pickupTime", @"deliveryTime", @"bidEndingTime",
           @"weight", @"referenceRate", @"length",@"width", @"height",
           @"specialCarryingPermitRequired", @"palletJackRequired",
-          @"vehicleType", @"tailgate", @"jobNumber", @"pickupAddress", @"deliveryAddress"] each:^(id propertyName) {
+          @"vehicleType", @"tailgate", @"pickupAddress", @"deliveryAddress"] each:^(id propertyName) {
     [listing setValue:[form valueForKey:propertyName] forKey:propertyName];
   }];
   listing.userId = self.user.id;

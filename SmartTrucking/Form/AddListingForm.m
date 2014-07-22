@@ -53,9 +53,7 @@
             FXFormFieldOptions : self.vehicleTypes},
     @{FXFormFieldKey : @"specialCarryingPermitRequired", FXFormFieldTitle : @"Specail carrying permit"},
     @{FXFormFieldKey : @"palletJackRequired", FXFormFieldTitle : @"Pallet jack"},
-    @{FXFormFieldKey : @"tailgate", FXFormFieldOptions : self.tailgates},
-
-    @{FXFormFieldKey : @"jobNumber", FXFormFieldTitle : @"Job number", FXFormFieldHeader : @"", FXFormFieldType : FXFormFieldTypeInteger}
+    @{FXFormFieldKey : @"tailgate", FXFormFieldOptions : self.tailgates}
   ];
 }
 

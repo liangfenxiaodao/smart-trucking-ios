@@ -15,7 +15,6 @@
 @property(nonatomic, strong) Address *deliveryAddress;
 @property(nonatomic, strong) NSDate *deliveryTime;
 @property(nonatomic, strong) NSDate *bidEndingTime;
-@property(nonatomic, assign) NSUInteger jobNumber;
 @property(nonatomic, strong) NSString *vehicleType;
 @property(nonatomic, assign) BOOL specialCarryingPermitRequired;
 @property(nonatomic, assign) BOOL palletJackRequired;
