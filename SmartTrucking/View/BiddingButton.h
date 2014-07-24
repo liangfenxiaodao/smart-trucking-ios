@@ -3,6 +3,6 @@
 @class ListingSummaryViewController;
 @interface BiddingButton : UIView
 
-- (id)initWithDelegate:(ListingSummaryViewController *)delegate;
+- (id)initWithTarget:(ListingSummaryViewController *)target;
 @end
 

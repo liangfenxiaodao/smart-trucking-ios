@@ -24,7 +24,7 @@
 
 }
 
-- (id)initWithListing:(Listing *)listing andDelegate:(ListingSummaryViewController *)delegate {
+- (id)initWithListing:(Listing *)listing andTarget:(ListingSummaryViewController *)target {
   self = [super init];
   if (!self) return nil;
 
@@ -44,7 +44,7 @@
   self.listingSpecificView.backgroundColor = [UIColor whiteColor];
   [self.contentView addSubview:self.listingSpecificView];
 
-  self.biddingButton = [[BiddingButton alloc] initWithDelegate:delegate];
+  self.biddingButton = [[BiddingButton alloc] initWithTarget:target];
   [self.contentView addSubview:self.biddingButton];
   [self setupConstraints];
   return self;

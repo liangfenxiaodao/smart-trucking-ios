@@ -1,6 +1,8 @@
 #import "ListingSummaryViewController.h"
 #import "Listing.h"
 #import "ListingSummaryView.h"
+#import "PlaceBidViewController.h"
+#import "CustomNavigation.h"
 
 @interface ListingSummaryViewController ()
 @property(nonatomic, strong) Listing *listing;
@@ -14,16 +16,19 @@
   self = [super init];
   if (!self) return nil;
   self.listing = listing;
-  [self.navigationItem setTitle:@"Summary"];
+  [self setTitle:@"Summary"];
   return self;
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.view = [[ListingSummaryView alloc] initWithListing:self.listing andDelegate:self ];
+  self.view = [[ListingSummaryView alloc] initWithListing:self.listing andTarget:self];
 }
 
 - (void)placeBidding {
-
+  UINavigationController *modal = [[UINavigationController alloc] initWithNavigationBarClass:[CustomNavigation class]
+                                                                                toolbarClass:nil];
+  [modal pushViewController:[[PlaceBidViewController alloc] initWithListing:self.listing] animated:YES];
+  [self presentViewController:modal animated:YES completion:nil ];
 }
 @end

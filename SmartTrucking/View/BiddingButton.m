@@ -3,17 +3,17 @@
 
 @interface BiddingButton ()
 @property(nonatomic, strong) UIButton *biddingButton;
-@property(nonatomic, strong) ListingSummaryViewController *delegate;
+@property(nonatomic, strong) ListingSummaryViewController *target;
 @end
 
 @implementation BiddingButton {
 
 }
 
-- (id)initWithDelegate:(ListingSummaryViewController *)delegate {
+- (id)initWithTarget:(ListingSummaryViewController *)target {
   self = [super initWithFrame:CGRectMake(0, 0, 320, 60)];
   if (!self) return nil;
-  self.delegate = delegate;
+  self.target = target;
   self.biddingButton = [self createBiddingButton];
   [self addSubview:self.biddingButton];
   [self.biddingButton mas_makeConstraints:^(MASConstraintMaker *maker) {
@@ -28,7 +28,7 @@
   biddingButton.titleLabel.font = [UIFont buttonFont];
   [biddingButton setTitle:@"Place bid" forState:UIControlStateNormal];
   [biddingButton setAccessibilityIdentifier:@"BidButton"];
-  [biddingButton addTarget:self.delegate action:@selector(placeBidding) forControlEvents:UIControlEventTouchUpInside];
+  [biddingButton addTarget:self.target action:@selector(placeBidding) forControlEvents:UIControlEventTouchUpInside];
   return biddingButton;
 }
 

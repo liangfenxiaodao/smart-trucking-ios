@@ -41,6 +41,7 @@
 		36867F6100E504D088221A45 /* AddListingForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686751D60A928352F50D775 /* AddListingForm.m */; };
 		36867FBEBAA69AC64CF55655 /* PlaceBidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867693D58C15C6252F5F89 /* PlaceBidViewController.m */; };
 		4964F1E91948829900EB661E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964F1E81948829900EB661E /* MapKit.framework */; };
+		BD845064C89DE8F93709D303 /* CustomNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845A135E96F4EDF8E67DA1 /* CustomNavigation.m */; };
 		BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */; };
 		BD84519A563002F19E7A1950 /* SmartTruckingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845CF952F93904B19B0A4A /* SmartTruckingTests.m */; };
 		BD84520E336995ED89FC850B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84546F903691CC22FCF176 /* UIKit.framework */; };
@@ -132,11 +133,13 @@
 		4964F1E81948829900EB661E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BD84505016193D534B7F2ED5 /* SmartTruckingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTruckingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD84546F903691CC22FCF176 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BD8454AD9EB80F2439D52FB6 /* CustomNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigation.h; sourceTree = "<group>"; };
 		BD84558A796C79341FFE7EE4 /* SmartTrucking-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "SmartTrucking-Info.plist"; sourceTree = "<group>"; };
 		BD845628EA73733E6DA66780 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BD84573E6D7784B2D5854A39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BD84578A97CD4974B3D17CB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BD84582B4223A08F090B50C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BD845A135E96F4EDF8E67DA1 /* CustomNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigation.m; sourceTree = "<group>"; };
 		BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BD845C25CA082A5EE13C5A1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BD845CB402DCCDD6A47F08CD /* SmartTrucking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartTrucking-Prefix.pch"; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 				36867BA66E833117B7DB6CE5 /* DashedLine.h */,
 				3686784568ECD3E825E62AC3 /* STAnnotation.m */,
 				36867EA168E9706EA2C611C7 /* STAnnotation.h */,
+				BD845A135E96F4EDF8E67DA1 /* CustomNavigation.m */,
+				BD8454AD9EB80F2439D52FB6 /* CustomNavigation.h */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				36867DA6A319E356413C2E7C /* ListingBasicInfoView.m in Sources */,
 				36867D4F5934FFA521DF8D10 /* AbstractListingSubView.m in Sources */,
 				3686759F6D4A082881F57947 /* BiddingActivity.m in Sources */,
+				BD845064C89DE8F93709D303 /* CustomNavigation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

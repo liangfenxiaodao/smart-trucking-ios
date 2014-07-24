@@ -4,5 +4,5 @@
 @class ListingSummaryViewController;
 
 @interface ListingSummaryView : UIView
-- (id)initWithListing:(Listing *)listing andDelegate:(ListingSummaryViewController *)delegate;
+- (id)initWithListing:(Listing *)listing andTarget:(ListingSummaryViewController *)target;
 @end
