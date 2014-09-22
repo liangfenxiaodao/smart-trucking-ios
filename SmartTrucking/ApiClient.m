@@ -51,6 +51,19 @@ static ApiClient *sharedInstance;
      }];
 }
 
+- (void)getListingBy:(NSString *)listingId withSuccess:(void (^)(Listing *listing))success error:(void (^)(NSError *error))errorBlock {
+  [_requestOperationManager GET:[NSString stringWithFormat:@"/listings/%@", listingId]
+     parameters:nil
+        success:^(AFHTTPRequestOperation *operation, id response) {
+            Listing *user = [[Listing alloc] initWithDictionary:response[0]];
+            success(user);
+        }
+        failure:^(AFHTTPRequestOperation *operation, NSError *error){
+            errorBlock(error);
+        }
+  ];
+}
+
 - (void)getAllListingsWithSuccess:(void (^)(NSArray *result))successBlock error:(void(^)(NSError *error))errorBlock {
   [_requestOperationManager GET:@"/listings"
      parameters:nil

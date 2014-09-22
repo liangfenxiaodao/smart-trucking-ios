@@ -11,5 +11,7 @@
 
 - (void)addListing:(Listing *)listing WithSuccess:(void (^)())successBlock error:(void (^)(NSError *error))errorBlock;
 
+- (void)getListingBy:(NSString *)listingId withSuccess:(void (^)(Listing *listing))success error:(void (^)(NSError *error))errorBlock;
+
 - (void)getAllListingsWithSuccess:(void (^)(NSArray *result))successBlock error:(void (^)(NSError *error))errorBlock;
 @end
