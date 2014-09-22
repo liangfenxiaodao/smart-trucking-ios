@@ -54,4 +54,22 @@
   return [formatter dateFromString:date];
 }
 
+- (NSDictionary *)toParameters{
+  return @{@"from_address_id": self.pickupAddress.id,
+      @"to_address_id": self.deliveryAddress.id,
+      @"user_id": self.userId,
+      @"reference_rate": @(self.referenceRate),
+      @"weight": self.weight?:@"0",
+      @"length": self.length?:@"0",
+      @"width": self.width?:@"0",
+      @"height": self.height?:@"0",
+      @"pick_up_time": self.pickupTime,
+      @"arrive_time": self.deliveryTime,
+      @"bid_ending_time": self.bidEndingTime,
+      @"vehicle_type": self.vehicleType?:@"Van",
+      @"job_number": @0,
+      @"special_carrying_permit_required": @(self.specialCarryingPermitRequired),
+      @"pallet_jack_required": @(self.palletJackRequired),
+      @"tail_gate": self.tailgate?:@"Not Required"};
+}
 @end

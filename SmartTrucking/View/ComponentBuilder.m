@@ -8,9 +8,8 @@
                                                              style:UIBarButtonItemStylePlain
                                                             target:target
                                                             action:action];
-//  [button setBackgroundImage:[UIImage imageNamed:@"ClearButtonBackground"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-  [button setTitleTextAttributes:@{ NSForegroundColorAttributeName: [UIColor whiteColor],
-      NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:17] }
+  [button setTitleTextAttributes:@{ NSForegroundColorAttributeName: [UIColor blueColor],
+      NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:17] }
                         forState:UIControlStateNormal];
   return button;
 }

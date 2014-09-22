@@ -1,9 +1,9 @@
 #import "ApiClient.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "Listing.h"
-#import "Address.h"
 #import "User.h"
 #import <AFNetworking/AFNetworking.h>
+#import <ObjectiveSugar/NSArray+ObjectiveSugar.h>
 
 @interface ApiClient ()
 @property(nonatomic, strong) AFHTTPRequestOperationManager *requestOperationManager;
@@ -42,22 +42,7 @@ static ApiClient *sharedInstance;
 
 - (void)addListing: (Listing *)listing WithSuccess:(void(^)())successBlock error: (void(^)(NSError *error))errorBlock {
   [_requestOperationManager POST:@"/listings"
-     parameters:@{@"from_address_id": listing.pickupAddress.id,
-     @"to_address_id": listing.deliveryAddress.id,
-     @"user_id": listing.userId,
-     @"reference_rate": [NSNumber numberWithInt:listing.referenceRate],
-     @"weight": listing.weight?:@"0",
-     @"length": listing.length?:@"0",
-     @"width": listing.width?:@"0",
-     @"height": listing.height?:@"0",
-     @"pick_up_time": listing.pickupTime,
-     @"arrive_time": listing.deliveryTime,
-     @"bid_ending_time": listing.bidEndingTime,
-     @"vehicle_type": listing.vehicleType?:@"Van",
-     @"job_number": listing.jobNumber,
-     @"special_carrying_permit_required": [NSNumber numberWithBool:listing.specialCarryingPermitRequired],
-     @"pallet_jack_required": [NSNumber numberWithBool:listing.palletJackRequired],
-     @"tail_gate": listing.tailgate?:@"Not Required"}
+     parameters:[listing toParameters]
      success:^(AFHTTPRequestOperation *operation, id response){
        successBlock();
      }
@@ -70,12 +55,10 @@ static ApiClient *sharedInstance;
   [_requestOperationManager GET:@"/listings"
      parameters:nil
      success:^(AFHTTPRequestOperation *operation, id response) {
-       NSMutableArray *result = [[NSMutableArray alloc]init];
-       for(NSDictionary *goodDictionary in response){
-          Listing *listing = [[Listing alloc] initWithDictionary:goodDictionary];
-         [result addObject:listing];
-       }
-       successBlock(result);
+       NSArray *listingArray = [response map:(^id(NSDictionary *dictionary) {
+         return [[Listing alloc] initWithDictionary:dictionary];
+       })];
+       successBlock(listingArray);
      }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
        errorBlock(error);
      }

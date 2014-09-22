@@ -28,4 +28,6 @@
 
 - (NSString *)formattedPickupTime;
 - (NSString *)formattedDeliveryTime;
+
+- (NSDictionary *)toParameters;
 @end

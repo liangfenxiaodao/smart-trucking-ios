@@ -29,7 +29,7 @@
 }
 
 - (void)cancel{
-
+  [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 - (void)save{
