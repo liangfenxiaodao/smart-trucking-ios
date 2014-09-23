@@ -10,7 +10,7 @@
   CGContextFillRect(context, rect);
 
   [self setTranslucent:NO];
-  [self setTintColor:[UIColor clearColor]];
+//  [self setTintColor:[UIColor clearColor]];
 }
 
 @end

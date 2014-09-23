@@ -3,7 +3,7 @@
 @implementation ComponentBuilder {
 
 }
-+ (UIBarButtonItem *)createBarButtonItemWithTitle:(NSString *)title target:(id)target action:(SEL)action {
++ (UIBarButtonItem *)createNavItemWithTitle:(NSString *)title target:(id)target action:(SEL)action {
   UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:title
                                                              style:UIBarButtonItemStylePlain
                                                             target:target

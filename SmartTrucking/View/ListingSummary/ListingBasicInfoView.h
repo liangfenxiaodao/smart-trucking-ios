@@ -4,5 +4,7 @@
 @class Listing;
 
 @interface ListingBasicInfoView : AbstractListingSubView
+- (void)setListing:(Listing *)listing;
+
 - (id)initWithListing:(Listing *)listing;
 @end
