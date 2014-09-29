@@ -1,22 +1,13 @@
-//
-//  PlaceBiddingViewController.m
-//  SmartTrucking
-//
-//  Created by Jacky Li on 23/9/14.
-//  Copyright (c) 2014 none. All rights reserved.
-//
-
-#import "PlaceBiddingViewController.h"
+#import "PlaceBidViewController.h"
 #import "Listing.h"
 #import "ComponentBuilder.h"
-#import "ListingBasicInfoView.h"
 #import "PlaceBidView.h"
 
-@interface PlaceBiddingViewController ()
+@interface PlaceBidViewController ()
 @property(nonatomic, strong) Listing *listing;
 @end
 
-@implementation PlaceBiddingViewController
+@implementation PlaceBidViewController
 
 - (id)initWithListing:(Listing *)listing {
   self = [super init];

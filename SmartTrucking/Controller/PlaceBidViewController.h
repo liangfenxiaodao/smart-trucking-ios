@@ -1,5 +1,5 @@
 //
-//  PlaceBiddingViewController.h
+//  PlaceBidViewController.h
 //  SmartTrucking
 //
 //  Created by Jacky Li on 23/9/14.
@@ -11,7 +11,7 @@
 @class Listing;
 @class ListingBasicInfoView;
 
-@interface PlaceBiddingViewController : UIViewController
+@interface PlaceBidViewController : UIViewController
 @property(strong, nonatomic) IBOutlet ListingBasicInfoView *listingBasicInfoView;
 
 - (id)initWithListing:(Listing *)listing;

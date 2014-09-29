@@ -1,6 +1,7 @@
 #import "PlaceBidView.h"
 #import "Listing.h"
 #import "ListingBasicInfoView.h"
+#import "ComponentBuilder.h"
 
 @interface PlaceBidView ()
 @property(nonatomic, strong) UIScrollView *contentView;
@@ -38,18 +39,7 @@
 
   [self.contentView addSubview:_biddingPricingLabel];
 
-  _biddingField = [[UITextField alloc] init];
-  [_biddingField setBackgroundColor:[UIColor textEntryBackgroundColor]];
-  [[_biddingField layer] setBorderColor:[UIColor textEntryBorderColor].CGColor];
-  [[_biddingField layer] setBorderWidth:0.6f];
-  [_biddingField setFont:[UIFont textEntryFont]];
-  [_biddingField setTextColor:[UIColor textColor]];
-  _biddingField.keyboardType = UIKeyboardTypeDecimalPad;
-  _biddingField.textAlignment = NSTextAlignmentRight;
-  _biddingField.clearButtonMode = UITextFieldViewModeNever;
-  UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
-  _biddingField.rightView = paddingView;
-  _biddingField.rightViewMode = UITextFieldViewModeAlways;
+  _biddingField = [ComponentBuilder numericTextField];
   [self.contentView addSubview:_biddingField];
   [_biddingField becomeFirstResponder];
 

@@ -2,7 +2,7 @@
 #import "Listing.h"
 #import "ListingSummaryView.h"
 #import "CustomNavigation.h"
-#import "PlaceBiddingViewController.h"
+#import "PlaceBidViewController.h"
 
 @interface ListingSummaryViewController ()
 @property(nonatomic, strong) Listing *listing;
@@ -28,7 +28,7 @@
 - (void)placeBidding {
   UINavigationController *modal = [[UINavigationController alloc] initWithNavigationBarClass:[CustomNavigation class]
                                                                                 toolbarClass:nil];
-  [modal pushViewController:[[PlaceBiddingViewController alloc] initWithListing:self.listing] animated:YES];
+  [modal pushViewController:[[PlaceBidViewController alloc] initWithListing:self.listing] animated:YES];
   [self presentViewController:modal animated:YES completion:nil ];
 }
 @end

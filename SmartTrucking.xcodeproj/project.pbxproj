@@ -38,7 +38,7 @@
 		36867EE34AEFDE8A0C511181 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867AA656C492231C2A7B71 /* User.m */; };
 		36867F4CFCA59433D7D9DB37 /* STAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686784568ECD3E825E62AC3 /* STAnnotation.m */; };
 		36867F6100E504D088221A45 /* AddListingForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686751D60A928352F50D775 /* AddListingForm.m */; };
-		39E922A919D19729002D6FB1 /* PlaceBiddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E922A719D19729002D6FB1 /* PlaceBiddingViewController.m */; };
+		39E922A919D19729002D6FB1 /* PlaceBidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E922A719D19729002D6FB1 /* PlaceBidViewController.m */; };
 		4964F1E91948829900EB661E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964F1E81948829900EB661E /* MapKit.framework */; };
 		BD845064C89DE8F93709D303 /* CustomNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845A135E96F4EDF8E67DA1 /* CustomNavigation.m */; };
 		BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */; };
@@ -124,8 +124,8 @@
 		36867F9ADB72DF3B4C61B066 /* DashedLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedLine.m; sourceTree = "<group>"; };
 		36867F9D0FFD2A1AC5442AE6 /* Listing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Listing.m; sourceTree = "<group>"; };
 		36867FF52275EADBE80AE18A /* BiddingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiddingButton.m; sourceTree = "<group>"; };
-		39E922A619D19729002D6FB1 /* PlaceBiddingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceBiddingViewController.h; path = ../PlaceBiddingViewController.h; sourceTree = "<group>"; };
-		39E922A719D19729002D6FB1 /* PlaceBiddingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceBiddingViewController.m; path = ../PlaceBiddingViewController.m; sourceTree = "<group>"; };
+		39E922A619D19729002D6FB1 /* PlaceBidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceBidViewController.h; path = ../PlaceBidViewController.h; sourceTree = "<group>"; };
+		39E922A719D19729002D6FB1 /* PlaceBidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceBidViewController.m; path = ../PlaceBidViewController.m; sourceTree = "<group>"; };
 		3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4964F1E61948804E00EB661E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4964F1E81948829900EB661E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -239,8 +239,8 @@
 		36867BF5A7A81E68C65994B5 /* Listing */ = {
 			isa = PBXGroup;
 			children = (
-				39E922A619D19729002D6FB1 /* PlaceBiddingViewController.h */,
-				39E922A719D19729002D6FB1 /* PlaceBiddingViewController.m */,
+				39E922A619D19729002D6FB1 /* PlaceBidViewController.h */,
+				39E922A719D19729002D6FB1 /* PlaceBidViewController.m */,
 				36867D398D1E234451E4F731 /* ListingsMapViewController.h */,
 				36867EAEFA695A4598D032DE /* BiddingActivitiesViewController.h */,
 				3686742EBF1C9D4874006BC1 /* AddListingViewController.h */,
@@ -541,7 +541,7 @@
 			files = (
 				BD845B756B6772CBBA1F6E3B /* main.m in Sources */,
 				BD8458CCEDCDF861786A5B79 /* AppDelegate.m in Sources */,
-				39E922A919D19729002D6FB1 /* PlaceBiddingViewController.m in Sources */,
+				39E922A919D19729002D6FB1 /* PlaceBidViewController.m in Sources */,
 				3686788B9AC8D17F64DC2384 /* ApiClient.m in Sources */,
 				3686785F59A0BB34B4E59699 /* Listing.m in Sources */,
 				368677ED565AAB5E51ED3080 /* ListingsViewController.m in Sources */,
