@@ -47,6 +47,10 @@
   return self;
 }
 
+- (NSString *)bidValue{
+  return self.biddingField.text;
+}
+
 - (void)layout {
   [self.contentView mas_makeConstraints:^(MASConstraintMaker *maker) {
       maker.edges.mas_equalTo(self);

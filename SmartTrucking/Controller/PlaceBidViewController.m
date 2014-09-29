@@ -25,7 +25,13 @@
 }
 
 - (void)save {
-
+  NSString *message = [NSString stringWithFormat:@"Are you sure to place the bid with $%@?",
+          [(PlaceBidView *)self.view bidValue]];
+  [[[UIAlertView alloc] initWithTitle:@"Confirm bid"
+                              message:message
+                             delegate:self
+                    cancelButtonTitle:@"No"
+                    otherButtonTitles:@"Yes", nil] show];
 }
 
 - (void)loadView {

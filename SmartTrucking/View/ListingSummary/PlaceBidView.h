@@ -5,4 +5,6 @@
 
 @interface PlaceBidView : UIView
 - (instancetype)initWithListing:(Listing *)listing;
+
+- (NSString *)bidValue;
 @end
