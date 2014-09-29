@@ -1,7 +1,6 @@
 #import <Foundation/Foundation.h>
 
 @interface UIFont (SmartTrucking)
-+ (UIFont *)goodsListFont;
 
 + (UIFont *)smallFont;
 
@@ -10,4 +9,6 @@
 + (UIFont *)goodsLocationFont;
 
 + (UIFont *)buttonFont;
+
++ (UIFont *)textEntryFont;
 @end

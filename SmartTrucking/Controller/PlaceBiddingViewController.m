@@ -10,6 +10,7 @@
 #import "Listing.h"
 #import "ComponentBuilder.h"
 #import "ListingBasicInfoView.h"
+#import "PlaceBidView.h"
 
 @interface PlaceBiddingViewController ()
 @property(nonatomic, strong) Listing *listing;
@@ -36,10 +37,8 @@
 
 }
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  [self.view setBackgroundColor:[UIColor buildColorWithRed:236 green:236 blue:236]];
-  [self.listingBasicInfoView setListing:self.listing];
+- (void)loadView {
+  self.view = [[PlaceBidView alloc] initWithListing:self.listing];
 }
 
 @end

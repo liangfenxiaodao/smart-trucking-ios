@@ -39,12 +39,12 @@
 		36867F4CFCA59433D7D9DB37 /* STAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686784568ECD3E825E62AC3 /* STAnnotation.m */; };
 		36867F6100E504D088221A45 /* AddListingForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686751D60A928352F50D775 /* AddListingForm.m */; };
 		39E922A919D19729002D6FB1 /* PlaceBiddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E922A719D19729002D6FB1 /* PlaceBiddingViewController.m */; };
-		39E922AA19D19729002D6FB1 /* PlaceBiddingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39E922A819D19729002D6FB1 /* PlaceBiddingViewController.xib */; };
 		4964F1E91948829900EB661E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964F1E81948829900EB661E /* MapKit.framework */; };
 		BD845064C89DE8F93709D303 /* CustomNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845A135E96F4EDF8E67DA1 /* CustomNavigation.m */; };
 		BD8450E4C1DD2A9639C473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */; };
 		BD84519A563002F19E7A1950 /* SmartTruckingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845CF952F93904B19B0A4A /* SmartTruckingTests.m */; };
 		BD84520E336995ED89FC850B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84546F903691CC22FCF176 /* UIKit.framework */; };
+		BD84550A993CAE56EBC5C745 /* PlaceBidView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8458AAB76A4D1C0F7B5CE7 /* PlaceBidView.m */; };
 		BD845601B533FBB0E9C2B1C0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845F4CAB0B85AA5673407B /* XCTest.framework */; };
 		BD8458CCEDCDF861786A5B79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD84578A97CD4974B3D17CB6 /* AppDelegate.m */; };
 		BD845B756B6772CBBA1F6E3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845C25CA082A5EE13C5A1D /* main.m */; };
@@ -126,7 +126,6 @@
 		36867FF52275EADBE80AE18A /* BiddingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiddingButton.m; sourceTree = "<group>"; };
 		39E922A619D19729002D6FB1 /* PlaceBiddingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceBiddingViewController.h; path = ../PlaceBiddingViewController.h; sourceTree = "<group>"; };
 		39E922A719D19729002D6FB1 /* PlaceBiddingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceBiddingViewController.m; path = ../PlaceBiddingViewController.m; sourceTree = "<group>"; };
-		39E922A819D19729002D6FB1 /* PlaceBiddingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlaceBiddingViewController.xib; path = ../PlaceBiddingViewController.xib; sourceTree = "<group>"; };
 		3D9C14FE9D934430AD4598E8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4964F1E61948804E00EB661E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4964F1E81948829900EB661E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -135,9 +134,11 @@
 		BD8454AD9EB80F2439D52FB6 /* CustomNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigation.h; sourceTree = "<group>"; };
 		BD84558A796C79341FFE7EE4 /* SmartTrucking-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "SmartTrucking-Info.plist"; sourceTree = "<group>"; };
 		BD845628EA73733E6DA66780 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BD8456DC840C04019BEFD16C /* PlaceBidView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceBidView.h; sourceTree = "<group>"; };
 		BD84573E6D7784B2D5854A39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BD84578A97CD4974B3D17CB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BD84582B4223A08F090B50C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BD8458AAB76A4D1C0F7B5CE7 /* PlaceBidView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBidView.m; sourceTree = "<group>"; };
 		BD845A135E96F4EDF8E67DA1 /* CustomNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigation.m; sourceTree = "<group>"; };
 		BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BD845C25CA082A5EE13C5A1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -240,7 +241,6 @@
 			children = (
 				39E922A619D19729002D6FB1 /* PlaceBiddingViewController.h */,
 				39E922A719D19729002D6FB1 /* PlaceBiddingViewController.m */,
-				39E922A819D19729002D6FB1 /* PlaceBiddingViewController.xib */,
 				36867D398D1E234451E4F731 /* ListingsMapViewController.h */,
 				36867EAEFA695A4598D032DE /* BiddingActivitiesViewController.h */,
 				3686742EBF1C9D4874006BC1 /* AddListingViewController.h */,
@@ -266,6 +266,8 @@
 				368673AECB8C506D93E79ED0 /* ListingBasicInfoView.h */,
 				36867AADA59896A459FC28E1 /* AbstractListingSubView.m */,
 				368678AB3EA4C1D082DE4FFD /* AbstractListingSubView.h */,
+				BD8458AAB76A4D1C0F7B5CE7 /* PlaceBidView.m */,
+				BD8456DC840C04019BEFD16C /* PlaceBidView.h */,
 			);
 			path = ListingSummary;
 			sourceTree = "<group>";
@@ -493,7 +495,6 @@
 				BD845EE75C5D1B914AAD0D30 /* Images.xcassets in Resources */,
 				3686702F7DA5ABCC55CAD1F3 /* debug.xcconfig in Resources */,
 				36867EA3CFDEC1FA690D032D /* release.xcconfig in Resources */,
-				39E922AA19D19729002D6FB1 /* PlaceBiddingViewController.xib in Resources */,
 				368672230E915FE6FE534FB0 /* common.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,6 +570,7 @@
 				36867D4F5934FFA521DF8D10 /* AbstractListingSubView.m in Sources */,
 				3686759F6D4A082881F57947 /* BiddingActivity.m in Sources */,
 				BD845064C89DE8F93709D303 /* CustomNavigation.m in Sources */,
+				BD84550A993CAE56EBC5C745 /* PlaceBidView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

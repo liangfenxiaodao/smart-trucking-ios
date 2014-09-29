@@ -81,7 +81,7 @@
 };
 
 - (UILabel *)createLabel {
-  return [self createLabelWith:[UIFont goodsListFont]];
+  return [self createLabelWith:[UIFont smallFont]];
 }
 
 - (UILabel *)createLabelWith:(UIFont *)font {

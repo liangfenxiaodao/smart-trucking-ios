@@ -14,6 +14,14 @@
   return [UIColor buildSimpleColor:113];
 }
 
++ (UIColor*) textEntryBackgroundColor {
+  return [UIColor buildSimpleColor:255];
+}
+
++ (UIColor*) textEntryBorderColor {
+  return [UIColor buildSimpleColor:215];
+}
+
 + (UIColor *)buildSimpleColor:(int)value {
   return [UIColor buildColorWithRed:value green:value blue:value];
 }

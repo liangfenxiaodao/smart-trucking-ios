@@ -15,21 +15,6 @@
 @implementation ListingBasicInfoView {
 
 }
-//TODO remove initWithListing method
-- (id)initWithCoder:(NSCoder *)aDecoder {
-  self = [super initWithCoder:aDecoder];
-  if (!self) return nil;
-  self.basicInfoLabel = [self buildLabelWithText:@"Basic Information"];
-  self.basicInfoLabel.font = [UIFont smallBoldFont];
-  self.referenceRateLabelSeparator = [self buildSubSeparatorLine];
-  self.referenceRateLabel = [self buildLabelWithText:@""];
-  self.currentBidLabelSeparator = [self buildSubSeparatorLine];
-  self.currentBidLabel = [self buildLabelWithText:@""];
-  self.timeLeftLabelSeparator = [self buildSubSeparatorLine];
-  self.timeLeftLabel = [self buildLabelWithText:@""];
-  [self setupConstraints];
-  return self;
-}
 
 - (void)setListing:(Listing *)listing {
   [self.referenceRateLabel setText:[NSString stringWithFormat:@"Reference rate: $%i", listing.referenceRate]];
