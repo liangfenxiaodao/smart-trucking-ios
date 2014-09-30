@@ -4,7 +4,6 @@
 #import "Listing.h"
 #import "ListingsCell.h"
 #import "ListingSummaryViewController.h"
-#import "ListingSummaryViewController.h"
 
 @interface ListingsViewController ()
 
@@ -33,12 +32,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  Listing *goods = [_listingsArray objectAtIndex:(NSUInteger) indexPath.row];
+  Listing *listing = _listingsArray[(NSUInteger) indexPath.row];
   ListingsCell *goodsCell = [tableView dequeueReusableCellWithIdentifier:@"ListingsCell"];
   if(goodsCell == nil){
     goodsCell = [[ListingsCell alloc]init];
   }
-  [goodsCell setGoods:goods];
+  [goodsCell setGoods:listing];
   return goodsCell;
 }
 
@@ -60,8 +59,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  Listing *goods = [self.listingsArray objectAtIndex:(NSUInteger) indexPath.row];
-  ListingSummaryViewController *summaryViewController = [[ListingSummaryViewController alloc] initWithListing:goods];
+  Listing *listing = (self.listingsArray)[(NSUInteger) indexPath.row];
+  ListingSummaryViewController *summaryViewController = [[ListingSummaryViewController alloc] initWithListing:listing];
   [self.navigationController pushViewController:summaryViewController animated:YES];
 }
 

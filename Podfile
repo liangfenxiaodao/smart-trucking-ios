@@ -1,7 +1,7 @@
 platform :ios, '7.0'
 
 pod 'AFNetworking'
-pod 'Masonry'
+pod 'Masonry', '0.5.3'
 pod 'ObjectiveSugar'
-pod 'MBProgressHUD', '~> 0.8'
-pod 'XLForm', '~> 1.0.1'
+pod 'MBProgressHUD'
+pod 'XLForm'

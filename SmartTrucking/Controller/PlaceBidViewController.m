@@ -1,9 +1,11 @@
+#import <MBProgressHUD/MBProgressHUD.h>
 #import "PlaceBidViewController.h"
 #import "Listing.h"
 #import "ComponentBuilder.h"
 #import "PlaceBidView.h"
+#import "ApiClient.h"
 
-@interface PlaceBidViewController ()
+@interface PlaceBidViewController () <UIAlertViewDelegate>
 @property(nonatomic, strong) Listing *listing;
 @end
 
@@ -25,13 +27,30 @@
 }
 
 - (void)save {
-  NSString *message = [NSString stringWithFormat:@"Are you sure to place the bid with $%@?",
-          [(PlaceBidView *)self.view bidValue]];
-  [[[UIAlertView alloc] initWithTitle:@"Confirm bid"
-                              message:message
-                             delegate:self
-                    cancelButtonTitle:@"No"
-                    otherButtonTitles:@"Yes", nil] show];
+  NSString *message = [NSString stringWithFormat:@"Are you sure to place the bid with $%@?", [self getBidValue]];
+  [[[UIAlertView alloc] initWithTitle:@"Confirm bid" message:message delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil] show];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+  if (buttonIndex == 1) {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Processing, please wait...";
+    [[ApiClient client] placeBidWithPrice:[self getBidValue]
+                                onListing:self.listing.id
+                                  success:^{
+                                      [hud hide:YES];
+                                      NSLog(@"place bidding succeed");
+                                  }
+                                  failure:^(NSError *error) {
+                                      [hud hide:YES];
+                                      NSLog(@"error: %@", error);
+                                  }
+    ];
+  }
+}
+
+- (NSString *)getBidValue {
+  return [(PlaceBidView *) self.view bidValue];
 }
 
 - (void)loadView {

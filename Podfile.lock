@@ -1,78 +1,42 @@
 PODS:
-  - AFNetworking (2.2.4):
+  - AFNetworking (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
     - AFNetworking/UIKit
-  - AFNetworking/NSURLConnection (2.2.4):
+  - AFNetworking/NSURLConnection (2.4.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.2.4):
-    - AFNetworking/NSURLConnection
-  - AFNetworking/Reachability (2.2.4)
-  - AFNetworking/Security (2.2.4)
-  - AFNetworking/Serialization (2.2.4)
-  - AFNetworking/UIKit (2.2.4):
+  - AFNetworking/NSURLSession (2.4.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.4.1)
+  - AFNetworking/Security (2.4.1)
+  - AFNetworking/Serialization (2.4.1)
+  - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Masonry (0.5.0)
-  - MBProgressHUD (0.8)
-  - MRProgress (0.5.1):
-    - MRProgress/ActivityIndicator
-    - MRProgress/Blur
-    - MRProgress/Circular
-    - MRProgress/Helper
-    - MRProgress/Icons
-    - MRProgress/MessageInterceptor
-    - MRProgress/NavigationBarProgress
-    - MRProgress/Overlay
-    - MRProgress/Stopable
-    - MRProgress/WeakProxy
-  - MRProgress/ActivityIndicator (0.5.1):
-    - MRProgress/Stopable
-  - MRProgress/Blur (0.5.1):
-    - MRProgress/Helper
-  - MRProgress/Circular (0.5.1):
-    - MRProgress/Helper
-    - MRProgress/Stopable
-  - MRProgress/Helper (0.5.1)
-  - MRProgress/Icons (0.5.1)
-  - MRProgress/MessageInterceptor (0.5.1)
-  - MRProgress/NavigationBarProgress (0.5.1)
-  - MRProgress/Overlay (0.5.1):
-    - MRProgress/ActivityIndicator
-    - MRProgress/Blur
-    - MRProgress/Circular
-    - MRProgress/Helper
-    - MRProgress/Icons
-  - MRProgress/Stopable (0.5.1):
-    - MRProgress/Helper
-  - MRProgress/WeakProxy (0.5.1)
+  - Masonry (0.5.3)
+  - MBProgressHUD (0.9)
   - ObjectiveSugar (1.1.0)
-  - XLDataLoader (1.0.0):
-    - AFNetworking (~> 2.0)
-  - XLForm (1.0.1):
-    - AFNetworking (~> 2.0)
-    - MRProgress (~> 0.2)
-    - XLDataLoader (~> 1.0)
+  - XLForm (2.0.0)
 
 DEPENDENCIES:
   - AFNetworking
-  - Masonry
-  - MBProgressHUD (~> 0.8)
+  - Masonry (= 0.5.3)
+  - MBProgressHUD
   - ObjectiveSugar
-  - XLForm (~> 1.0.1)
+  - XLForm
 
 SPEC CHECKSUMS:
-  AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
-  Masonry: eb26a0073a2c4b0df533c39fd623fb11d79a1bd9
-  MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
-  MRProgress: 7853c177e7d79b90e6f0910561967ebcf3289eb1
+  AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  Masonry: 35368c2ca9577ca87722c12fc52c4bad9b1c1516
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
-  XLDataLoader: 629d2beb074079b2352d9c7a106998df6d65639a
-  XLForm: 57e453a391473088e5296abe7d557530f52dfda8
+  XLForm: e065ea92da75acb51a577c40f2bb540c814982a3
 
 COCOAPODS: 0.32.1

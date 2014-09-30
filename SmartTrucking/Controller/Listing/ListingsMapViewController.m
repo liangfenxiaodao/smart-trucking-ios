@@ -31,7 +31,7 @@ static NSString *username = @"jacky.li";
 
   [self.navigationItem setTitle:@"Listings"];
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
-          initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addListing)];
+      initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addListing)];
 
   self.view = [[UIView alloc] init];
   self.mapView = MKMapView.new;
@@ -39,7 +39,7 @@ static NSString *username = @"jacky.li";
   [self.mapView setDelegate:self];
   [self.view addSubview:self.mapView];
   [self.mapView mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.edges.equalTo(self.view);
+      make.edges.equalTo(self.view);
   }];
   return self;
 }
@@ -47,7 +47,8 @@ static NSString *username = @"jacky.li";
 - (void)addListing {
   AddListingViewController *addListingViewController = [[AddListingViewController alloc] initWithUser:self.user delegate:self];
   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addListingViewController];
-  [self presentViewController:navigationController animated:YES completion:^{}];
+  [self presentViewController:navigationController animated:YES completion:^{
+  }];
 }
 
 - (void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(NSError *)error {
@@ -74,26 +75,29 @@ static NSString *username = @"jacky.li";
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
   [[ApiClient client] getAllListingsWithSuccess:^(NSArray *result) {
-    self.listings = [NSMutableArray arrayWithArray:result];
-    [self showListings:self.listings];
+      self.listings = [NSMutableArray arrayWithArray:result];
+      [self showListings:self.listings];
+      [self retrieveUserInfo];
+  }  error:^(NSError *error) {
+      NSLog(@"error: %@", error);
+      [MBProgressHUD hideHUDForView:self.view animated:YES];
+  }];
+}
 
-      [[ApiClient client] getUserBy:username WithSuccess:^(User *user){
+- (void)retrieveUserInfo {
+  [[ApiClient client] getUserBy:username withSuccess:^(User *user) {
           self.user = user;
           [MBProgressHUD hideHUDForView:self.view animated:YES];
-      } error:^(NSError *error){
+      }   error:^(NSError *error) {
           NSLog(@"error: %@", error);
           [MBProgressHUD hideHUDForView:self.view animated:YES];
       }];
-  } error:^(NSError *error) {
-    NSLog(@"error: %@", error);
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-  }];
 }
 
 - (void)showListings:(NSMutableArray *)listings {
   [self.mapView removeAnnotations:self.mapView.annotations];
   [listings each:^(Listing *listing) {
-    [self addAnnotationForListing:listing];
+      [self addAnnotationForListing:listing];
   }];
 }
 
@@ -113,10 +117,10 @@ static NSString *username = @"jacky.li";
   static NSString *annotationIdentifier = @"annotationIdentifier";
 
   MKPinAnnotationView *pinView =
-          (MKPinAnnotationView *) [self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
+      (MKPinAnnotationView *) [self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
   if (pinView == nil) {
     MKPinAnnotationView *customPinView = [[MKPinAnnotationView alloc]
-            initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
+        initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
     customPinView.pinColor = MKPinAnnotationColorRed;
     customPinView.animatesDrop = YES;
     customPinView.canShowCallout = YES;
