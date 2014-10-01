@@ -43,16 +43,16 @@
   [HUD show:YES];
   HUD.labelText = @"processing...";
   [[ApiClient client] addListing:listing
-                     withSuccess:^() {
-                         [self dismissViewControllerAnimated:YES completion:^{
-                             [self.delegate listingCreated:listing];
+                         success:^() {
+                             [self dismissViewControllerAnimated:YES completion:^{
+                                 [self.delegate listingCreated:listing];
+                                 [HUD hide:YES];
+                             }];
+                         }
+                         failure:^(NSError *error) {
                              [HUD hide:YES];
-                         }];
-                     }
-                           error:^(NSError *error) {
-                               [HUD hide:YES];
-                               NSLog(@"error: %@", error);
-                           }
+                             NSLog(@"error: %@", error);
+                         }
   ];
 }
 

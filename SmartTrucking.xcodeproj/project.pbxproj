@@ -47,11 +47,14 @@
 		BD84550A993CAE56EBC5C745 /* PlaceBidView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8458AAB76A4D1C0F7B5CE7 /* PlaceBidView.m */; };
 		BD845601B533FBB0E9C2B1C0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845F4CAB0B85AA5673407B /* XCTest.framework */; };
 		BD8458CCEDCDF861786A5B79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD84578A97CD4974B3D17CB6 /* AppDelegate.m */; };
+		BD845AFD60A138C588E0E665 /* NSString+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845E9FF86B12BDBC33C795 /* NSString+SmartTrucking.m */; };
 		BD845B756B6772CBBA1F6E3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845C25CA082A5EE13C5A1D /* main.m */; };
+		BD845B8B9884AD2F27997E0E /* NSDictionary+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845739E816B71B43125CC5 /* NSDictionary+SmartTrucking.m */; };
 		BD845B8CFA7A5FE42769F4B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845F75EBF0CC7D2BE902F9 /* Foundation.framework */; };
 		BD845CAB32682000F9621392 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845F75EBF0CC7D2BE902F9 /* Foundation.framework */; };
 		BD845CB51DE349ECE884EF5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD845B4E7AFC7AABCAD079F6 /* InfoPlist.strings */; };
 		BD845CE13493261CD4269D6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84546F903691CC22FCF176 /* UIKit.framework */; };
+		BD845D3AB09AA579C233574A /* NSDate+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845B6632F7B1246DC49B70 /* NSDate+SmartTrucking.m */; };
 		BD845EE75C5D1B914AAD0D30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD845628EA73733E6DA66780 /* Images.xcassets */; };
 		BD845F6B5B1F45C9F8AB6530 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD845D26C5E2F5E7D5EC6366 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -130,22 +133,28 @@
 		4964F1E61948804E00EB661E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4964F1E81948829900EB661E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BD84505016193D534B7F2ED5 /* SmartTruckingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTruckingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD8451F9FBEF2A19622B6F9B /* NSString+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SmartTrucking.h"; sourceTree = "<group>"; };
+		BD8453DE54838B6EC65168CF /* NSDictionary+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SmartTrucking.h"; sourceTree = "<group>"; };
 		BD84546F903691CC22FCF176 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BD8454AD9EB80F2439D52FB6 /* CustomNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigation.h; sourceTree = "<group>"; };
 		BD84558A796C79341FFE7EE4 /* SmartTrucking-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "SmartTrucking-Info.plist"; sourceTree = "<group>"; };
 		BD845628EA73733E6DA66780 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BD8456DC840C04019BEFD16C /* PlaceBidView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceBidView.h; sourceTree = "<group>"; };
+		BD845739E816B71B43125CC5 /* NSDictionary+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SmartTrucking.m"; sourceTree = "<group>"; };
 		BD84573E6D7784B2D5854A39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BD84578A97CD4974B3D17CB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BD84582B4223A08F090B50C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BD8458AAB76A4D1C0F7B5CE7 /* PlaceBidView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBidView.m; sourceTree = "<group>"; };
 		BD845A135E96F4EDF8E67DA1 /* CustomNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigation.m; sourceTree = "<group>"; };
+		BD845A15E77F6BEE38EE4A65 /* NSDate+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SmartTrucking.h"; sourceTree = "<group>"; };
+		BD845B6632F7B1246DC49B70 /* NSDate+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SmartTrucking.m"; sourceTree = "<group>"; };
 		BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BD845C25CA082A5EE13C5A1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BD845CB402DCCDD6A47F08CD /* SmartTrucking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartTrucking-Prefix.pch"; sourceTree = "<group>"; };
 		BD845CF952F93904B19B0A4A /* SmartTruckingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartTruckingTests.m; sourceTree = "<group>"; };
 		BD845D05F779A92988829A55 /* SmartTruckingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "SmartTruckingTests-Info.plist"; sourceTree = "<group>"; };
 		BD845E9B142ECBD90280BBEE /* SmartTrucking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTrucking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD845E9FF86B12BDBC33C795 /* NSString+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SmartTrucking.m"; sourceTree = "<group>"; };
 		BD845F194ABFF2BF3513EFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BD845F4CAB0B85AA5673407B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BD845F75EBF0CC7D2BE902F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -232,6 +241,12 @@
 				36867225497198AFDAC080F2 /* UIColor+SmartTrucking.h */,
 				368679863396CB326E8879F7 /* UIFont+SmartTrucking.m */,
 				36867CCCF2600D8A42A8C916 /* UIFont+SmartTrucking.h */,
+				BD845739E816B71B43125CC5 /* NSDictionary+SmartTrucking.m */,
+				BD8453DE54838B6EC65168CF /* NSDictionary+SmartTrucking.h */,
+				BD845E9FF86B12BDBC33C795 /* NSString+SmartTrucking.m */,
+				BD8451F9FBEF2A19622B6F9B /* NSString+SmartTrucking.h */,
+				BD845B6632F7B1246DC49B70 /* NSDate+SmartTrucking.m */,
+				BD845A15E77F6BEE38EE4A65 /* NSDate+SmartTrucking.h */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -571,6 +586,9 @@
 				3686759F6D4A082881F57947 /* BiddingActivity.m in Sources */,
 				BD845064C89DE8F93709D303 /* CustomNavigation.m in Sources */,
 				BD84550A993CAE56EBC5C745 /* PlaceBidView.m in Sources */,
+				BD845B8B9884AD2F27997E0E /* NSDictionary+SmartTrucking.m in Sources */,
+				BD845AFD60A138C588E0E665 /* NSString+SmartTrucking.m in Sources */,
+				BD845D3AB09AA579C233574A /* NSDate+SmartTrucking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

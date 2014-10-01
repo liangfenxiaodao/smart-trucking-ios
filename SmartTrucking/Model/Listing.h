@@ -21,12 +21,13 @@
 @property(nonatomic, assign) BOOL palletJackRequired;
 @property(nonatomic, strong) NSString *tailgate;
 @property(nonatomic, strong) NSString *jobNumber;
-
+@property(nonatomic, strong) NSArray *biddingActivities;
 @property(nonatomic, strong) NSString *customerName;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
 - (NSString *)formattedPickupTime;
+
 - (NSString *)formattedDeliveryTime;
 
 - (NSDictionary *)toParameters;

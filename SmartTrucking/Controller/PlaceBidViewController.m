@@ -37,9 +37,11 @@
     hud.labelText = @"Processing, please wait...";
     [[ApiClient client] placeBidWithPrice:[self getBidValue]
                                 onListing:self.listing.id
-                                  success:^{
+                                  success:^(Listing *listing){
                                       [hud hide:YES];
-                                      NSLog(@"place bidding succeed");
+                                      [self dismissViewControllerAnimated:YES completion:^{
+                                          [[NSNotificationCenter defaultCenter] postNotificationName:@"bidPlaced" object:nil userInfo:@{@"listing": listing}];
+                                      }];
                                   }
                                   failure:^(NSError *error) {
                                       [hud hide:YES];

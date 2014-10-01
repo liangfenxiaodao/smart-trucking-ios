@@ -15,5 +15,9 @@
     #import <Foundation/Foundation.h>
     #import "UIColor+SmartTrucking.h"
     #import "UIFont+SmartTrucking.h"
+    #import "NSString+SmartTrucking.h"
+    #import "NSDictionary+SmartTrucking.h"
+    #import "NSDate+SmartTrucking.h"
+    #import "ObjectiveSugar.h"
 
 #endif

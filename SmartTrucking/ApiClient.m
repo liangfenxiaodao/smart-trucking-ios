@@ -6,7 +6,7 @@
 #import <ObjectiveSugar/NSArray+ObjectiveSugar.h>
 
 @interface ApiClient ()
-@property(nonatomic, strong) AFHTTPRequestOperationManager *requestOperationManager;
+@property(nonatomic, strong) AFHTTPRequestOperationManager *operationManager;
 @end
 
 @implementation ApiClient {
@@ -28,69 +28,68 @@ static ApiClient *sharedInstance;
 }
 
 - (void)getUserBy:(NSString *)username withSuccess:(void (^)(User *user))successBlock error:(void (^)(NSError *error))errorBlock {
-  [_requestOperationManager GET:[NSString stringWithFormat:@"/users/%@", username]
-                     parameters:nil
-                        success:^(AFHTTPRequestOperation *operation, id response) {
-                            User *user = [[User alloc] initWithDictionary:response[0]];
-                            [[_requestOperationManager requestSerializer] setValue:[user id] forHTTPHeaderField:@"user-id"];
-                            [[_requestOperationManager requestSerializer] setValue:[user username] forHTTPHeaderField:@"user-name"];
-                            successBlock(user);
-                        }
-                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                            errorBlock(error);
-                        }
+  [_operationManager GET:[NSString stringWithFormat:@"/users/%@", username]
+              parameters:nil
+                 success:^(AFHTTPRequestOperation *operation, id response) {
+                     User *user = [[User alloc] initWithDictionary:response[0]];
+                     [[_operationManager requestSerializer] setValue:[user id] forHTTPHeaderField:@"user-id"];
+                     [[_operationManager requestSerializer] setValue:[user username] forHTTPHeaderField:@"user-name"];
+                     successBlock(user);
+                 }
+                 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                     errorBlock(error);
+                 }
   ];
 }
 
 - (void)placeBidWithPrice:(NSString *)price onListing:(NSString *)listingId
-                                              success:(void (^)())successBlock
+                                              success:(void (^)(Listing *listing))successBlock
                                               failure:(void (^)(NSError *error))errorBlock {
-  [_requestOperationManager POST:[NSString stringWithFormat:@"/listings/%@/bidding_activities", listingId]
-                      parameters:@{@"bidding_value": price}
-                         success:^(AFHTTPRequestOperation *operation, id response) {
-                             successBlock();
-                         }
-                         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                             errorBlock(error);
-                         }];
+  [_operationManager POST:[NSString stringWithFormat:@"/listings/%@/bidding_activities", listingId]
+               parameters:@{@"bidding_value" : price}
+                  success:^(AFHTTPRequestOperation *operation, id response) {
+                      successBlock([[Listing alloc] initWithDictionary:response]);
+                  }
+                  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                      errorBlock(error);
+                  }];
 }
 
-- (void)addListing:(Listing *)listing withSuccess:(void (^)())successBlock error:(void (^)(NSError *error))errorBlock {
-  [_requestOperationManager POST:@"/listings"
-                      parameters:[listing toParameters]
-                         success:^(AFHTTPRequestOperation *operation, id response) {
-                             successBlock();
-                         }
-                         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                             errorBlock(error);
-                         }];
+- (void)addListing:(Listing *)listing success:(void (^)())successBlock failure:(void (^)(NSError *error))errorBlock {
+  [_operationManager POST:@"/listings"
+               parameters:[listing toParameters]
+                  success:^(AFHTTPRequestOperation *operation, id response) {
+                      successBlock();
+                  }
+                  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                      errorBlock(error);
+                  }];
 }
 
-- (void)getListingBy:(NSString *)listingId withSuccess:(void (^)(Listing *listing))success error:(void (^)(NSError *error))errorBlock {
-  [_requestOperationManager GET:[NSString stringWithFormat:@"/listings/%@", listingId]
-                     parameters:nil
-                        success:^(AFHTTPRequestOperation *operation, id response) {
-                            Listing *user = [[Listing alloc] initWithDictionary:response[0]];
-                            success(user);
-                        }
-                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                            errorBlock(error);
-                        }
+- (void)getListingBy:(NSString *)listingId success:(void (^)(Listing *listing))success failure:(void (^)(NSError *error))errorBlock {
+  [_operationManager GET:[NSString stringWithFormat:@"/listings/%@", listingId]
+              parameters:nil
+                 success:^(AFHTTPRequestOperation *operation, id response) {
+                     success([[Listing alloc] initWithDictionary:response]);
+                 }
+                 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                     errorBlock(error);
+                 }
   ];
 }
 
 - (void)getAllListingsWithSuccess:(void (^)(NSArray *result))successBlock error:(void (^)(NSError *error))errorBlock {
-  [_requestOperationManager GET:@"/listings"
-                     parameters:nil
-                        success:^(AFHTTPRequestOperation *operation, id response) {
-                            NSArray *listingArray = [response map:(^id(NSDictionary *dictionary) {
-                                return [[Listing alloc] initWithDictionary:dictionary];
-                            })];
-                            successBlock(listingArray);
-                        }
-                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                            errorBlock(error);
-                        }
+  [_operationManager GET:@"/listings"
+              parameters:nil
+                 success:^(AFHTTPRequestOperation *operation, id response) {
+                     NSArray *listingArray = [response map:(^id(NSDictionary *dictionary) {
+                         return [[Listing alloc] initWithDictionary:dictionary];
+                     })];
+                     successBlock(listingArray);
+                 }
+                 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                     errorBlock(error);
+                 }
   ];
 };
 
@@ -98,7 +97,7 @@ static ApiClient *sharedInstance;
   self = [super init];
   if (self) {
     NSString *url = [NSString stringWithFormat:@"%@://%@", protocol, server];
-    _requestOperationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:url]];
+    _operationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:url]];
   }
   return self;
 }
