@@ -4,4 +4,6 @@
 
 
 - (NSDate *)toDate;
+
+- (BOOL)digitsNoMoreThan:(int)i;
 @end

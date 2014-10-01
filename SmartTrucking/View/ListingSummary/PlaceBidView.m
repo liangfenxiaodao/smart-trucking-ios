@@ -2,6 +2,7 @@
 #import "Listing.h"
 #import "ListingBasicInfoView.h"
 #import "ComponentBuilder.h"
+#import "MoneyTextFieldDelegate.h"
 
 @interface PlaceBidView ()
 @property(nonatomic, strong) UIScrollView *contentView;
@@ -9,6 +10,7 @@
 @property(nonatomic, strong) UILabel *biddingLabel;
 @property(nonatomic, strong) UILabel *biddingPricingLabel;
 @property(nonatomic, strong) UITextField *biddingField;
+@property(nonatomic, strong) MoneyTextFieldDelegate *textFieldDelegate;
 @end
 
 @implementation PlaceBidView {
@@ -18,7 +20,7 @@
 - (instancetype)initWithListing:(Listing *)listing {
   self = [super init];
   if (!self)return nil;
-
+  self.textFieldDelegate = [[MoneyTextFieldDelegate alloc]init];
   self.contentView = [[UIScrollView alloc] init];
   [self.contentView setBackgroundColor:[UIColor buildColorWithRed:236 green:236 blue:236]];
   [self addSubview:self.contentView];
@@ -40,6 +42,8 @@
   [self.contentView addSubview:_biddingPricingLabel];
 
   _biddingField = [ComponentBuilder numericTextField];
+  _biddingField.placeholder = @"0.00";
+  _biddingField.delegate = self.textFieldDelegate;
   [self.contentView addSubview:_biddingField];
   [_biddingField becomeFirstResponder];
 
@@ -47,7 +51,7 @@
   return self;
 }
 
-- (NSString *)bidValue{
+- (NSString *)bidValue {
   return self.biddingField.text;
 }
 

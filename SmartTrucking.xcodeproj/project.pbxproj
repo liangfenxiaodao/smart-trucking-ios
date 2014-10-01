@@ -46,6 +46,7 @@
 		BD84520E336995ED89FC850B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84546F903691CC22FCF176 /* UIKit.framework */; };
 		BD84550A993CAE56EBC5C745 /* PlaceBidView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8458AAB76A4D1C0F7B5CE7 /* PlaceBidView.m */; };
 		BD845601B533FBB0E9C2B1C0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD845F4CAB0B85AA5673407B /* XCTest.framework */; };
+		BD8457510203217072D1DCCB /* MoneyTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845B4EEC8DD42E2C3BF83E /* MoneyTextFieldDelegate.m */; };
 		BD8458CCEDCDF861786A5B79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD84578A97CD4974B3D17CB6 /* AppDelegate.m */; };
 		BD845AFD60A138C588E0E665 /* NSString+SmartTrucking.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845E9FF86B12BDBC33C795 /* NSString+SmartTrucking.m */; };
 		BD845B756B6772CBBA1F6E3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845C25CA082A5EE13C5A1D /* main.m */; };
@@ -147,12 +148,14 @@
 		BD8458AAB76A4D1C0F7B5CE7 /* PlaceBidView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBidView.m; sourceTree = "<group>"; };
 		BD845A135E96F4EDF8E67DA1 /* CustomNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigation.m; sourceTree = "<group>"; };
 		BD845A15E77F6BEE38EE4A65 /* NSDate+SmartTrucking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SmartTrucking.h"; sourceTree = "<group>"; };
+		BD845B4EEC8DD42E2C3BF83E /* MoneyTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTextFieldDelegate.m; sourceTree = "<group>"; };
 		BD845B6632F7B1246DC49B70 /* NSDate+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SmartTrucking.m"; sourceTree = "<group>"; };
 		BD845BC5D39AD1AA1CB5AB1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BD845C25CA082A5EE13C5A1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BD845CB402DCCDD6A47F08CD /* SmartTrucking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartTrucking-Prefix.pch"; sourceTree = "<group>"; };
 		BD845CF952F93904B19B0A4A /* SmartTruckingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartTruckingTests.m; sourceTree = "<group>"; };
 		BD845D05F779A92988829A55 /* SmartTruckingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "SmartTruckingTests-Info.plist"; sourceTree = "<group>"; };
+		BD845DB9632710155C055BBD /* MoneyTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyTextFieldDelegate.h; sourceTree = "<group>"; };
 		BD845E9B142ECBD90280BBEE /* SmartTrucking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTrucking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD845E9FF86B12BDBC33C795 /* NSString+SmartTrucking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SmartTrucking.m"; sourceTree = "<group>"; };
 		BD845F194ABFF2BF3513EFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 				36867E25D4486C3297E032DA /* Component */,
 				3686754561DD4480B67E80C3 /* ComponentBuilder.m */,
 				36867EDF81F218F502CB053E /* ComponentBuilder.h */,
+				BD845B4EEC8DD42E2C3BF83E /* MoneyTextFieldDelegate.m */,
+				BD845DB9632710155C055BBD /* MoneyTextFieldDelegate.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -589,6 +594,7 @@
 				BD845B8B9884AD2F27997E0E /* NSDictionary+SmartTrucking.m in Sources */,
 				BD845AFD60A138C588E0E665 /* NSString+SmartTrucking.m in Sources */,
 				BD845D3AB09AA579C233574A /* NSDate+SmartTrucking.m in Sources */,
+				BD8457510203217072D1DCCB /* MoneyTextFieldDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

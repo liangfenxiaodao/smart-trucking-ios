@@ -37,7 +37,6 @@
 }
 
 - (void)refreshBiddingActivities {
-  NSLog(@"activities: %@", self.listing.biddingActivities);
 }
 
 - (void)viewDidLoad {
